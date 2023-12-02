@@ -28,86 +28,78 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
-            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.tenQN = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.tenViPham = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.repositoryItemLookUpEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit1)).BeginInit();
+            this.gcDanhSach = new DevExpress.XtraGrid.GridControl();
+            this.grvDanhSachLoi = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.gcDanhSach)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grvDanhSachLoi)).BeginInit();
             this.SuspendLayout();
             // 
-            // gridControl1
+            // gcDanhSach
             // 
-            this.gridControl1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.gridControl1.Location = new System.Drawing.Point(0, 0);
-            this.gridControl1.MainView = this.gridView1;
-            this.gridControl1.Name = "gridControl1";
-            this.gridControl1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
-            this.repositoryItemLookUpEdit1});
-            this.gridControl1.Size = new System.Drawing.Size(1092, 347);
-            this.gridControl1.TabIndex = 0;
-            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView1});
+            this.gcDanhSach.Dock = System.Windows.Forms.DockStyle.Top;
+            this.gcDanhSach.Location = new System.Drawing.Point(0, 0);
+            this.gcDanhSach.MainView = this.grvDanhSachLoi;
+            this.gcDanhSach.Name = "gcDanhSach";
+            this.gcDanhSach.Size = new System.Drawing.Size(1092, 404);
+            this.gcDanhSach.TabIndex = 0;
+            this.gcDanhSach.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.grvDanhSachLoi});
             // 
-            // gridView1
+            // grvDanhSachLoi
             // 
-            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.tenQN,
-            this.tenViPham});
-            this.gridView1.GridControl = this.gridControl1;
-            this.gridView1.Name = "gridView1";
+            this.grvDanhSachLoi.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gridColumn1,
+            this.gridColumn2});
+            this.grvDanhSachLoi.GridControl = this.gcDanhSach;
+            this.grvDanhSachLoi.Name = "grvDanhSachLoi";
+            this.grvDanhSachLoi.OptionsCustomization.AllowMergedGrouping = DevExpress.Utils.DefaultBoolean.True;
             // 
-            // tenQN
+            // gridColumn1
             // 
-            this.tenQN.Caption = "Tên học viên";
-            this.tenQN.FieldName = "tenQN";
-            this.tenQN.MinWidth = 25;
-            this.tenQN.Name = "tenQN";
-            this.tenQN.Visible = true;
-            this.tenQN.VisibleIndex = 0;
-            this.tenQN.Width = 94;
+            this.gridColumn1.AppearanceCell.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridColumn1.AppearanceCell.Options.UseFont = true;
+            this.gridColumn1.Caption = "Tên quân nhân";
+            this.gridColumn1.FieldName = "TenQN";
+            this.gridColumn1.MinWidth = 25;
+            this.gridColumn1.Name = "gridColumn1";
+            this.gridColumn1.Visible = true;
+            this.gridColumn1.VisibleIndex = 0;
+            this.gridColumn1.Width = 94;
             // 
-            // tenViPham
+            // gridColumn2
             // 
-            this.tenViPham.Caption = "Loại lỗi";
-            this.tenViPham.ColumnEdit = this.repositoryItemLookUpEdit1;
-            this.tenViPham.FieldName = "tenViPham";
-            this.tenViPham.MinWidth = 25;
-            this.tenViPham.Name = "tenViPham";
-            this.tenViPham.Visible = true;
-            this.tenViPham.VisibleIndex = 1;
-            this.tenViPham.Width = 94;
-            // 
-            // repositoryItemLookUpEdit1
-            // 
-            this.repositoryItemLookUpEdit1.AutoHeight = false;
-            this.repositoryItemLookUpEdit1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.repositoryItemLookUpEdit1.Name = "repositoryItemLookUpEdit1";
+            this.gridColumn2.AppearanceCell.Font = new System.Drawing.Font("Arial", 7.8F);
+            this.gridColumn2.AppearanceCell.Options.UseFont = true;
+            this.gridColumn2.Caption = "Loại vi phạm";
+            this.gridColumn2.FieldName = "TenViPham";
+            this.gridColumn2.MinWidth = 25;
+            this.gridColumn2.Name = "gridColumn2";
+            this.gridColumn2.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.True;
+            this.gridColumn2.Visible = true;
+            this.gridColumn2.VisibleIndex = 1;
+            this.gridColumn2.Width = 94;
             // 
             // frmListLoi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1092, 517);
-            this.Controls.Add(this.gridControl1);
+            this.Controls.Add(this.gcDanhSach);
             this.Name = "frmListLoi";
             this.Text = "Sổ lỗi";
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gcDanhSach)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grvDanhSachLoi)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private DevExpress.XtraGrid.GridControl gridControl1;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
-        private DevExpress.XtraGrid.Columns.GridColumn tenQN;
-        private DevExpress.XtraGrid.Columns.GridColumn tenViPham;
-        private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit repositoryItemLookUpEdit1;
+        private DevExpress.XtraGrid.GridControl gcDanhSach;
+        private DevExpress.XtraGrid.Views.Grid.GridView grvDanhSachLoi;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
     }
 }
