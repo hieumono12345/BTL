@@ -20,8 +20,8 @@ namespace BTL
             InitializeComponent();
             WindowState = FormWindowState.Maximized;
             manageLoi.Visible = true;
-            btnQLHocVien.Enabled = false;
-            OpenformDacQuyen(typeof(frmCatGac));
+            //btnQLHocVien.Enabled = false;
+            OpenformDacQuyen(typeof(frmPhanCongCV));
         }
         void OpenForm(Type typeForm)
         {
@@ -80,6 +80,16 @@ namespace BTL
         private void btnCatGac_ItemClick(object sender, ItemClickEventArgs e)
         {
             OpenForm(typeof(frmCatGac));
+        }
+
+        private void btnPhanCongCV_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            OpenForm(typeof(frmPhanCongCV));
+        }
+
+        private void btnPhanCongGac_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            OpenForm(typeof(frmPhanCongGac));
         }
     }
 }

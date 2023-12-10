@@ -63,6 +63,7 @@
     <Compile Include="DAO\QuanLyViPham.cs" />
     <Compile Include="DTO\ChiTietDanhSachCongViec.cs" />
     <Compile Include="DTO\ChiTietDanhSachGac.cs" />
+    <Compile Include="DTO\ChiTietQuanNhan.cs" />
     <Compile Include="DTO\ChucVu.cs" />
     <Compile Include="DTO\DanhSach.cs" />
     <Compile Include="DTO\DonVi.cs" />
@@ -101,6 +102,18 @@
     <Compile Include="frmListLoi.Designer.cs">
       <DependentUpon>frmListLoi.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmPhanCongCV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPhanCongCV.Designer.cs">
+      <DependentUpon>frmPhanCongCV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPhanCongGac.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPhanCongGac.Designer.cs">
+      <DependentUpon>frmPhanCongGac.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -132,6 +145,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmListLoi.resx">
       <DependentUpon>frmListLoi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPhanCongCV.resx">
+      <DependentUpon>frmPhanCongCV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPhanCongGac.resx">
+      <DependentUpon>frmPhanCongGac.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
