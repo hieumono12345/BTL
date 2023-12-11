@@ -47,9 +47,6 @@
             this.panelControl3 = new DevExpress.XtraEditors.PanelControl();
             this.simpleButton5 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
-            this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
-            this.textBox17 = new System.Windows.Forms.TextBox();
-            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.panelControl11 = new DevExpress.XtraEditors.PanelControl();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
@@ -57,11 +54,15 @@
             this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.panelControl10 = new DevExpress.XtraEditors.PanelControl();
+            this.textBox17 = new System.Windows.Forms.TextBox();
+            this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.timeEdit2 = new DevExpress.XtraEditors.TimeEdit();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.dateEdit1 = new DevExpress.XtraEditors.DateEdit();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl11 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl13 = new DevExpress.XtraEditors.LabelControl();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.gcDanhSachGac)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvDanhSachGac)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
@@ -72,8 +73,6 @@
             this.panelControl7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).BeginInit();
             this.panelControl3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
-            this.panelControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl11)).BeginInit();
             this.panelControl11.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl8)).BeginInit();
@@ -83,6 +82,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.timeEdit2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
             // 
             // labelControl2
@@ -238,7 +238,6 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelControl7.Controls.Add(this.panelControl3);
-            this.panelControl7.Controls.Add(this.panelControl2);
             this.panelControl7.Controls.Add(this.panelControl11);
             this.panelControl7.Controls.Add(this.panelControl8);
             this.panelControl7.Controls.Add(this.panelControl10);
@@ -277,32 +276,6 @@
             this.simpleButton3.Size = new System.Drawing.Size(186, 43);
             this.simpleButton3.TabIndex = 20;
             this.simpleButton3.Text = "Xác nhận";
-            // 
-            // panelControl2
-            // 
-            this.panelControl2.Controls.Add(this.textBox17);
-            this.panelControl2.Controls.Add(this.labelControl1);
-            this.panelControl2.Location = new System.Drawing.Point(91, 306);
-            this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(531, 83);
-            this.panelControl2.TabIndex = 19;
-            // 
-            // textBox17
-            // 
-            this.textBox17.Location = new System.Drawing.Point(239, 33);
-            this.textBox17.Name = "textBox17";
-            this.textBox17.Size = new System.Drawing.Size(269, 23);
-            this.textBox17.TabIndex = 18;
-            // 
-            // labelControl1
-            // 
-            this.labelControl1.Appearance.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl1.Appearance.Options.UseFont = true;
-            this.labelControl1.Location = new System.Drawing.Point(25, 30);
-            this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(195, 26);
-            this.labelControl1.TabIndex = 17;
-            this.labelControl1.Text = "Địa điểm thực hiện:";
             // 
             // panelControl11
             // 
@@ -360,14 +333,35 @@
             // 
             // panelControl10
             // 
+            this.panelControl10.Controls.Add(this.numericUpDown1);
+            this.panelControl10.Controls.Add(this.textBox17);
+            this.panelControl10.Controls.Add(this.labelControl4);
             this.panelControl10.Controls.Add(this.timeEdit2);
+            this.panelControl10.Controls.Add(this.labelControl1);
             this.panelControl10.Controls.Add(this.dateEdit1);
             this.panelControl10.Controls.Add(this.labelControl3);
             this.panelControl10.Controls.Add(this.labelControl11);
             this.panelControl10.Location = new System.Drawing.Point(91, 83);
             this.panelControl10.Name = "panelControl10";
-            this.panelControl10.Size = new System.Drawing.Size(531, 192);
+            this.panelControl10.Size = new System.Drawing.Size(531, 314);
             this.panelControl10.TabIndex = 10;
+            // 
+            // textBox17
+            // 
+            this.textBox17.Location = new System.Drawing.Point(239, 201);
+            this.textBox17.Name = "textBox17";
+            this.textBox17.Size = new System.Drawing.Size(269, 23);
+            this.textBox17.TabIndex = 18;
+            // 
+            // labelControl4
+            // 
+            this.labelControl4.Appearance.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl4.Appearance.Options.UseFont = true;
+            this.labelControl4.Location = new System.Drawing.Point(25, 259);
+            this.labelControl4.Name = "labelControl4";
+            this.labelControl4.Size = new System.Drawing.Size(104, 26);
+            this.labelControl4.TabIndex = 19;
+            this.labelControl4.Text = "Số lượng :";
             // 
             // timeEdit2
             // 
@@ -378,6 +372,16 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.timeEdit2.Size = new System.Drawing.Size(269, 24);
             this.timeEdit2.TabIndex = 25;
+            // 
+            // labelControl1
+            // 
+            this.labelControl1.Appearance.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl1.Appearance.Options.UseFont = true;
+            this.labelControl1.Location = new System.Drawing.Point(25, 198);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(195, 26);
+            this.labelControl1.TabIndex = 17;
+            this.labelControl1.Text = "Địa điểm thực hiện:";
             // 
             // dateEdit1
             // 
@@ -421,6 +425,13 @@
             this.labelControl13.TabIndex = 1;
             this.labelControl13.Text = "NHẬP THÔNG TIN CÔNG VIỆC";
             // 
+            // numericUpDown1
+            // 
+            this.numericUpDown1.Location = new System.Drawing.Point(239, 265);
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(269, 23);
+            this.numericUpDown1.TabIndex = 26;
+            // 
             // frmPhanCongCV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -442,9 +453,6 @@
             this.panelControl7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).EndInit();
             this.panelControl3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
-            this.panelControl2.ResumeLayout(false);
-            this.panelControl2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl11)).EndInit();
             this.panelControl11.ResumeLayout(false);
             this.panelControl11.PerformLayout();
@@ -457,6 +465,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.timeEdit2.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -489,12 +498,13 @@
         private DevExpress.XtraEditors.SimpleButton simpleButton1;
         private DevExpress.XtraEditors.PanelControl panelControl3;
         private DevExpress.XtraEditors.SimpleButton simpleButton5;
-        private DevExpress.XtraEditors.PanelControl panelControl2;
         private System.Windows.Forms.TextBox textBox17;
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraEditors.TimeEdit timeEdit2;
         private DevExpress.XtraEditors.DateEdit dateEdit1;
         private DevExpress.XtraEditors.LabelControl labelControl3;
         private DevExpress.XtraEditors.LabelControl labelControl11;
+        private DevExpress.XtraEditors.LabelControl labelControl4;
+        private System.Windows.Forms.NumericUpDown numericUpDown1;
     }
 }

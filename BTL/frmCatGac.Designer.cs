@@ -301,9 +301,9 @@
             this.labelControl9.Appearance.Options.UseFont = true;
             this.labelControl9.Location = new System.Drawing.Point(45, 28);
             this.labelControl9.Name = "labelControl9";
-            this.labelControl9.Size = new System.Drawing.Size(109, 26);
+            this.labelControl9.Size = new System.Drawing.Size(115, 26);
             this.labelControl9.TabIndex = 17;
-            this.labelControl9.Text = "Đơn vị gác";
+            this.labelControl9.Text = "Đội trưởng:";
             // 
             // panelControl8
             // 

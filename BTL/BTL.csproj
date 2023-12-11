@@ -78,6 +78,12 @@
     <Compile Include="DTO\TK_Quyen.cs" />
     <Compile Include="DTO\UuTien.cs" />
     <Compile Include="DTO\ViPham.cs" />
+    <Compile Include="frmCatCuCV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCatCuCV.Designer.cs">
+      <DependentUpon>frmCatCuCV.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmCatGac.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -114,6 +120,18 @@
     <Compile Include="frmPhanCongGac.Designer.cs">
       <DependentUpon>frmPhanCongGac.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmThongBaoCV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmThongBaoCV.Designer.cs">
+      <DependentUpon>frmThongBaoCV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmThongBaoGac.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmThongBaoGac.Designer.cs">
+      <DependentUpon>frmThongBaoGac.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -134,6 +152,9 @@
     <Compile Include="XtraForm1.Designer.cs">
       <DependentUpon>XtraForm1.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="frmCatCuCV.resx">
+      <DependentUpon>frmCatCuCV.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmCatGac.resx">
       <DependentUpon>frmCatGac.cs</DependentUpon>
     </EmbeddedResource>
@@ -151,6 +172,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmPhanCongGac.resx">
       <DependentUpon>frmPhanCongGac.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmThongBaoCV.resx">
+      <DependentUpon>frmThongBaoCV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmThongBaoGac.resx">
+      <DependentUpon>frmThongBaoGac.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>

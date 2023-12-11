@@ -11,12 +11,17 @@ using System.Windows.Forms;
 
 namespace BTL
 {
-    public partial class frmPhanCongCV : DevExpress.XtraEditors.XtraForm
+    public partial class frmThongBaoGac : DevExpress.XtraEditors.XtraForm
     {
-        public frmPhanCongCV()
+        public frmThongBaoGac()
         {
             InitializeComponent();
         }
 
+        private void simpleButton8_Click(object sender, EventArgs e)
+        {
+            frmCatGac frmCatGac = new frmCatGac();
+            frmCatGac.ShowDialog();
+        }
     }
 }

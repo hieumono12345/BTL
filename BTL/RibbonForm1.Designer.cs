@@ -54,6 +54,7 @@
             this.btnPhanCongGac = new DevExpress.XtraBars.BarButtonItem();
             this.btnPhanCongCV = new DevExpress.XtraBars.BarButtonItem();
             this.btnDieuChinhCaGac = new DevExpress.XtraBars.BarButtonItem();
+            this.barStaticItem2 = new DevExpress.XtraBars.BarStaticItem();
             this.System = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
@@ -77,7 +78,6 @@
             this.btnThongKe = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage3 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup11 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.barStaticItem2 = new DevExpress.XtraBars.BarStaticItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.documentManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedView1)).BeginInit();
@@ -123,7 +123,7 @@
             this.ribbonPage1,
             this.manageQN,
             this.manageLoi});
-            this.ribbon.Size = new System.Drawing.Size(1125, 181);
+            this.ribbon.Size = new System.Drawing.Size(1217, 181);
             this.ribbon.StatusBar = this.ribbonStatusBar;
             // 
             // btnInFoUser
@@ -241,6 +241,7 @@
             this.btnThongBaoGac.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnThongBaoGac.ImageOptions.Image")));
             this.btnThongBaoGac.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnThongBaoGac.ImageOptions.LargeImage")));
             this.btnThongBaoGac.Name = "btnThongBaoGac";
+            this.btnThongBaoGac.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnThongBaoGac_ItemClick);
             // 
             // barStaticItem1
             // 
@@ -255,6 +256,7 @@
             this.btnThongBaoCongViec.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnThongBaoCongViec.ImageOptions.Image")));
             this.btnThongBaoCongViec.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnThongBaoCongViec.ImageOptions.LargeImage")));
             this.btnThongBaoCongViec.Name = "btnThongBaoCongViec";
+            this.btnThongBaoCongViec.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnThongBaoCongViec_ItemClick);
             // 
             // btnPhanCongGac
             // 
@@ -281,6 +283,12 @@
             this.btnDieuChinhCaGac.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnDieuChinhCaGac.ImageOptions.Image")));
             this.btnDieuChinhCaGac.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnDieuChinhCaGac.ImageOptions.LargeImage")));
             this.btnDieuChinhCaGac.Name = "btnDieuChinhCaGac";
+            // 
+            // barStaticItem2
+            // 
+            this.barStaticItem2.Caption = "Chương trình hỗ trợ cắt cử công việc bán tự động";
+            this.barStaticItem2.Id = 25;
+            this.barStaticItem2.Name = "barStaticItem2";
             // 
             // System
             // 
@@ -400,10 +408,10 @@
             // ribbonStatusBar
             // 
             this.ribbonStatusBar.ItemLinks.Add(this.barStaticItem2);
-            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 616);
+            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 662);
             this.ribbonStatusBar.Name = "ribbonStatusBar";
             this.ribbonStatusBar.Ribbon = this.ribbon;
-            this.ribbonStatusBar.Size = new System.Drawing.Size(1125, 30);
+            this.ribbonStatusBar.Size = new System.Drawing.Size(1217, 30);
             // 
             // documentManager1
             // 
@@ -428,15 +436,9 @@
             // 
             this.ribbonPageGroup11.Name = "ribbonPageGroup11";
             // 
-            // barStaticItem2
-            // 
-            this.barStaticItem2.Caption = "Chương trình hỗ trợ cắt cử công việc bán tự động";
-            this.barStaticItem2.Id = 25;
-            this.barStaticItem2.Name = "barStaticItem2";
-            // 
             // frmMain
             // 
-            this.ClientSize = new System.Drawing.Size(1125, 646);
+            this.ClientSize = new System.Drawing.Size(1217, 692);
             this.Controls.Add(this.ribbonStatusBar);
             this.Controls.Add(this.ribbon);
             this.IsMdiContainer = true;

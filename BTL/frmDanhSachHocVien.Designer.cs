@@ -119,6 +119,7 @@
             this.MaQN.MaxWidth = 150;
             this.MaQN.MinWidth = 100;
             this.MaQN.Name = "MaQN";
+            this.MaQN.OptionsColumn.AllowEdit = false;
             this.MaQN.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.True;
             this.MaQN.Visible = true;
             this.MaQN.VisibleIndex = 0;
@@ -131,6 +132,7 @@
             this.TenQN.MaxWidth = 500;
             this.TenQN.MinWidth = 25;
             this.TenQN.Name = "TenQN";
+            this.TenQN.OptionsColumn.AllowEdit = false;
             this.TenQN.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.True;
             this.TenQN.Visible = true;
             this.TenQN.VisibleIndex = 1;
@@ -143,6 +145,7 @@
             this.TenDV.MaxWidth = 275;
             this.TenDV.MinWidth = 25;
             this.TenDV.Name = "TenDV";
+            this.TenDV.OptionsColumn.AllowEdit = false;
             this.TenDV.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.True;
             this.TenDV.Visible = true;
             this.TenDV.VisibleIndex = 2;
@@ -155,6 +158,7 @@
             this.TenCV.MaxWidth = 275;
             this.TenCV.MinWidth = 25;
             this.TenCV.Name = "TenCV";
+            this.TenCV.OptionsColumn.AllowEdit = false;
             this.TenCV.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.True;
             this.TenCV.Visible = true;
             this.TenCV.VisibleIndex = 3;
@@ -164,7 +168,7 @@
             // 
             this.gridColumn1.Caption = "Chi tiết";
             this.gridColumn1.ColumnEdit = this.btnDetail;
-            this.gridColumn1.MaxWidth = 50;
+            this.gridColumn1.MaxWidth = 70;
             this.gridColumn1.MinWidth = 25;
             this.gridColumn1.Name = "gridColumn1";
             this.gridColumn1.Visible = true;
