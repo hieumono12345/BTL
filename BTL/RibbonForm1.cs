@@ -19,7 +19,6 @@ namespace BTL
         {
             InitializeComponent();
             WindowState = FormWindowState.Maximized;
-            manageLoi.Visible = true;
             //btnQLHocVien.Enabled = false;
             OpenformDacQuyen(typeof(frmThongBaoGac));
         }
@@ -100,6 +99,11 @@ namespace BTL
         private void btnThongBaoCongViec_ItemClick(object sender, ItemClickEventArgs e)
         {
             OpenForm(typeof(frmThongBaoCV));
+        }
+
+        private void btnCatCuCV_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            OpenForm(typeof(frmCatCuCV));
         }
     }
 }
