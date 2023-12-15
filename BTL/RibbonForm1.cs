@@ -13,7 +13,7 @@ using System.Windows.Forms;
 
 namespace BTL
 {
-    public partial class frmMain : DevExpress.XtraBars.Ribbon.RibbonForm
+    public partial class frmMain : DevExpress.XtraEditors.XtraForm
     {
         public frmMain()
         {

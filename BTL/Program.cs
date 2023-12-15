@@ -19,7 +19,7 @@ namespace BTL
             
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmPhanCongCV());
+            Application.Run(new frmPhanCongGac());
         }
     }
 }

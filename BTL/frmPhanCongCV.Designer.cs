@@ -64,11 +64,11 @@
             this.cbSua = new DevExpress.XtraEditors.CheckEdit();
             this.Ngay = new DevExpress.XtraEditors.DateEdit();
             this.cbThem = new DevExpress.XtraEditors.CheckEdit();
-            this.txtMaCV = new System.Windows.Forms.TextBox();
             this.nbSoL = new System.Windows.Forms.NumericUpDown();
             this.txtDiaDiem = new System.Windows.Forms.TextBox();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.ThoiGian = new DevExpress.XtraEditors.TimeEdit();
+            this.txtMaCV = new System.Windows.Forms.TextBox();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl11 = new DevExpress.XtraEditors.LabelControl();
@@ -380,11 +380,11 @@
             this.panelControl10.Controls.Add(this.cbSua);
             this.panelControl10.Controls.Add(this.Ngay);
             this.panelControl10.Controls.Add(this.cbThem);
-            this.panelControl10.Controls.Add(this.txtMaCV);
             this.panelControl10.Controls.Add(this.nbSoL);
             this.panelControl10.Controls.Add(this.txtDiaDiem);
             this.panelControl10.Controls.Add(this.labelControl4);
             this.panelControl10.Controls.Add(this.ThoiGian);
+            this.panelControl10.Controls.Add(this.txtMaCV);
             this.panelControl10.Controls.Add(this.labelControl1);
             this.panelControl10.Controls.Add(this.labelControl3);
             this.panelControl10.Controls.Add(this.labelControl11);
@@ -395,7 +395,7 @@
             // 
             // cbSua
             // 
-            this.cbSua.Location = new System.Drawing.Point(397, 8);
+            this.cbSua.Location = new System.Drawing.Point(25, 8);
             this.cbSua.Name = "cbSua";
             this.cbSua.Properties.Caption = "cbSua";
             this.cbSua.Size = new System.Drawing.Size(87, 20);
@@ -418,20 +418,12 @@
             // 
             // cbThem
             // 
-            this.cbThem.Location = new System.Drawing.Point(304, 8);
+            this.cbThem.Location = new System.Drawing.Point(118, 8);
             this.cbThem.Name = "cbThem";
             this.cbThem.Properties.Caption = "cbThem";
             this.cbThem.Size = new System.Drawing.Size(87, 20);
             this.cbThem.TabIndex = 28;
             this.cbThem.Visible = false;
-            // 
-            // txtMaCV
-            // 
-            this.txtMaCV.Location = new System.Drawing.Point(5, 5);
-            this.txtMaCV.Name = "txtMaCV";
-            this.txtMaCV.Size = new System.Drawing.Size(269, 23);
-            this.txtMaCV.TabIndex = 27;
-            this.txtMaCV.Visible = false;
             // 
             // nbSoL
             // 
@@ -471,6 +463,14 @@
             this.ThoiGian.Properties.EditFormat.FormatString = "HH:mm";
             this.ThoiGian.Size = new System.Drawing.Size(269, 24);
             this.ThoiGian.TabIndex = 25;
+            // 
+            // txtMaCV
+            // 
+            this.txtMaCV.Location = new System.Drawing.Point(239, 7);
+            this.txtMaCV.Name = "txtMaCV";
+            this.txtMaCV.Size = new System.Drawing.Size(269, 23);
+            this.txtMaCV.TabIndex = 27;
+            this.txtMaCV.Visible = false;
             // 
             // labelControl1
             // 

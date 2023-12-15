@@ -41,8 +41,6 @@ namespace BTL
             cbSua.Checked = false;
             cbThem.Checked = false;
             disenableTatCa();
-
-
         }
 
         void enableTatCa()
