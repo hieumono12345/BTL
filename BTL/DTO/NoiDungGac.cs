@@ -29,7 +29,7 @@ namespace BTL.DTO
             this.TenDV= row["TenDV"].ToString();
             this.Dap= row["Dap"].ToString();
             this.NhacNho = row["NhacNho"].ToString();
-            this.STTGac = (bool)row["STTGac"];
+            //this.STTGac = (bool)row["STTGac"];
         }
 
         private int _MaGac;

@@ -1,6 +1,7 @@
 ﻿using BTL.DAO;
 using BTL.DTO;
 using DevExpress.XtraEditors;
+using DevExpress.XtraGrid;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -22,6 +23,7 @@ namespace BTL
 {
     public partial class frmPhanCongCV : DevExpress.XtraEditors.XtraForm
     {
+        //cbDV.DataSource = DAO.QuanLyDonVi.Instance.getListDonVi();
         public frmPhanCongCV()
         {
             InitializeComponent();
@@ -33,8 +35,15 @@ namespace BTL
         private void frmDanhSachQN_Load(object sender, EventArgs e)
         {
             //gcDanhSachQN.DataSource = QuanLyQnDAO.Instance.getDanhSachQN();
+            loadDS();
             btnDetail.Click += BtnDetail_Click;
         }
+        void loadDS()
+        {
+            gridControl1.DataSource = QuanLyPhanCongCV.Instance.LayToanBoCVChuaHoanThanh();
+        }
+
+
 
         private void BtnDetail_Click(object sender, EventArgs e)
         {
@@ -76,6 +85,7 @@ namespace BTL
         void loadCbDV()
         {
             cbDV.DataSource = DAO.QuanLyDonVi.Instance.getListDonVi();
+            cbDV.DataSource = DAO.QuanLyDonVi.Instance.getListDonVi();
             cbDV.DisplayMember = "TenDV";
             cbDV.ValueMember = "MaDV";
         }
@@ -88,7 +98,10 @@ namespace BTL
             }
             if (cbThem.Checked == true)
             {
-                MessageBox.Show(Ngay.Text + nbSoL.ToString() + txtGhiChu.Text + txtDiaDiem.Text + ThoiGian.Text + cbDV.SelectedValue.ToString(), "Thêm");
+                bool a = QuanLyPhanCongCV.Instance.themCongViec(Ngay.Text,txtNoiDung.Text, ThoiGian.Text, (Int32)cbDV.SelectedValue, (int)nbSoL.Value, txtDiaDiem.Text, txtGhiChu.Text); 
+                loadDS();
+                //                                       Ngay,   NoidungCV,        TGThucHien,        maDV,                soLuong,  DiaDiem,        nhacNho
+                //MessageBox.Show(Ngay.Text + nbSoL.ToString() + txtGhiChu.Text + txtDiaDiem.Text + ThoiGian.Text + cbDV.SelectedValue.ToString(), "Thêm");
             }
 
         }

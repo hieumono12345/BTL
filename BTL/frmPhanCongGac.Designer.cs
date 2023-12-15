@@ -53,8 +53,6 @@
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.panelControl7 = new DevExpress.XtraEditors.PanelControl();
             this.pcThem = new DevExpress.XtraEditors.PanelControl();
-            this.pcSua = new DevExpress.XtraEditors.PanelControl();
-            this.btnXacNhanSua = new DevExpress.XtraEditors.SimpleButton();
             this.btnThemLichGac = new DevExpress.XtraEditors.SimpleButton();
             this.panelControl11 = new DevExpress.XtraEditors.PanelControl();
             this.cbDV = new System.Windows.Forms.ComboBox();
@@ -73,6 +71,8 @@
             this.txtMaGac = new System.Windows.Forms.TextBox();
             this.labelControl15 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl13 = new DevExpress.XtraEditors.LabelControl();
+            this.cbSua = new DevExpress.XtraEditors.CheckEdit();
+            this.cbThem = new DevExpress.XtraEditors.CheckEdit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gcDanhSachGac)).BeginInit();
@@ -82,8 +82,6 @@
             this.panelControl7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcThem)).BeginInit();
             this.pcThem.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pcSua)).BeginInit();
-            this.pcSua.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl11)).BeginInit();
             this.panelControl11.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl8)).BeginInit();
@@ -92,6 +90,8 @@
             this.panelControl10.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl9)).BeginInit();
             this.panelControl9.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cbSua.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbThem.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // panelControl1
@@ -304,32 +304,11 @@
             // pcThem
             // 
             this.pcThem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.pcThem.Controls.Add(this.pcSua);
             this.pcThem.Controls.Add(this.btnThemLichGac);
             this.pcThem.Location = new System.Drawing.Point(91, 734);
             this.pcThem.Name = "pcThem";
             this.pcThem.Size = new System.Drawing.Size(531, 50);
             this.pcThem.TabIndex = 25;
-            // 
-            // pcSua
-            // 
-            this.pcSua.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.pcSua.Controls.Add(this.btnXacNhanSua);
-            this.pcSua.Location = new System.Drawing.Point(0, 0);
-            this.pcSua.Name = "pcSua";
-            this.pcSua.Size = new System.Drawing.Size(531, 50);
-            this.pcSua.TabIndex = 25;
-            // 
-            // btnXacNhanSua
-            // 
-            this.btnXacNhanSua.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnXacNhanSua.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnXacNhanSua.ImageOptions.Image")));
-            this.btnXacNhanSua.Location = new System.Drawing.Point(178, 5);
-            this.btnXacNhanSua.Name = "btnXacNhanSua";
-            this.btnXacNhanSua.Size = new System.Drawing.Size(186, 43);
-            this.btnXacNhanSua.TabIndex = 20;
-            this.btnXacNhanSua.Text = "Xác nhận sửa";
-            this.btnXacNhanSua.Click += new System.EventHandler(this.btnXacNhan_Click);
             // 
             // btnThemLichGac
             // 
@@ -339,7 +318,7 @@
             this.btnThemLichGac.Name = "btnThemLichGac";
             this.btnThemLichGac.Size = new System.Drawing.Size(186, 43);
             this.btnThemLichGac.TabIndex = 20;
-            this.btnThemLichGac.Text = "Xác nhận thêm ";
+            this.btnThemLichGac.Text = "Xác nhận";
             this.btnThemLichGac.Click += new System.EventHandler(this.btnThemLichGac_Click);
             // 
             // panelControl11
@@ -400,6 +379,8 @@
             // 
             // panelControl10
             // 
+            this.panelControl10.Controls.Add(this.cbSua);
+            this.panelControl10.Controls.Add(this.cbThem);
             this.panelControl10.Controls.Add(this.dateTimePicker1);
             this.panelControl10.Controls.Add(this.labelControl11);
             this.panelControl10.Location = new System.Drawing.Point(91, 83);
@@ -505,6 +486,24 @@
             this.labelControl13.TabIndex = 1;
             this.labelControl13.Text = "THÔNG TIN GÁC";
             // 
+            // cbSua
+            // 
+            this.cbSua.Location = new System.Drawing.Point(211, 90);
+            this.cbSua.Name = "cbSua";
+            this.cbSua.Properties.Caption = "cbSua";
+            this.cbSua.Size = new System.Drawing.Size(87, 20);
+            this.cbSua.TabIndex = 33;
+            this.cbSua.Visible = false;
+            // 
+            // cbThem
+            // 
+            this.cbThem.Location = new System.Drawing.Point(304, 90);
+            this.cbThem.Name = "cbThem";
+            this.cbThem.Properties.Caption = "cbThem";
+            this.cbThem.Size = new System.Drawing.Size(87, 20);
+            this.cbThem.TabIndex = 32;
+            this.cbThem.Visible = false;
+            // 
             // frmPhanCongGac
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -525,8 +524,6 @@
             this.panelControl7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcThem)).EndInit();
             this.pcThem.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pcSua)).EndInit();
-            this.pcSua.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl11)).EndInit();
             this.panelControl11.ResumeLayout(false);
             this.panelControl11.PerformLayout();
@@ -539,6 +536,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl9)).EndInit();
             this.panelControl9.ResumeLayout(false);
             this.panelControl9.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cbSua.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbThem.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -571,8 +570,6 @@
         private DevExpress.XtraEditors.LabelControl labelControl13;
         private DevExpress.XtraEditors.SimpleButton btnXoa;
         private System.Windows.Forms.ComboBox cbDV;
-        private DevExpress.XtraEditors.PanelControl pcSua;
-        private DevExpress.XtraEditors.SimpleButton btnXacNhanSua;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit btnDetail;
         private DevExpress.XtraEditors.SimpleButton btnThem;
@@ -584,5 +581,7 @@
         private DevExpress.XtraEditors.SimpleButton btnThemLichGac;
         private DevExpress.XtraEditors.SimpleButton simpleButton3;
         private System.Windows.Forms.TextBox txtDap;
+        private DevExpress.XtraEditors.CheckEdit cbSua;
+        private DevExpress.XtraEditors.CheckEdit cbThem;
     }
 }

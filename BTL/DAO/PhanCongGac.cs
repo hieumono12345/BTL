@@ -25,7 +25,7 @@ namespace BTL.DAO
         
         public DataTable getDSDaPhanCongTrongThang()
         {
-            DataTable data= DataProvider.Instance.ExecuteQuery("SELECT ROW_NUMBER() OVER (ORDER BY MaGac) AS 'STT',a.Dap,a.Hoi,a.MaGac,a.Ngay,a.NhacNho,a.STTGac,b.TenDV from NoiDungGac a, DonVi b where a.MaDV=b.MaDV");
+            DataTable data= DataProvider.Instance.ExecuteQuery("SELECT ROW_NUMBER() OVER (ORDER BY MaGac) AS 'STT',a.Dap,a.Hoi,a.MaGac,a.Ngay,a.NhacNho,b.TenDV from NoiDungGac a, DonVi b where a.MaDV=b.MaDV");
             return data;
         }
         public NoiDungGac getNoiDungGac(int id)
@@ -33,7 +33,7 @@ namespace BTL.DAO
             
             List<NoiDungGac> list = new List<NoiDungGac>();
 
-            string query = "SELECT ROW_NUMBER() OVER (ORDER BY MaGac) AS 'STT',a.Dap,a.Hoi,a.MaGac,a.Ngay,a.NhacNho,a.STTGac,b.TenDV from NoiDungGac a, DonVi b where a.MaDV=b.MaDV and a.MaGac=" + id;
+            string query = "SELECT ROW_NUMBER() OVER (ORDER BY MaGac) AS 'STT',a.Dap,a.Hoi,a.MaGac,a.Ngay,a.NhacNho,b.TenDV from NoiDungGac a, DonVi b where a.MaDV=b.MaDV and a.MaGac=" + id;
 
             DataTable data = DataProvider.Instance.ExecuteQuery(query);
 

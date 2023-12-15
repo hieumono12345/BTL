@@ -241,7 +241,6 @@
             this.panelControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelControl1.Controls.Add(this.panelControl7);
             this.panelControl1.Controls.Add(this.panelControl6);
             this.panelControl1.Controls.Add(this.panelControl5);
             this.panelControl1.Controls.Add(this.panelControl4);
@@ -264,7 +263,7 @@
             this.panelControl7.Controls.Add(this.panelControl10);
             this.panelControl7.Controls.Add(this.panelControl9);
             this.panelControl7.Controls.Add(this.labelControl13);
-            this.panelControl7.Location = new System.Drawing.Point(0, 0);
+            this.panelControl7.Location = new System.Drawing.Point(1208, 12);
             this.panelControl7.Name = "panelControl7";
             this.panelControl7.Size = new System.Drawing.Size(643, 796);
             this.panelControl7.TabIndex = 10;
@@ -936,6 +935,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1863, 820);
+            this.Controls.Add(this.panelControl7);
             this.Controls.Add(this.panelControl12);
             this.Controls.Add(this.simpleButton2);
             this.Controls.Add(this.simpleButton1);

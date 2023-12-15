@@ -39,7 +39,7 @@
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.NgayGac = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.NoiDungCV = new DevExpress.XtraGrid.Columns.GridColumn();
             this.DaiDoi = new DevExpress.XtraGrid.Columns.GridColumn();
             this.Hoi = new DevExpress.XtraGrid.Columns.GridColumn();
             this.Dap = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -61,6 +61,8 @@
             this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
             this.txtGhiChu = new System.Windows.Forms.RichTextBox();
             this.panelControl10 = new DevExpress.XtraEditors.PanelControl();
+            this.txtNoiDung = new System.Windows.Forms.TextBox();
+            this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
             this.cbSua = new DevExpress.XtraEditors.CheckEdit();
             this.Ngay = new DevExpress.XtraEditors.DateEdit();
             this.cbThem = new DevExpress.XtraEditors.CheckEdit();
@@ -138,7 +140,7 @@
             // 
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.gridColumn3,
-            this.NgayGac,
+            this.NoiDungCV,
             this.DaiDoi,
             this.Hoi,
             this.Dap,
@@ -159,17 +161,17 @@
             this.gridColumn3.Visible = true;
             this.gridColumn3.VisibleIndex = 0;
             // 
-            // NgayGac
+            // NoiDungCV
             // 
-            this.NgayGac.Caption = "Nội dung công việc";
-            this.NgayGac.FieldName = "NoiDungCV";
-            this.NgayGac.MinWidth = 25;
-            this.NgayGac.Name = "NgayGac";
-            this.NgayGac.OptionsColumn.AllowEdit = false;
-            this.NgayGac.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.True;
-            this.NgayGac.Visible = true;
-            this.NgayGac.VisibleIndex = 2;
-            this.NgayGac.Width = 94;
+            this.NoiDungCV.Caption = "Nội dung công việc";
+            this.NoiDungCV.FieldName = "NoiDung";
+            this.NoiDungCV.MinWidth = 25;
+            this.NoiDungCV.Name = "NoiDungCV";
+            this.NoiDungCV.OptionsColumn.AllowEdit = false;
+            this.NoiDungCV.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.True;
+            this.NoiDungCV.Visible = true;
+            this.NoiDungCV.VisibleIndex = 2;
+            this.NoiDungCV.Width = 94;
             // 
             // DaiDoi
             // 
@@ -186,6 +188,7 @@
             // Hoi
             // 
             this.Hoi.Caption = "Thời gian";
+            this.Hoi.FieldName = "TGDuKien";
             this.Hoi.MinWidth = 25;
             this.Hoi.Name = "Hoi";
             this.Hoi.OptionsColumn.AllowEdit = false;
@@ -197,7 +200,7 @@
             // Dap
             // 
             this.Dap.Caption = "Ngày";
-            this.Dap.FieldName = "ngay";
+            this.Dap.FieldName = "Ngay";
             this.Dap.MinWidth = 25;
             this.Dap.Name = "Dap";
             this.Dap.OptionsColumn.AllowEdit = false;
@@ -237,7 +240,7 @@
             // gridColumn6
             // 
             this.gridColumn6.Caption = "Mã Công việc";
-            this.gridColumn6.FieldName = "MaCV";
+            this.gridColumn6.FieldName = "MaCongViec";
             this.gridColumn6.MinWidth = 25;
             this.gridColumn6.Name = "gridColumn6";
             this.gridColumn6.Width = 94;
@@ -377,6 +380,8 @@
             // 
             // panelControl10
             // 
+            this.panelControl10.Controls.Add(this.txtNoiDung);
+            this.panelControl10.Controls.Add(this.labelControl5);
             this.panelControl10.Controls.Add(this.cbSua);
             this.panelControl10.Controls.Add(this.Ngay);
             this.panelControl10.Controls.Add(this.cbThem);
@@ -392,6 +397,23 @@
             this.panelControl10.Name = "panelControl10";
             this.panelControl10.Size = new System.Drawing.Size(531, 314);
             this.panelControl10.TabIndex = 10;
+            // 
+            // txtNoiDung
+            // 
+            this.txtNoiDung.Location = new System.Drawing.Point(239, 155);
+            this.txtNoiDung.Name = "txtNoiDung";
+            this.txtNoiDung.Size = new System.Drawing.Size(269, 23);
+            this.txtNoiDung.TabIndex = 33;
+            // 
+            // labelControl5
+            // 
+            this.labelControl5.Appearance.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl5.Appearance.Options.UseFont = true;
+            this.labelControl5.Location = new System.Drawing.Point(25, 150);
+            this.labelControl5.Name = "labelControl5";
+            this.labelControl5.Size = new System.Drawing.Size(95, 26);
+            this.labelControl5.TabIndex = 32;
+            this.labelControl5.Text = "Nôi dung:";
             // 
             // cbSua
             // 
@@ -434,7 +456,7 @@
             // 
             // txtDiaDiem
             // 
-            this.txtDiaDiem.Location = new System.Drawing.Point(239, 196);
+            this.txtDiaDiem.Location = new System.Drawing.Point(239, 206);
             this.txtDiaDiem.Name = "txtDiaDiem";
             this.txtDiaDiem.Size = new System.Drawing.Size(269, 23);
             this.txtDiaDiem.TabIndex = 18;
@@ -452,7 +474,7 @@
             // ThoiGian
             // 
             this.ThoiGian.EditValue = new System.DateTime(2023, 12, 13, 0, 0, 0, 0);
-            this.ThoiGian.Location = new System.Drawing.Point(239, 125);
+            this.ThoiGian.Location = new System.Drawing.Point(239, 102);
             this.ThoiGian.Name = "ThoiGian";
             this.ThoiGian.Properties.Appearance.BackColor = System.Drawing.SystemColors.Window;
             this.ThoiGian.Properties.Appearance.Options.UseBackColor = true;
@@ -476,7 +498,7 @@
             // 
             this.labelControl1.Appearance.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl1.Appearance.Options.UseFont = true;
-            this.labelControl1.Location = new System.Drawing.Point(25, 191);
+            this.labelControl1.Location = new System.Drawing.Point(25, 201);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(96, 26);
             this.labelControl1.TabIndex = 17;
@@ -486,7 +508,7 @@
             // 
             this.labelControl3.Appearance.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl3.Appearance.Options.UseFont = true;
-            this.labelControl3.Location = new System.Drawing.Point(25, 121);
+            this.labelControl3.Location = new System.Drawing.Point(25, 98);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(106, 26);
             this.labelControl3.TabIndex = 24;
@@ -582,7 +604,7 @@
         private DevExpress.XtraGrid.GridControl gridControl1;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
-        private DevExpress.XtraGrid.Columns.GridColumn NgayGac;
+        private DevExpress.XtraGrid.Columns.GridColumn NoiDungCV;
         private DevExpress.XtraGrid.Columns.GridColumn DaiDoi;
         private DevExpress.XtraGrid.Columns.GridColumn Hoi;
         private DevExpress.XtraGrid.Columns.GridColumn Dap;
@@ -594,5 +616,7 @@
         private System.Windows.Forms.TextBox txtMaCV;
         private DevExpress.XtraEditors.DateEdit Ngay;
         private DevExpress.XtraEditors.CheckEdit cbSua;
+        private System.Windows.Forms.TextBox txtNoiDung;
+        private DevExpress.XtraEditors.LabelControl labelControl5;
     }
 }

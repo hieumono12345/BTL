@@ -70,8 +70,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DAO\DataProvider.cs" />
+    <Compile Include="DAO\LoadCombox.cs" />
     <Compile Include="DAO\PhanCongGac.cs" />
     <Compile Include="DAO\QuanLyDonVi.cs" />
+    <Compile Include="DAO\QuanLyPhanCongCV.cs" />
     <Compile Include="DAO\QuanLyQnDAO.cs" />
     <Compile Include="DAO\QuanLyViPham.cs" />
     <Compile Include="DTO\ChiTietDanhSachCongViec.cs" />
@@ -82,6 +84,7 @@
     <Compile Include="DTO\DonVi.cs" />
     <Compile Include="DTO\NoiDungCongViec.cs" />
     <Compile Include="DTO\NoiDungGac.cs" />
+    <Compile Include="DTO\QN.cs" />
     <Compile Include="DTO\QN_UuTien.cs" />
     <Compile Include="DTO\QN_ViPham.cs" />
     <Compile Include="DTO\QuanNhan.cs" />
@@ -102,6 +105,12 @@
     </Compile>
     <Compile Include="frmCatGac.Designer.cs">
       <DependentUpon>frmCatGac.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCatGacThuCong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCatGacThuCong.Designer.cs">
+      <DependentUpon>frmCatGacThuCong.cs</DependentUpon>
     </Compile>
     <Compile Include="frmDanhSachHocVien.cs">
       <SubType>Form</SubType>
@@ -188,6 +197,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmCatGac.resx">
       <DependentUpon>frmCatGac.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCatGacThuCong.resx">
+      <DependentUpon>frmCatGacThuCong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmDanhSachHocVien.resx">
       <DependentUpon>frmDanhSachHocVien.cs</DependentUpon>

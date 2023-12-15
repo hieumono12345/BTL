@@ -26,6 +26,8 @@ namespace BTL
         #region Các hàm dùng chung
         void Load()
         {
+            cbSua.Checked = false;
+            cbThem.Checked = false;
             loadDataLichGacTrongThang();    
             loadCbDV();
             disenableTatCa();
@@ -48,7 +50,6 @@ namespace BTL
             txtMaGac.Enabled = true;
             txtDap.Enabled = true;
             cbDV.Enabled = true;
-            btnXacNhanSua.Enabled = true;
         }
         void disenableTatCa()
         {
@@ -58,7 +59,6 @@ namespace BTL
             txtDap.Enabled = false;
             txtMaGac.Enabled = false;
             cbDV.Enabled = false;
-            btnXacNhanSua.Enabled = false;
             
         }
         void XoaTatCa()
@@ -91,38 +91,25 @@ namespace BTL
             txtNhacNho.Text = ndg.NhacNho;
             dateTimePicker1.Text = ndg.Ngay.ToString();
             cbDV.Text = ndg.TenDV.ToString();
-            disenableTatCa();
-            
-
+            disenableTatCa();  
+            cbThem.Checked = false;
+            cbSua.Checked = false;
         }
-        //Xác nhận sửa
-        private void btnXacNhan_Click(object sender, EventArgs e)
-        {
-            //MessageBox.Show(cbDV.SelectedValue.ToString()+"------"+ dateTimePicker1.Value.ToString("yyyy-MM-yy")+"----", "sss");
-            //bool a = PhanCongGac.Instance.themLichGac(dateTimePicker1.Value.ToString("yyyy-MM-yy"), txtHoi.Text, txtDap.Text, (int)cbDV.SelectedValue, txtNhacNho.Text);
-            bool a = true;
-            if (a)
-            {
-                MessageBox.Show("Thêm thành công", "Thông báo");
-                loadDataLichGacTrongThang();
-            }
-            else
-            {
-                MessageBox.Show("Xem ngày gác đã được phân công!!", "Thông báo");
-            }
-        }
+        
 
         //btnSua
         private void simpleButton2_Click(object sender, EventArgs e)
         {
-            pcSua.Visible = true;
+            cbThem.Checked = false;
+            cbSua.Checked = true;
             enableTatCa();
             
         }
         //btnThem
         private void btnThem_Click(object sender, EventArgs e)
         {
-            pcSua.Visible = false;
+            cbThem.Checked = true;
+            cbSua.Checked = false;
             enableTatCa();
             XoaTatCa();
             
@@ -131,7 +118,7 @@ namespace BTL
         private void btnThemLichGac_Click(object sender, EventArgs e)
         {
             //MessageBox.Show(  dateTimePicker1.Value.ToString("yyyy-MM-yy") +"--------"+dateTimePicker1.Text+ "----", "sss");
-             bool a = PhanCongGac.Instance.themLichGac(dateTimePicker1.Text.ToString(), txtHoi.Text, txtMaGac.Text, (int)cbDV.SelectedValue, txtNhacNho.Text);
+             bool a = PhanCongGac.Instance.themLichGac(dateTimePicker1.Text.ToString(), txtHoi.Text, txtDap.Text, (int)cbDV.SelectedValue, txtNhacNho.Text);
              if (a)
             {
                 MessageBox.Show("Thêm thành công", "Thông báo");
