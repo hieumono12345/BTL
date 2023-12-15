@@ -18,7 +18,7 @@ namespace BTL.DAO
         }
         private DataProvider() { }
 
-        private string connectionSTR = @"Data Source=NGUYENGIAHIEU\NGUYENGIAHIEU;Initial Catalog=QuanlyDaiDoi3;Integrated Security=True";
+        private string connectionSTR = @"Data Source=DUCMANH;Initial Catalog=QuanlyDaiDoi3;Integrated Security=True";
 
         public DataTable ExecuteQuery(string query, object[] parameter = null)
         {
