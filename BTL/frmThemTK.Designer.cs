@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions4 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions2 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmThemTK));
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject13 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject14 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject15 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject16 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject5 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject7 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject8 = new DevExpress.Utils.SerializableAppearanceObject();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.gcDanhSachTK = new DevExpress.XtraGrid.GridControl();
             this.gvDanhSachTK = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -52,7 +52,7 @@
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.panelControl7 = new DevExpress.XtraEditors.PanelControl();
             this.pcThem = new DevExpress.XtraEditors.PanelControl();
-            this.btnThemLichGac = new DevExpress.XtraEditors.SimpleButton();
+            this.btnXacNhan = new DevExpress.XtraEditors.SimpleButton();
             this.panelControl8 = new DevExpress.XtraEditors.PanelControl();
             this.cbSua = new DevExpress.XtraEditors.CheckEdit();
             this.cbThem = new DevExpress.XtraEditors.CheckEdit();
@@ -72,6 +72,7 @@
             this.labelControl14 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl15 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl13 = new DevExpress.XtraEditors.LabelControl();
+            this.cbQuyen = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gcDanhSachTK)).BeginInit();
@@ -202,9 +203,9 @@
             // btnDetail
             // 
             this.btnDetail.AutoHeight = false;
-            editorButtonImageOptions4.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions4.Image")));
+            editorButtonImageOptions2.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions2.Image")));
             this.btnDetail.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions4, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject13, serializableAppearanceObject14, serializableAppearanceObject15, serializableAppearanceObject16, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions2, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, serializableAppearanceObject6, serializableAppearanceObject7, serializableAppearanceObject8, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.btnDetail.Name = "btnDetail";
             this.btnDetail.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             // 
@@ -287,24 +288,26 @@
             // pcThem
             // 
             this.pcThem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.pcThem.Controls.Add(this.btnThemLichGac);
+            this.pcThem.Controls.Add(this.btnXacNhan);
             this.pcThem.Location = new System.Drawing.Point(91, 758);
             this.pcThem.Name = "pcThem";
             this.pcThem.Size = new System.Drawing.Size(531, 50);
             this.pcThem.TabIndex = 25;
             // 
-            // btnThemLichGac
+            // btnXacNhan
             // 
-            this.btnThemLichGac.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnThemLichGac.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnThemLichGac.ImageOptions.Image")));
-            this.btnThemLichGac.Location = new System.Drawing.Point(178, 5);
-            this.btnThemLichGac.Name = "btnThemLichGac";
-            this.btnThemLichGac.Size = new System.Drawing.Size(186, 43);
-            this.btnThemLichGac.TabIndex = 20;
-            this.btnThemLichGac.Text = "Xác nhận";
+            this.btnXacNhan.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnXacNhan.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnThemLichGac.ImageOptions.Image")));
+            this.btnXacNhan.Location = new System.Drawing.Point(178, 5);
+            this.btnXacNhan.Name = "btnXacNhan";
+            this.btnXacNhan.Size = new System.Drawing.Size(186, 43);
+            this.btnXacNhan.TabIndex = 20;
+            this.btnXacNhan.Text = "Xác nhận";
+            this.btnXacNhan.Click += new System.EventHandler(this.btnXacNhan_Click);
             // 
             // panelControl8
             // 
+            this.panelControl8.Controls.Add(this.cbQuyen);
             this.panelControl8.Controls.Add(this.cbSua);
             this.panelControl8.Controls.Add(this.cbThem);
             this.panelControl8.Controls.Add(this.ceAdmin);
@@ -336,7 +339,7 @@
             // 
             // ceAdmin
             // 
-            this.ceAdmin.Location = new System.Drawing.Point(217, 115);
+            this.ceAdmin.Location = new System.Drawing.Point(45, 195);
             this.ceAdmin.Name = "ceAdmin";
             this.ceAdmin.Properties.Caption = "Admin";
             this.ceAdmin.Size = new System.Drawing.Size(161, 20);
@@ -344,7 +347,7 @@
             // 
             // ceDaiDoi
             // 
-            this.ceDaiDoi.Location = new System.Drawing.Point(216, 76);
+            this.ceDaiDoi.Location = new System.Drawing.Point(44, 156);
             this.ceDaiDoi.Name = "ceDaiDoi";
             this.ceDaiDoi.Properties.Caption = "Đại đội";
             this.ceDaiDoi.Size = new System.Drawing.Size(161, 20);
@@ -352,7 +355,7 @@
             // 
             // ceTieuDoan
             // 
-            this.ceTieuDoan.Location = new System.Drawing.Point(217, 38);
+            this.ceTieuDoan.Location = new System.Drawing.Point(45, 118);
             this.ceTieuDoan.Name = "ceTieuDoan";
             this.ceTieuDoan.Properties.Caption = "Tiểu đoàn";
             this.ceTieuDoan.Size = new System.Drawing.Size(161, 20);
@@ -402,8 +405,8 @@
             this.cbChucVu.Location = new System.Drawing.Point(216, 95);
             this.cbChucVu.Name = "cbChucVu";
             this.cbChucVu.Size = new System.Drawing.Size(269, 24);
-            this.cbChucVu.TabIndex = 27; this.cbChucVu.SelectionChangeCommitted += new System.EventHandler(this.d);
-             
+            this.cbChucVu.TabIndex = 27;
+            this.cbChucVu.SelectionChangeCommitted += new System.EventHandler(this.d);
             // 
             // labelControl1
             // 
@@ -442,7 +445,7 @@
             this.cbDV.Name = "cbDV";
             this.cbDV.Size = new System.Drawing.Size(269, 24);
             this.cbDV.TabIndex = 18;
-             this.cbDV.SelectionChangeCommitted += new System.EventHandler(this.c); 
+            this.cbDV.SelectionChangeCommitted += new System.EventHandler(this.c);
             // 
             // txtMK
             // 
@@ -489,6 +492,15 @@
             this.labelControl13.Size = new System.Drawing.Size(183, 26);
             this.labelControl13.TabIndex = 1;
             this.labelControl13.Text = "THÔNG TIN GÁC";
+            // 
+            // cbQuyen
+            // 
+            this.cbQuyen.Enabled = false;
+            this.cbQuyen.FormattingEnabled = true;
+            this.cbQuyen.Location = new System.Drawing.Point(217, 37);
+            this.cbQuyen.Name = "cbQuyen";
+            this.cbQuyen.Size = new System.Drawing.Size(269, 24);
+            this.cbQuyen.TabIndex = 28;
             // 
             // frmThemTK
             // 
@@ -547,7 +559,7 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
         private DevExpress.XtraEditors.PanelControl panelControl7;
         private DevExpress.XtraEditors.PanelControl pcThem;
-        private DevExpress.XtraEditors.SimpleButton btnThemLichGac;
+        private DevExpress.XtraEditors.SimpleButton btnXacNhan;
         private DevExpress.XtraEditors.PanelControl panelControl8;
         private DevExpress.XtraEditors.LabelControl labelControl8;
         private DevExpress.XtraEditors.PanelControl panelControl9;
@@ -567,5 +579,6 @@
         private DevExpress.XtraEditors.CheckEdit ceAdmin;
         private DevExpress.XtraEditors.CheckEdit ceDaiDoi;
         private DevExpress.XtraEditors.CheckEdit ceTieuDoan;
+        private System.Windows.Forms.ComboBox cbQuyen;
     }
 }

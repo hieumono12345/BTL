@@ -19,6 +19,7 @@ namespace BTL
         {
             InitializeComponent();
             LoadCBB();
+            loadData();
             cbThem.Checked = false;
             cbSua.Checked = false;
         }
@@ -33,6 +34,7 @@ namespace BTL
             ceDaiDoi.Enabled = true;
             ceTieuDoan.Enabled = true;
             ceAdmin.Enabled = true;
+            cbQuyen.Enabled = true; 
         }
 
         void disbleTatCa()
@@ -45,6 +47,7 @@ namespace BTL
             ceDaiDoi.Enabled = false;
             ceTieuDoan.Enabled = false;
             ceAdmin.Enabled = false;
+            cbQuyen.Enabled = false;
         }
 
         void xoaTatCa()
@@ -55,6 +58,7 @@ namespace BTL
             txtTenTK.Text = "";
             txtMK.Text = "";
             ceDaiDoi.Text = "";
+            cbQuyen.Text = "";
             
         }
 
@@ -73,6 +77,10 @@ namespace BTL
             cbQN.DataSource = LoadCombox.Instance.getDSQNByDV_CV((int)cbChucVu.SelectedValue, (int)cbDV.SelectedValue);
             cbQN.ValueMember = "MaQN";
             cbQN.DisplayMember = "TenQN";
+
+            cbQuyen.DataSource=LoadCombox.Instance.getListQuyen();
+            cbQuyen.ValueMember = "MaQuyen";
+            cbQuyen.DisplayMember = "TenQuyen";
 
         }
 
@@ -112,18 +120,23 @@ namespace BTL
             xoaTatCa();
         }
 
-        private void btnXoa_Click(object sender, EventArgs e)
-        {
-            
-        }
-
         private void btnSua_Click(object sender, EventArgs e)
         {
             enableTatCa();
             cbSua.Checked = true;
             cbThem.Checked = false;
-        }         
+        }
 
-        
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+
+            //xóa tại đây
+        }
+
+        private void btnXacNhan_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(cbQN.SelectedValue.)
+            //viết store thêm tk ở đây
+        }
     }
 }

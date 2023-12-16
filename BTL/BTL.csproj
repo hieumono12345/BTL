@@ -76,6 +76,7 @@
     <Compile Include="DAO\QuanLyPhanCongCV.cs" />
     <Compile Include="DAO\QuanLyQnDAO.cs" />
     <Compile Include="DAO\QuanLyViPham.cs" />
+    <Compile Include="DAO\SHA1_HASH.cs" />
     <Compile Include="DTO\ChiTietDanhSachCongViec.cs" />
     <Compile Include="DTO\ChiTietDanhSachGac.cs" />
     <Compile Include="DTO\ChucVu.cs" />

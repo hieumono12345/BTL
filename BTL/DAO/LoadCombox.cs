@@ -37,6 +37,23 @@ namespace BTL.DAO
 
             return list ;
         }
+
+        public List<Quyen> getListQuyen()
+        {
+            List<Quyen> list = new List<Quyen>();
+
+            string query = "select * from Quyen";
+
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+
+            foreach (DataRow item in data.Rows)
+            {
+                Quyen a = new Quyen(item);
+                list.Add(a);
+            }
+
+            return list;
+        }
         public List<QN> getDSQNByDV_CV(int MaCV, int MaDV)
         {
             if (MaCV == null) MaCV = 0;
