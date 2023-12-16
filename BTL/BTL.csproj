@@ -71,10 +71,12 @@
   <ItemGroup>
     <Compile Include="DAO\DataProvider.cs" />
     <Compile Include="DAO\LoadCombox.cs" />
+    <Compile Include="DAO\Login.cs" />
     <Compile Include="DAO\PhanCongGac.cs" />
     <Compile Include="DAO\QuanLyDonVi.cs" />
     <Compile Include="DAO\QuanLyPhanCongCV.cs" />
     <Compile Include="DAO\QuanLyQnDAO.cs" />
+    <Compile Include="DAO\QuanLyTaiKhoan.cs" />
     <Compile Include="DAO\QuanLyViPham.cs" />
     <Compile Include="DAO\SHA1_HASH.cs" />
     <Compile Include="DTO\ChiTietDanhSachCongViec.cs" />
@@ -93,6 +95,7 @@
     <Compile Include="DTO\TaiKhoan.cs" />
     <Compile Include="DTO\ThoiGianGac.cs" />
     <Compile Include="DTO\TK_Quyen.cs" />
+    <Compile Include="DTO\TTNguoiDung.cs" />
     <Compile Include="DTO\UuTien.cs" />
     <Compile Include="frmCatCuCV.cs">
       <SubType>Form</SubType>

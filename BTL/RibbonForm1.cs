@@ -1,4 +1,5 @@
-﻿using DevExpress.XtraBars;
+﻿using BTL.DTO;
+using DevExpress.XtraBars;
 using DevExpress.XtraBars.Navigation;
 using GUI;
 using System;
@@ -15,13 +16,23 @@ namespace BTL
 {
     public partial class frmMain : DevExpress.XtraEditors.XtraForm
     {
-        public frmMain()
+        private TTNguoiDung inForUser;
+        public TTNguoiDung InForUser
+        {
+            get { return inForUser; }
+            set { inForUser = value; }
+        }
+
+        public frmMain(TTNguoiDung inFor)
         {
             InitializeComponent();
             WindowState = FormWindowState.Maximized;
             //btnQLHocVien.Enabled = false;
-            OpenformDacQuyen(typeof(frmThongBaoGac));
+            //OpenformDacQuyen(typeof(frmThongBaoGac));
+            this.inForUser = inFor;
+            PhanQuyen();
         }
+
         void OpenForm(Type typeForm)
         {
             foreach( Form frm in MdiChildren )
@@ -36,6 +47,21 @@ namespace BTL
             f.MdiParent = this;
             f.Show();
         }
+        void PhanQuyen()
+        {
+            if (inForUser.MaQuyen == 2)
+            {
+                PhanCong.Visible = false;
+                System.Visible= false;
+                Home.Visible = false;
+                ThongBao.Visible = true;
+                QuanLyGac.Visible = true;
+                QuanLyQN.Visible = true;
+                QuanLyCongViec.Visible = true;
+            }
+
+        }
+
         void OpenformDacQuyen(Type typeForm)
         {
             Form f = (Form)Activator.CreateInstance(typeForm);

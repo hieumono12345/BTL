@@ -86,9 +86,11 @@ namespace BTL
 
         private void c(object sender, EventArgs e)
         {
+
             cbQN.DataSource = LoadCombox.Instance.getDSQNByDV_CV((int)cbChucVu.SelectedValue, (int)cbDV.SelectedValue);
             cbQN.ValueMember = "MaQN";
             cbQN.DisplayMember = "TenQN";
+            cbQN.Text = "";
         }
 
         private void d(object sender, EventArgs e)
@@ -96,6 +98,7 @@ namespace BTL
             cbQN.DataSource = LoadCombox.Instance.getDSQNByDV_CV((int)cbChucVu.SelectedValue, (int)cbDV.SelectedValue);
             cbQN.ValueMember = "MaQN";
             cbQN.DisplayMember = "TenQN";
+            cbQN.Text = "";
         }
 
         void loadData()
@@ -135,7 +138,28 @@ namespace BTL
 
         private void btnXacNhan_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(cbQN.SelectedValue.)
+            if(cbSua.Checked == true && cbThem.Checked == false)
+            {
+                //gọi hàm sửa
+                string pass = SHA1_HASH.Instance.Hash(txtMK.Text);
+                MessageBox.Show(cbQN.SelectedValue.ToString() + cbQuyen.SelectedValue.ToString() + txtTenTK.Text +pass , "sửa");
+            }
+            if (cbSua.Checked == false && cbThem.Checked == true)
+            {
+                string pass = SHA1_HASH.Instance.Hash(txtMK.Text);
+               
+                bool a = QuanLyTaiKhoan.Instance.themTaiKhoan(txtTenTK.Text, pass,(int)cbQN.SelectedValue, (int)cbQuyen.SelectedValue);
+                if (a == true)
+                {
+                    MessageBox.Show(cbQN.SelectedValue.ToString() + cbQuyen.SelectedValue.ToString() + txtTenTK.Text + pass, "Thêm Thành công");
+                }
+                else
+                {
+                    MessageBox.Show("Thêm thất bại", "ssss");
+                }
+
+            }
+
             //viết store thêm tk ở đây
         }
     }

@@ -62,26 +62,26 @@
             this.barButtonItem5 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem6 = new DevExpress.XtraBars.BarButtonItem();
             this.skinPaletteRibbonGalleryBarItem1 = new DevExpress.XtraBars.SkinPaletteRibbonGalleryBarItem();
-            this.ribbonPage6 = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.Home = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup15 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup16 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.System = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup17 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.PhanCong = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup8 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup12 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.ribbonPage4 = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.ThongBao = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup9 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup10 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.QuanLyGac = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup5 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.manageQN = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.QuanLyQN = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup6 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup7 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.ribbonPage5 = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.QuanLyCongViec = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup13 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup14 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -137,13 +137,13 @@
             this.ribbon.MaxItemId = 33;
             this.ribbon.Name = "ribbon";
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
-            this.ribbonPage6,
+            this.Home,
             this.System,
-            this.ribbonPage2,
-            this.ribbonPage4,
-            this.ribbonPage1,
-            this.manageQN,
-            this.ribbonPage5});
+            this.PhanCong,
+            this.ThongBao,
+            this.QuanLyGac,
+            this.QuanLyQN,
+            this.QuanLyCongViec});
             this.ribbon.Size = new System.Drawing.Size(1217, 177);
             this.ribbon.StatusBar = this.ribbonStatusBar;
             // 
@@ -355,13 +355,13 @@
             this.skinPaletteRibbonGalleryBarItem1.Id = 32;
             this.skinPaletteRibbonGalleryBarItem1.Name = "skinPaletteRibbonGalleryBarItem1";
             // 
-            // ribbonPage6
+            // Home
             // 
-            this.ribbonPage6.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.Home.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.ribbonPageGroup15,
             this.ribbonPageGroup16});
-            this.ribbonPage6.Name = "ribbonPage6";
-            this.ribbonPage6.Text = "Home";
+            this.Home.Name = "Home";
+            this.Home.Text = "Home";
             // 
             // ribbonPageGroup15
             // 
@@ -395,13 +395,13 @@
             this.ribbonPageGroup17.Name = "ribbonPageGroup17";
             this.ribbonPageGroup17.Text = "ribbonPageGroup17";
             // 
-            // ribbonPage2
+            // PhanCong
             // 
-            this.ribbonPage2.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.PhanCong.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.ribbonPageGroup8,
             this.ribbonPageGroup12});
-            this.ribbonPage2.Name = "ribbonPage2";
-            this.ribbonPage2.Text = "Phân công";
+            this.PhanCong.Name = "PhanCong";
+            this.PhanCong.Text = "Phân công";
             // 
             // ribbonPageGroup8
             // 
@@ -416,13 +416,13 @@
             this.ribbonPageGroup12.Name = "ribbonPageGroup12";
             this.ribbonPageGroup12.Text = "Phân công công việc";
             // 
-            // ribbonPage4
+            // ThongBao
             // 
-            this.ribbonPage4.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.ThongBao.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.ribbonPageGroup9,
             this.ribbonPageGroup10});
-            this.ribbonPage4.Name = "ribbonPage4";
-            this.ribbonPage4.Text = "Thông báo";
+            this.ThongBao.Name = "ThongBao";
+            this.ThongBao.Text = "Thông báo";
             // 
             // ribbonPageGroup9
             // 
@@ -436,13 +436,13 @@
             this.ribbonPageGroup10.Name = "ribbonPageGroup10";
             this.ribbonPageGroup10.Text = "Thông báo công việc";
             // 
-            // ribbonPage1
+            // QuanLyGac
             // 
-            this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.QuanLyGac.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.ribbonPageGroup4,
             this.ribbonPageGroup5});
-            this.ribbonPage1.Name = "ribbonPage1";
-            this.ribbonPage1.Text = "Quản lý gác";
+            this.QuanLyGac.Name = "QuanLyGac";
+            this.QuanLyGac.Text = "Quản lý gác";
             // 
             // ribbonPageGroup4
             // 
@@ -457,14 +457,14 @@
             this.ribbonPageGroup5.Name = "ribbonPageGroup5";
             this.ribbonPageGroup5.Text = "ribbonPageGroup5";
             // 
-            // manageQN
+            // QuanLyQN
             // 
-            this.manageQN.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.QuanLyQN.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.ribbonPageGroup2,
             this.ribbonPageGroup6,
             this.ribbonPageGroup7});
-            this.manageQN.Name = "manageQN";
-            this.manageQN.Text = "Quản lý quân nhân";
+            this.QuanLyQN.Name = "QuanLyQN";
+            this.QuanLyQN.Text = "Quản lý quân nhân";
             // 
             // ribbonPageGroup2
             // 
@@ -484,14 +484,14 @@
             this.ribbonPageGroup7.Name = "ribbonPageGroup7";
             this.ribbonPageGroup7.Text = "ribbonPageGroup7";
             // 
-            // ribbonPage5
+            // QuanLyCongViec
             // 
-            this.ribbonPage5.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.QuanLyCongViec.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.ribbonPageGroup3,
             this.ribbonPageGroup13,
             this.ribbonPageGroup14});
-            this.ribbonPage5.Name = "ribbonPage5";
-            this.ribbonPage5.Text = "Quản lý công việc";
+            this.QuanLyCongViec.Name = "QuanLyCongViec";
+            this.QuanLyCongViec.Text = "Quản lý công việc";
             // 
             // ribbonPageGroup3
             // 
@@ -567,7 +567,7 @@
         private DevExpress.XtraBars.Ribbon.RibbonStatusBar ribbonStatusBar;
         private DevExpress.XtraBars.BarButtonItem btnInFoUser;
         private DevExpress.XtraBars.BarButtonItem btnQLHocVien;
-        private DevExpress.XtraBars.Ribbon.RibbonPage manageQN;
+        private DevExpress.XtraBars.Ribbon.RibbonPage QuanLyQN;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup2;
         private DevExpress.XtraBars.Docking2010.DocumentManager documentManager1;
         private DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView tabbedView1;
@@ -577,7 +577,7 @@
         private DevExpress.XtraBars.BarButtonItem btnHome;
         private DevExpress.XtraBars.BarButtonItem barButtonItem1;
         private DevExpress.XtraBars.BarButtonItem btnCatGac;
-        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage1;
+        private DevExpress.XtraBars.Ribbon.RibbonPage QuanLyGac;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup4;
         private DevExpress.XtraBars.BarButtonItem btnLichSuGac;
         private DevExpress.XtraBars.BarButtonItem barButtonItem4;
@@ -591,9 +591,9 @@
         private DevExpress.XtraBars.BarButtonItem btnPhanCongCongViec;
         private DevExpress.XtraBars.BarButtonItem btnLichSuPhanCong;
         private DevExpress.XtraBars.BarButtonItem bntLichSuCongViec;
-        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage2;
+        private DevExpress.XtraBars.Ribbon.RibbonPage PhanCong;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup8;
-        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage4;
+        private DevExpress.XtraBars.Ribbon.RibbonPage ThongBao;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup9;
         private DevExpress.XtraBars.BarButtonItem btnThongKe;
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage3;
@@ -610,13 +610,13 @@
         private DevExpress.XtraBars.BarButtonItem btnCatCuCV;
         private DevExpress.XtraBars.BarButtonItem btnLichSuCV;
         private DevExpress.XtraBars.BarButtonItem btnThongKeCV;
-        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage5;
+        private DevExpress.XtraBars.Ribbon.RibbonPage QuanLyCongViec;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup3;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup13;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup14;
         private DevExpress.XtraBars.BarButtonItem barButtonItem3;
         private DevExpress.XtraBars.BarButtonItem barButtonItem5;
-        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage6;
+        private DevExpress.XtraBars.Ribbon.RibbonPage Home;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup15;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup16;
         private DevExpress.XtraBars.BarButtonItem barButtonItem6;

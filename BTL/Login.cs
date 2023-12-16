@@ -9,6 +9,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using BTL;
+using BTL.DAO;
+using BTL.DTO;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace GUI
 {
@@ -26,38 +29,26 @@ namespace GUI
         private void btnDangNhap_Click(object sender, EventArgs e)
         {
             string user = tbUser.Text.Trim();
-            string pass = tbPassword.Text.Trim();
-            /*if (bus.Login(user, pass))
+            string pass = SHA1_HASH.Instance.Hash(tbPassword.Text.Trim());
+            TTNguoiDung inFor = BTL.DAO.Login.Instance.getTTNgoiDung(user, pass);
+            if (inFor!=null)
             {
-                new Form1(user,bus.getHashPass(user,pass)).Show();
+                //TTNguoiDung inFor = BTL.DAO.Login.Instance.getTTNgoiDung(user, pass);
+                frmMain frmMain = new frmMain(inFor);
+
                 this.Hide();
+                frmMain.ShowDialog();
+                this.Show();
+
             }
             else
             {
-                if (tbUser.Text == "" && tbPassword.Text == "")
-                {
-                    isUserCorrect = false;
-                    isPassCorrect = false;
-                    tbUser.Refresh();
-                    tbPassword.Refresh();
-                }
-                else if (tbUser.Text == "")
-                {
-                    isUserCorrect = false;
-                    tbUser.Refresh();
-                }
-                else if (tbPassword.Text == "")
-                {
-                    isPassCorrect = false;
-                    tbPassword.Refresh();
-                }
-                else
-                {
-                    MessageBoxEx.Show(this, "Tên đăng nhập hoặc mật khẩu sai");
-                }
-            }*/
-            frmMain frmMain = new frmMain();
-            frmMain.ShowDialog();
+                
+                
+                    MessageBox.Show(this, "Tên đăng nhập hoặc mật khẩu sai"+pass+ BTL.DAO.Login.Instance.XacThuc(user, pass).ToString());
+                
+            }
+            
         }
 
         private void Login_FormClosing(object sender, FormClosingEventArgs e)
@@ -133,7 +124,7 @@ namespace GUI
 
         private void tbUser_Leave(object sender, EventArgs e)
         {
-            tbUser.Text = tbUser.Text.ToUpper();
+            //tbUser.Text = tbUser.Text.ToUpper();
         }
 
         private void checkKhachHang_Click(object sender, EventArgs e)

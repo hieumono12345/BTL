@@ -19,7 +19,7 @@ namespace BTL
             
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmThemTK());
+            Application.Run(new Login());
         }
     }
 }
