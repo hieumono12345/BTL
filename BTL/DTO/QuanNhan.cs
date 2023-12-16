@@ -9,12 +9,13 @@ namespace BTL.DTO
 {
     public class QuanNhan
     {
-        public QuanNhan(int MaQN, string TenQN, int MaDV, int MaCV,bool GioiTinh)
+        public QuanNhan(int MaQN, string TenQN, int MaDV, int MaCV,string SDT,bool GioiTinh)
         {
             this.MaQN = MaQN;
             this.TenQN = TenQN;
             this.MaDV = MaDV;
             this.MaCV = MaCV;
+            this.SDT = SDT;
             this.GioiTinh= GioiTinh;
         }
         public QuanNhan(DataRow row)
@@ -23,6 +24,7 @@ namespace BTL.DTO
             this.TenQN = row["TenQN"].ToString();
             this.MaDV = (int)row["MaDV"];
             this.MaCV = (int)row["MaCV"];
+            this.SDT = row["SDT"].ToString();
             this.GioiTinh =(bool)row["GioiTinh"];
         }
 
@@ -52,6 +54,13 @@ namespace BTL.DTO
         {
             get { return _MaCV; }
             set { _MaCV = value; }
+        }
+
+        private string _SDT;
+        public string SDT
+        {
+            get { return _SDT; }
+            set { _SDT = value; }
         }
 
         private bool _GioiTinh;

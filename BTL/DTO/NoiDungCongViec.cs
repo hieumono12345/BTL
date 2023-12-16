@@ -9,19 +9,35 @@ namespace BTL.DTO
 {
     public class NoiDungCongViec
     {
-        public NoiDungCongViec(int MaCongViec, string NoiDung, string Diadiem, DateTime ThoiGian)
+        public NoiDungCongViec(int MaCongViec,string NoiDung, string Diadiem, string TGDuKien,int SoLuong, int STTDS, int STTCV, string GhiChu,string TGBD,string TGKT,string DacDiem,int MaDV)
         {
             this.MaCongViec = MaCongViec;
             this.NoiDung = NoiDung;
             this.Diadiem = Diadiem;
-            this.ThoiGian = ThoiGian;
+            this.TGDuKien = TGDuKien;
+            this.SoLuong = SoLuong;
+            this.STTDS = STTDS;
+            this.STTCV = STTCV;
+            this.GhiChu = GhiChu;
+            this.TGBD = TGBD;
+            this.TGKT = TGKT;
+            this.DacDiem = DacDiem;
+            this.MaDV = MaDV;
         }
         public NoiDungCongViec(DataRow row)
         {
             this.MaCongViec = (int)row["MaCongViec"];
             this.NoiDung = row["NoiDung"].ToString();
             this.Diadiem = row["Diadiem"].ToString();
-            this.ThoiGian = (DateTime)row["ThoiGian"];
+            this.TGDuKien = row["TGDuKien"].ToString();
+            this.SoLuong = (int)row["SoLuong"];
+            this.STTDS = (int)row["STTDS"];
+            this.STTCV = (int)row["STTCV"];
+            this.GhiChu = row["GhiChu"].ToString();
+            this.TGBD = row["TGBD"].ToString();
+            this.TGKT = row["TGKT"].ToString();
+            this.DacDiem = row["DacDiem"].ToString();
+            this.MaDV = (int)row["MaDV"];
         }
 
         private int _MaCongViec;
@@ -45,11 +61,67 @@ namespace BTL.DTO
             set { _Diadiem = value; }
         }
 
-        private DateTime _ThoiGian;
-        public DateTime ThoiGian
+        private string _TGDuKien;
+        public string TGDuKien
         {
-            get { return _ThoiGian; }
-            set { _ThoiGian = value; }
+            get { return _TGDuKien; }
+            set { _TGDuKien = value; }
+        }
+
+        private int _SoLuong;
+        public int SoLuong
+        {
+            get { return _SoLuong; }
+            set { _SoLuong = value; }
+        }
+
+        private int _STTDS;
+        public int STTDS
+        {
+            get { return _STTDS; }
+            set { _STTDS = value; }
+        }
+
+        private int _STTCV;
+        public int STTCV
+        {
+            get { return _STTCV; }
+            set { _STTCV = value; }
+        }
+
+        private string _GhiChu;
+        public string GhiChu
+        {
+            get { return _GhiChu; }
+            set { _GhiChu = value; }
+        }
+
+        private string _TGBD;
+        public string TGBD
+        {
+            get { return _TGBD; }
+            set { _TGBD = value; }
+        }
+
+        private string _TGKT;
+        public string TGKT
+        {
+            get { return _TGKT; }
+            set { _TGKT = value; }
+        }
+
+        private string _DacDiem;
+        public string DacDiem
+        {
+            get { return _DacDiem; }
+            set { _DacDiem = value; }
+        }
+
+        private int _MaDV;
+        public int MaDV
+        {
+            get { return _MaDV; }
+            set { _MaDV = value; }
         }
     }
 }

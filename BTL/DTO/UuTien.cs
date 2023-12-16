@@ -9,15 +9,16 @@ namespace BTL.DTO
 {
     public class UuTien
     {
-        public UuTien(int MaUT, string TenUuTien)
+        public UuTien(int MaUT, int MaQN,string NoiDungUuTien)
         {
             this.MaUT = MaUT;
-            this.TenUuTien = TenUuTien;
+            this.MaQN = MaQN;
+            this.NoiDungUuTien = NoiDungUuTien;
         }
         public UuTien(DataRow row)
         {
             this.MaUT = (int)row["MaUT"];
-            this.TenUuTien = row["TenUuTien"].ToString();
+            this.MaQN = (int)row["MaQN"];
         }
         private int _MaUT;
 
@@ -27,11 +28,18 @@ namespace BTL.DTO
             set { _MaUT = value; }
         }
 
-        private string _TenUuTien;
-        public string TenUuTien
+        private int _MaQN;
+        public int MaQN
         {
-            get { return _TenUuTien; }
-            set { _TenUuTien = value; }
+            get { return _MaQN; }
+            set { _MaQN = value; }
+        }
+
+        private string _NoiDungUuTien;
+        public string NoiDungUuTien
+        {
+            get { return _NoiDungUuTien; }
+            set { _NoiDungUuTien = value; }
         }
     }
 }
