@@ -26,7 +26,7 @@ namespace BTL
         }
         private void btnDetail_Click(object sender, EventArgs e)
         {
-            ChiTietQuanNhan dt = QuanLyQnDAO.Instance.getChiTietQN((int)gvDanhSachCV.GetFocusedRowCellValue("MaQN"));
+            QuanNhan dt = QuanLyQnDAO.Instance.getChiTietQN((int)gvDanhSachCV.GetFocusedRowCellValue("MaQN"));
 
             /*txtMaHV.Text = dt.MaQN.ToString();
             txtTenHV.Text = dt.TenQN;

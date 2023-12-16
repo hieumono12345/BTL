@@ -20,6 +20,7 @@ namespace BTL.DAO
 
         private LoadCombox() { }
 
+        //thay bằng store đầu vào là MaTg và MaGac
         public List<QN> getListQNGac()
         {
             List<QN> list = new List<QN>();
@@ -36,10 +37,80 @@ namespace BTL.DAO
 
             return list ;
         }
-
-        public List<ThoiGian> getListThoiGianGac()
+        public List<QN> getDSQNByDV_CV(int MaCV, int MaDV)
         {
-            List<ThoiGian> list = new List<ThoiGian>();
+            if (MaCV == null) MaCV = 0;
+            if (MaDV == null) MaDV = 0;
+            List<QN> list = new List<QN>();
+
+            string query = "select MaQN,TenQN from QuanNhan where MaDV=" + MaDV + "and MaChucVu=" + MaCV;
+
+
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+
+            foreach (DataRow item in data.Rows)
+            {
+                QN a = new QN(item);
+                list.Add(a);
+            }
+
+            return list;
+        }
+
+        public List<DonVi> getListDonVi()
+        {
+            List<DonVi> list = new List<DonVi>();
+
+            string query = "select * from DonVi";
+
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+
+            foreach (DataRow item in data.Rows)
+            {
+                DonVi DV = new DonVi(item);
+                list.Add(DV);
+            }
+
+            return list;
+        }
+
+        public List<Nganh> getListNganh()
+        {
+            List<Nganh> list = new List<Nganh>();
+
+            string query = "select * from Nganh";
+
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+
+            foreach (DataRow item in data.Rows)
+            {
+                Nganh DV = new Nganh(item);
+                list.Add(DV);
+            }
+
+            return list;
+        }
+
+        public List<ChucVu> getListChucVu()
+        {
+            List<ChucVu> list = new List<ChucVu>();
+
+            string query = "select * from ChucVu";
+
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+
+            foreach (DataRow item in data.Rows)
+            {
+                ChucVu ChucVu = new ChucVu(item);
+                list.Add(ChucVu);
+            }
+
+            return list;
+        }
+
+        public List<ThoiGianGac> getListThoiGianGac()
+        {
+            List<ThoiGianGac> list = new List<ThoiGianGac>();
 
             string query = "SELECT * from ThoiGianGac";
 
@@ -47,7 +118,7 @@ namespace BTL.DAO
 
             foreach (DataRow item in data.Rows)
             {
-                ThoiGian a = new ThoiGian(item);
+                ThoiGianGac a = new ThoiGianGac(item);
                 list.Add(a);
             }
 

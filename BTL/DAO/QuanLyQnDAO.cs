@@ -24,11 +24,11 @@ namespace BTL.DAO
         {
             return DataProvider.Instance.ExecuteQuery("select a.MaQN, a.TenQN, b.TenDV,c.TenCV from QuanNhan a,DonVi b, ChucVu c where a.MaDV=b.MaDV and a.MaCV=c.MaCV");
         }
-        public ChiTietQuanNhan getChiTietQN(int id)
+        public QuanNhan getChiTietQN(int id)
         {
             //return DataProvider.Instance.ExecuteQuery("select a.MaQN, a.TenQN, b.TenDV,c.TenCV from QuanNhan a,DonVi b, ChucVu c where a.MaDV=b.MaDV and a.MaCV=c.MaCV and MaQN="+id);
-            List<ChiTietQuanNhan> list = new List<ChiTietQuanNhan>();
-            //ChiTietQuanNhan chiTiet = new ChiTietQuanNhan(0,"");
+            List<QuanNhan> list = new List<QuanNhan>();
+            //QuanNhan chiTiet = new QuanNhan(0,"");
 
             string query = "select a.MaQN, a.TenQN, b.TenDV,c.TenCV,a.GioiTinh GioiTinh from QuanNhan a,DonVi b, ChucVu c where a.MaDV=b.MaDV and a.MaCV=c.MaCV and MaQN=" + id;
 
@@ -36,7 +36,7 @@ namespace BTL.DAO
 
             foreach (DataRow item in data.Rows)
             {
-                ChiTietQuanNhan food = new ChiTietQuanNhan(item);
+                QuanNhan food = new QuanNhan(item);
                 list.Add(food);
             }
 

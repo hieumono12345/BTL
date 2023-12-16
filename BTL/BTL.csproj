@@ -78,10 +78,10 @@
     <Compile Include="DAO\QuanLyViPham.cs" />
     <Compile Include="DTO\ChiTietDanhSachCongViec.cs" />
     <Compile Include="DTO\ChiTietDanhSachGac.cs" />
-    <Compile Include="DTO\ChiTietQuanNhan.cs" />
     <Compile Include="DTO\ChucVu.cs" />
     <Compile Include="DTO\DanhSach.cs" />
     <Compile Include="DTO\DonVi.cs" />
+    <Compile Include="DTO\Nganh.cs" />
     <Compile Include="DTO\NoiDungCongViec.cs" />
     <Compile Include="DTO\NoiDungGac.cs" />
     <Compile Include="DTO\QN.cs" />
@@ -90,10 +90,9 @@
     <Compile Include="DTO\QuanNhan.cs" />
     <Compile Include="DTO\Quyen.cs" />
     <Compile Include="DTO\TaiKhoan.cs" />
-    <Compile Include="DTO\ThoiGian.cs" />
+    <Compile Include="DTO\ThoiGianGac.cs" />
     <Compile Include="DTO\TK_Quyen.cs" />
     <Compile Include="DTO\UuTien.cs" />
-    <Compile Include="DTO\ViPham.cs" />
     <Compile Include="frmCatCuCV.cs">
       <SubType>Form</SubType>
     </Compile>

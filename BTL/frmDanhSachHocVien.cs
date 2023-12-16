@@ -51,12 +51,12 @@ namespace BTL
         }
         private void btnDetail_Click(object sender, EventArgs e)
         {            
-            ChiTietQuanNhan dt = QuanLyQnDAO.Instance.getChiTietQN((int)gvDanhSachQN.GetFocusedRowCellValue("MaQN"));
+            QuanNhan dt = QuanLyQnDAO.Instance.getChiTietQN((int)gvDanhSachQN.GetFocusedRowCellValue("MaQN"));
              
-            txtMaHV.Text = dt.MaQN.ToString();
+           /* txtMaHV.Text = dt.MaQN.ToString();
             txtTenHV.Text = dt.TenQN;
             txtChucVu.Text = dt.TenCV;
-            cbGioiTinh.Text = dt.GioiTinh == 1 ? "Nam" : "Nữ";
+            cbGioiTinh.Text = dt.GioiTinh == 1 ? "Nam" : "Nữ";*/
             
             //MessageBox.Show(dt.GioiTinh.ToString() + "ngày gác", "sss");
         }

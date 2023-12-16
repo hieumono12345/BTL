@@ -16,8 +16,8 @@ namespace BTL.DTO
         }   
         public ChucVu(DataRow row)
         {
-            this.MaCV = (int)row["MaCV"];
-            this.TenCV = row["TenCV"].ToString();
+            this.MaCV = (int)row["MaChucVu"];
+            this.TenCV = row["TenChucvu"].ToString();
         }
         private int _MaCV;
 

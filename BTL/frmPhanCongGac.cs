@@ -90,7 +90,7 @@ namespace BTL
             txtMaGac.Text= ndg.MaGac.ToString();
             txtNhacNho.Text = ndg.NhacNho;
             dateTimePicker1.Text = ndg.Ngay.ToString();
-            cbDV.Text = ndg.TenDV.ToString();
+            //cbDV.Text = ndg.TenDV.ToString();
             disenableTatCa();  
             cbThem.Checked = false;
             cbSua.Checked = false;
