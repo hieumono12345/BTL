@@ -51,6 +51,7 @@ namespace BTL
         {
             if (inForUser.MaQuyen == 2)
             {
+                QuanLyNguoiDung.Visible = false;
                 PhanCong.Visible = false;
                 System.Visible= false;
                 Home.Visible = false;
@@ -58,6 +59,27 @@ namespace BTL
                 QuanLyGac.Visible = true;
                 QuanLyQN.Visible = true;
                 QuanLyCongViec.Visible = true;
+            }
+            if (inForUser.MaQuyen == 1)
+            {
+                QuanLyNguoiDung.Visible = true;
+                PhanCong.Visible = false;
+                System.Visible = false;
+                Home.Visible = false;
+                ThongBao.Visible = false;
+                QuanLyGac.Visible = false;
+                QuanLyQN.Visible = false;
+                QuanLyCongViec.Visible = false;
+            }
+            if (inForUser.MaQuyen == 3)
+            {
+                PhanCong.Visible = true;
+                System.Visible = false;
+                Home.Visible = false;
+                ThongBao.Visible = false;
+                QuanLyGac.Visible = false;
+                QuanLyQN.Visible = false;
+                QuanLyCongViec.Visible = false;
             }
 
         }
@@ -130,6 +152,11 @@ namespace BTL
         private void btnCatCuCV_ItemClick(object sender, ItemClickEventArgs e)
         {
             OpenForm(typeof(frmCatCuCV));
+        }
+
+        private void barButtonItem7_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            OpenForm(typeof(frmThemTK));
         }
     }
 }

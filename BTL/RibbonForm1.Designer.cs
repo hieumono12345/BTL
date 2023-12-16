@@ -91,6 +91,9 @@
             this.btnThongKe = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage3 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup11 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.QuanLyNguoiDung = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.ribbonPageGroup18 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.barButtonItem7 = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.documentManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedView1)).BeginInit();
@@ -132,11 +135,13 @@
             this.barButtonItem3,
             this.barButtonItem5,
             this.barButtonItem6,
-            this.skinPaletteRibbonGalleryBarItem1});
+            this.skinPaletteRibbonGalleryBarItem1,
+            this.barButtonItem7});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
-            this.ribbon.MaxItemId = 33;
+            this.ribbon.MaxItemId = 34;
             this.ribbon.Name = "ribbon";
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
+            this.QuanLyNguoiDung,
             this.Home,
             this.System,
             this.PhanCong,
@@ -542,6 +547,26 @@
             // 
             this.ribbonPageGroup11.Name = "ribbonPageGroup11";
             // 
+            // QuanLyNguoiDung
+            // 
+            this.QuanLyNguoiDung.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.ribbonPageGroup18});
+            this.QuanLyNguoiDung.Name = "QuanLyNguoiDung";
+            this.QuanLyNguoiDung.Text = "quản lý người dùng";
+            // 
+            // ribbonPageGroup18
+            // 
+            this.ribbonPageGroup18.ItemLinks.Add(this.barButtonItem7);
+            this.ribbonPageGroup18.Name = "ribbonPageGroup18";
+            this.ribbonPageGroup18.Text = "ribbonPageGroup18";
+            // 
+            // barButtonItem7
+            // 
+            this.barButtonItem7.Caption = "Quản lý người dùng";
+            this.barButtonItem7.Id = 33;
+            this.barButtonItem7.Name = "barButtonItem7";
+            this.barButtonItem7.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem7_ItemClick);
+            // 
             // frmMain
             // 
             this.ClientSize = new System.Drawing.Size(1217, 692);
@@ -622,5 +647,8 @@
         private DevExpress.XtraBars.BarButtonItem barButtonItem6;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup17;
         private DevExpress.XtraBars.SkinPaletteRibbonGalleryBarItem skinPaletteRibbonGalleryBarItem1;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem7;
+        private DevExpress.XtraBars.Ribbon.RibbonPage QuanLyNguoiDung;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup18;
     }
 }
