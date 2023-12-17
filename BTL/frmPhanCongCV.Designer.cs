@@ -75,6 +75,8 @@
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl11 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl13 = new DevExpress.XtraEditors.LabelControl();
+            this.ThoiGianKT = new DevExpress.XtraEditors.TimeEdit();
+            this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
@@ -98,6 +100,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.cbThem.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nbSoL)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ThoiGian.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ThoiGianKT.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // labelControl2
@@ -355,16 +358,16 @@
             // 
             this.panelControl8.Controls.Add(this.labelControl8);
             this.panelControl8.Controls.Add(this.txtGhiChu);
-            this.panelControl8.Location = new System.Drawing.Point(91, 417);
+            this.panelControl8.Location = new System.Drawing.Point(91, 434);
             this.panelControl8.Name = "panelControl8";
-            this.panelControl8.Size = new System.Drawing.Size(531, 171);
+            this.panelControl8.Size = new System.Drawing.Size(531, 154);
             this.panelControl8.TabIndex = 18;
             // 
             // labelControl8
             // 
             this.labelControl8.Appearance.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl8.Appearance.Options.UseFont = true;
-            this.labelControl8.Location = new System.Drawing.Point(25, 34);
+            this.labelControl8.Location = new System.Drawing.Point(25, 31);
             this.labelControl8.Name = "labelControl8";
             this.labelControl8.Size = new System.Drawing.Size(90, 26);
             this.labelControl8.TabIndex = 17;
@@ -372,7 +375,7 @@
             // 
             // txtGhiChu
             // 
-            this.txtGhiChu.Location = new System.Drawing.Point(239, 34);
+            this.txtGhiChu.Location = new System.Drawing.Point(239, 31);
             this.txtGhiChu.Name = "txtGhiChu";
             this.txtGhiChu.Size = new System.Drawing.Size(264, 96);
             this.txtGhiChu.TabIndex = 11;
@@ -380,6 +383,8 @@
             // 
             // panelControl10
             // 
+            this.panelControl10.Controls.Add(this.ThoiGianKT);
+            this.panelControl10.Controls.Add(this.labelControl6);
             this.panelControl10.Controls.Add(this.txtNoiDung);
             this.panelControl10.Controls.Add(this.labelControl5);
             this.panelControl10.Controls.Add(this.cbSua);
@@ -395,12 +400,12 @@
             this.panelControl10.Controls.Add(this.labelControl11);
             this.panelControl10.Location = new System.Drawing.Point(91, 83);
             this.panelControl10.Name = "panelControl10";
-            this.panelControl10.Size = new System.Drawing.Size(531, 314);
+            this.panelControl10.Size = new System.Drawing.Size(531, 337);
             this.panelControl10.TabIndex = 10;
             // 
             // txtNoiDung
             // 
-            this.txtNoiDung.Location = new System.Drawing.Point(239, 155);
+            this.txtNoiDung.Location = new System.Drawing.Point(239, 201);
             this.txtNoiDung.Name = "txtNoiDung";
             this.txtNoiDung.Size = new System.Drawing.Size(269, 23);
             this.txtNoiDung.TabIndex = 33;
@@ -409,7 +414,7 @@
             // 
             this.labelControl5.Appearance.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl5.Appearance.Options.UseFont = true;
-            this.labelControl5.Location = new System.Drawing.Point(25, 150);
+            this.labelControl5.Location = new System.Drawing.Point(25, 196);
             this.labelControl5.Name = "labelControl5";
             this.labelControl5.Size = new System.Drawing.Size(95, 26);
             this.labelControl5.TabIndex = 32;
@@ -449,14 +454,14 @@
             // 
             // nbSoL
             // 
-            this.nbSoL.Location = new System.Drawing.Point(239, 265);
+            this.nbSoL.Location = new System.Drawing.Point(239, 301);
             this.nbSoL.Name = "nbSoL";
             this.nbSoL.Size = new System.Drawing.Size(269, 23);
             this.nbSoL.TabIndex = 26;
             // 
             // txtDiaDiem
             // 
-            this.txtDiaDiem.Location = new System.Drawing.Point(239, 206);
+            this.txtDiaDiem.Location = new System.Drawing.Point(239, 251);
             this.txtDiaDiem.Name = "txtDiaDiem";
             this.txtDiaDiem.Size = new System.Drawing.Size(269, 23);
             this.txtDiaDiem.TabIndex = 18;
@@ -465,7 +470,7 @@
             // 
             this.labelControl4.Appearance.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl4.Appearance.Options.UseFont = true;
-            this.labelControl4.Location = new System.Drawing.Point(25, 259);
+            this.labelControl4.Location = new System.Drawing.Point(25, 295);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(104, 26);
             this.labelControl4.TabIndex = 19;
@@ -498,7 +503,7 @@
             // 
             this.labelControl1.Appearance.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl1.Appearance.Options.UseFont = true;
-            this.labelControl1.Location = new System.Drawing.Point(25, 201);
+            this.labelControl1.Location = new System.Drawing.Point(25, 246);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(96, 26);
             this.labelControl1.TabIndex = 17;
@@ -510,9 +515,9 @@
             this.labelControl3.Appearance.Options.UseFont = true;
             this.labelControl3.Location = new System.Drawing.Point(25, 98);
             this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(106, 26);
+            this.labelControl3.Size = new System.Drawing.Size(187, 26);
             this.labelControl3.TabIndex = 24;
-            this.labelControl3.Text = "Thời gian: ";
+            this.labelControl3.Text = "Thời gian bắt đầu: ";
             // 
             // labelControl11
             // 
@@ -533,6 +538,31 @@
             this.labelControl13.Size = new System.Drawing.Size(332, 26);
             this.labelControl13.TabIndex = 1;
             this.labelControl13.Text = "NHẬP THÔNG TIN CÔNG VIỆC";
+            // 
+            // ThoiGianKT
+            // 
+            this.ThoiGianKT.EditValue = new System.DateTime(2023, 12, 13, 0, 0, 0, 0);
+            this.ThoiGianKT.Location = new System.Drawing.Point(239, 147);
+            this.ThoiGianKT.Name = "ThoiGianKT";
+            this.ThoiGianKT.Properties.Appearance.BackColor = System.Drawing.SystemColors.Window;
+            this.ThoiGianKT.Properties.Appearance.Options.UseBackColor = true;
+            this.ThoiGianKT.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.ThoiGianKT.Properties.DisplayFormat.FormatString = "HH:mm";
+            this.ThoiGianKT.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
+            this.ThoiGianKT.Properties.EditFormat.FormatString = "HH:mm";
+            this.ThoiGianKT.Size = new System.Drawing.Size(269, 24);
+            this.ThoiGianKT.TabIndex = 35;
+            // 
+            // labelControl6
+            // 
+            this.labelControl6.Appearance.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl6.Appearance.Options.UseFont = true;
+            this.labelControl6.Location = new System.Drawing.Point(25, 143);
+            this.labelControl6.Name = "labelControl6";
+            this.labelControl6.Size = new System.Drawing.Size(191, 26);
+            this.labelControl6.TabIndex = 34;
+            this.labelControl6.Text = "Thời gian kết thúc: ";
             // 
             // frmPhanCongCV
             // 
@@ -571,6 +601,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.cbThem.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nbSoL)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ThoiGian.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ThoiGianKT.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -618,5 +649,7 @@
         private DevExpress.XtraEditors.CheckEdit cbSua;
         private System.Windows.Forms.TextBox txtNoiDung;
         private DevExpress.XtraEditors.LabelControl labelControl5;
+        private DevExpress.XtraEditors.TimeEdit ThoiGianKT;
+        private DevExpress.XtraEditors.LabelControl labelControl6;
     }
 }

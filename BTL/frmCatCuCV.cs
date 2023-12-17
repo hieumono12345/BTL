@@ -17,18 +17,18 @@ namespace BTL
         {
             InitializeComponent();
             WindowState = FormWindowState.Maximized;
-            panelControl4.Visible = false;
+            //panelControl4.Visible = false;
         }
 
         private void simpleButton2_Click(object sender, EventArgs e)
         {
 
-            panelControl4.Visible = true;
+            //panelControl4.Visible = true;
         }
 
         private void simpleButton5_Click(object sender, EventArgs e)
         {
-            panelControl4.Visible = false;
+            //panelControl4.Visible = false;
         }
     }
 }

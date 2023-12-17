@@ -17,6 +17,7 @@ namespace BTL
     public partial class frmMain : DevExpress.XtraEditors.XtraForm
     {
         private TTNguoiDung inForUser;
+        
         public TTNguoiDung InForUser
         {
             get { return inForUser; }
@@ -47,13 +48,47 @@ namespace BTL
             f.MdiParent = this;
             f.Show();
         }
+        void OpenFormSpecical(Type typeForm)
+        {
+            foreach (Form frm in MdiChildren)
+            {
+                if (frm.GetType() == typeForm)
+                {
+                    frm.Activate();
+                    return;
+                }
+            }
+            Form f = (Form)Activator.CreateInstance(typeForm,inForUser);
+            f.MdiParent = this;
+            f.Show();
+        }
+
+        /*void OpenFormSpecical(int i)
+            
+        {
+            if (i == 1)
+            {
+                foreach (Form frm in MdiChildren)
+                {
+                    if (frm.GetType() == typeof(frmThongBaoGac))
+                    {
+                        frm.Activate();
+                        return;
+                    }
+                }
+                Form f = (Form)Activator.CreateInstance(typeForm(),inForUser);
+            }
+            
+            f.MdiParent = this;
+            f.Show();
+        }*/
         void PhanQuyen()
         {
             if (inForUser.MaQuyen == 2)
             {
                 QuanLyNguoiDung.Visible = false;
                 PhanCong.Visible = false;
-                System.Visible= false;
+                System.Visible= true;
                 Home.Visible = false;
                 ThongBao.Visible = true;
                 QuanLyGac.Visible = true;
@@ -64,7 +99,7 @@ namespace BTL
             {
                 QuanLyNguoiDung.Visible = true;
                 PhanCong.Visible = false;
-                System.Visible = false;
+                System.Visible = true;
                 Home.Visible = false;
                 ThongBao.Visible = false;
                 QuanLyGac.Visible = false;
@@ -74,7 +109,7 @@ namespace BTL
             if (inForUser.MaQuyen == 3)
             {
                 PhanCong.Visible = true;
-                System.Visible = false;
+                System.Visible = true;
                 Home.Visible = false;
                 ThongBao.Visible = false;
                 QuanLyGac.Visible = false;
@@ -141,12 +176,12 @@ namespace BTL
 
         private void btnThongBaoGac_ItemClick(object sender, ItemClickEventArgs e)
         {
-            OpenForm(typeof(frmThongBaoGac));
+            OpenFormSpecical(typeof(frmThongBaoGac));
         }
 
         private void btnThongBaoCongViec_ItemClick(object sender, ItemClickEventArgs e)
         {
-            OpenForm(typeof(frmThongBaoCV));
+            OpenFormSpecical(typeof(frmThongBaoCV));
         }
 
         private void btnCatCuCV_ItemClick(object sender, ItemClickEventArgs e)

@@ -28,23 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions2 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions1 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmThemTK));
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject5 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject7 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject8 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
-            this.gcDanhSachTK = new DevExpress.XtraGrid.GridControl();
-            this.gvDanhSachTK = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.STT = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.NgayGac = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.DaiDoi = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.Hoi = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.btnDetail = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
-            this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.panelControl12 = new DevExpress.XtraEditors.PanelControl();
             this.btnThem = new DevExpress.XtraEditors.SimpleButton();
             this.btnXoa = new DevExpress.XtraEditors.SimpleButton();
@@ -54,6 +44,7 @@
             this.pcThem = new DevExpress.XtraEditors.PanelControl();
             this.btnXacNhan = new DevExpress.XtraEditors.SimpleButton();
             this.panelControl8 = new DevExpress.XtraEditors.PanelControl();
+            this.cbQuyen = new System.Windows.Forms.ComboBox();
             this.cbSua = new DevExpress.XtraEditors.CheckEdit();
             this.cbThem = new DevExpress.XtraEditors.CheckEdit();
             this.ceAdmin = new DevExpress.XtraEditors.CheckEdit();
@@ -72,12 +63,18 @@
             this.labelControl14 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl15 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl13 = new DevExpress.XtraEditors.LabelControl();
-            this.cbQuyen = new System.Windows.Forms.ComboBox();
+            this.btnDetail = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
+            this.gvDanhSachTK = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.STT = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.NgayGac = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.DaiDoi = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.Hoi = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gcDanhSachTK = new DevExpress.XtraGrid.GridControl();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gcDanhSachTK)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gvDanhSachTK)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnDetail)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl12)).BeginInit();
             this.panelControl12.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl7)).BeginInit();
@@ -93,6 +90,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.ceTieuDoan.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl9)).BeginInit();
             this.panelControl9.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnDetail)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvDanhSachTK)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gcDanhSachTK)).BeginInit();
             this.SuspendLayout();
             // 
             // panelControl1
@@ -106,116 +106,6 @@
             this.panelControl1.Name = "panelControl1";
             this.panelControl1.Size = new System.Drawing.Size(1207, 813);
             this.panelControl1.TabIndex = 7;
-            // 
-            // gcDanhSachTK
-            // 
-            this.gcDanhSachTK.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.gcDanhSachTK.Location = new System.Drawing.Point(6, 80);
-            this.gcDanhSachTK.MainView = this.gvDanhSachTK;
-            this.gcDanhSachTK.Name = "gcDanhSachTK";
-            this.gcDanhSachTK.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
-            this.btnDetail});
-            this.gcDanhSachTK.Size = new System.Drawing.Size(1194, 652);
-            this.gcDanhSachTK.TabIndex = 21;
-            this.gcDanhSachTK.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gvDanhSachTK});
-            // 
-            // gvDanhSachTK
-            // 
-            this.gvDanhSachTK.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.STT,
-            this.NgayGac,
-            this.DaiDoi,
-            this.Hoi,
-            this.gridColumn3,
-            this.gridColumn1,
-            this.gridColumn2});
-            this.gvDanhSachTK.GridControl = this.gcDanhSachTK;
-            this.gvDanhSachTK.Name = "gvDanhSachTK";
-            this.gvDanhSachTK.OptionsCustomization.AllowMergedGrouping = DevExpress.Utils.DefaultBoolean.True;
-            // 
-            // STT
-            // 
-            this.STT.Caption = "STT";
-            this.STT.FieldName = "STT";
-            this.STT.MinWidth = 25;
-            this.STT.Name = "STT";
-            this.STT.OptionsColumn.AllowEdit = false;
-            this.STT.Visible = true;
-            this.STT.VisibleIndex = 0;
-            // 
-            // NgayGac
-            // 
-            this.NgayGac.Caption = "Tên quân nhân";
-            this.NgayGac.FieldName = "Ngay";
-            this.NgayGac.MinWidth = 25;
-            this.NgayGac.Name = "NgayGac";
-            this.NgayGac.OptionsColumn.AllowEdit = false;
-            this.NgayGac.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.True;
-            this.NgayGac.Visible = true;
-            this.NgayGac.VisibleIndex = 2;
-            this.NgayGac.Width = 94;
-            // 
-            // DaiDoi
-            // 
-            this.DaiDoi.Caption = "Đơn vị";
-            this.DaiDoi.FieldName = "TenDV";
-            this.DaiDoi.MinWidth = 25;
-            this.DaiDoi.Name = "DaiDoi";
-            this.DaiDoi.OptionsColumn.AllowEdit = false;
-            this.DaiDoi.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.True;
-            this.DaiDoi.Visible = true;
-            this.DaiDoi.VisibleIndex = 1;
-            this.DaiDoi.Width = 94;
-            // 
-            // Hoi
-            // 
-            this.Hoi.Caption = "Tên tài khoản";
-            this.Hoi.FieldName = "Hoi";
-            this.Hoi.MinWidth = 25;
-            this.Hoi.Name = "Hoi";
-            this.Hoi.OptionsColumn.AllowEdit = false;
-            this.Hoi.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.True;
-            this.Hoi.Visible = true;
-            this.Hoi.VisibleIndex = 3;
-            this.Hoi.Width = 94;
-            // 
-            // gridColumn3
-            // 
-            this.gridColumn3.Caption = "Trạng thái";
-            this.gridColumn3.FieldName = "STTGac";
-            this.gridColumn3.MinWidth = 25;
-            this.gridColumn3.Name = "gridColumn3";
-            this.gridColumn3.Width = 94;
-            // 
-            // gridColumn1
-            // 
-            this.gridColumn1.Caption = "Chi tiết";
-            this.gridColumn1.ColumnEdit = this.btnDetail;
-            this.gridColumn1.MaxWidth = 70;
-            this.gridColumn1.MinWidth = 25;
-            this.gridColumn1.Name = "gridColumn1";
-            this.gridColumn1.Visible = true;
-            this.gridColumn1.VisibleIndex = 4;
-            this.gridColumn1.Width = 70;
-            // 
-            // btnDetail
-            // 
-            this.btnDetail.AutoHeight = false;
-            editorButtonImageOptions2.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions2.Image")));
-            this.btnDetail.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions2, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, serializableAppearanceObject6, serializableAppearanceObject7, serializableAppearanceObject8, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
-            this.btnDetail.Name = "btnDetail";
-            this.btnDetail.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
-            // 
-            // gridColumn2
-            // 
-            this.gridColumn2.Caption = "MaTK";
-            this.gridColumn2.FieldName = "MaGac";
-            this.gridColumn2.MinWidth = 25;
-            this.gridColumn2.Name = "gridColumn2";
-            this.gridColumn2.Width = 94;
             // 
             // panelControl12
             // 
@@ -297,7 +187,7 @@
             // btnXacNhan
             // 
             this.btnXacNhan.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnXacNhan.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnThemLichGac.ImageOptions.Image")));
+            this.btnXacNhan.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnXacNhan.ImageOptions.Image")));
             this.btnXacNhan.Location = new System.Drawing.Point(178, 5);
             this.btnXacNhan.Name = "btnXacNhan";
             this.btnXacNhan.Size = new System.Drawing.Size(186, 43);
@@ -318,6 +208,15 @@
             this.panelControl8.Name = "panelControl8";
             this.panelControl8.Size = new System.Drawing.Size(531, 247);
             this.panelControl8.TabIndex = 18;
+            // 
+            // cbQuyen
+            // 
+            this.cbQuyen.Enabled = false;
+            this.cbQuyen.FormattingEnabled = true;
+            this.cbQuyen.Location = new System.Drawing.Point(217, 37);
+            this.cbQuyen.Name = "cbQuyen";
+            this.cbQuyen.Size = new System.Drawing.Size(269, 24);
+            this.cbQuyen.TabIndex = 28;
             // 
             // cbSua
             // 
@@ -493,14 +392,115 @@
             this.labelControl13.TabIndex = 1;
             this.labelControl13.Text = "THÔNG TIN GÁC";
             // 
-            // cbQuyen
+            // btnDetail
             // 
-            this.cbQuyen.Enabled = false;
-            this.cbQuyen.FormattingEnabled = true;
-            this.cbQuyen.Location = new System.Drawing.Point(217, 37);
-            this.cbQuyen.Name = "cbQuyen";
-            this.cbQuyen.Size = new System.Drawing.Size(269, 24);
-            this.cbQuyen.TabIndex = 28;
+            this.btnDetail.AutoHeight = false;
+            editorButtonImageOptions1.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions1.Image")));
+            this.btnDetail.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            this.btnDetail.Name = "btnDetail";
+            this.btnDetail.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            // 
+            // gvDanhSachTK
+            // 
+            this.gvDanhSachTK.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.STT,
+            this.NgayGac,
+            this.DaiDoi,
+            this.Hoi,
+            this.gridColumn3,
+            this.gridColumn1,
+            this.gridColumn2});
+            this.gvDanhSachTK.GridControl = this.gcDanhSachTK;
+            this.gvDanhSachTK.Name = "gvDanhSachTK";
+            this.gvDanhSachTK.OptionsCustomization.AllowMergedGrouping = DevExpress.Utils.DefaultBoolean.True;
+            // 
+            // STT
+            // 
+            this.STT.Caption = "STT";
+            this.STT.FieldName = "STT";
+            this.STT.MinWidth = 25;
+            this.STT.Name = "STT";
+            this.STT.OptionsColumn.AllowEdit = false;
+            this.STT.Visible = true;
+            this.STT.VisibleIndex = 0;
+            // 
+            // NgayGac
+            // 
+            this.NgayGac.Caption = "Tên quân nhân";
+            this.NgayGac.FieldName = "Ngay";
+            this.NgayGac.MinWidth = 25;
+            this.NgayGac.Name = "NgayGac";
+            this.NgayGac.OptionsColumn.AllowEdit = false;
+            this.NgayGac.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.True;
+            this.NgayGac.Visible = true;
+            this.NgayGac.VisibleIndex = 2;
+            this.NgayGac.Width = 94;
+            // 
+            // DaiDoi
+            // 
+            this.DaiDoi.Caption = "Đơn vị";
+            this.DaiDoi.FieldName = "TenDV";
+            this.DaiDoi.MinWidth = 25;
+            this.DaiDoi.Name = "DaiDoi";
+            this.DaiDoi.OptionsColumn.AllowEdit = false;
+            this.DaiDoi.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.True;
+            this.DaiDoi.Visible = true;
+            this.DaiDoi.VisibleIndex = 1;
+            this.DaiDoi.Width = 94;
+            // 
+            // Hoi
+            // 
+            this.Hoi.Caption = "Tên tài khoản";
+            this.Hoi.FieldName = "Hoi";
+            this.Hoi.MinWidth = 25;
+            this.Hoi.Name = "Hoi";
+            this.Hoi.OptionsColumn.AllowEdit = false;
+            this.Hoi.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.True;
+            this.Hoi.Visible = true;
+            this.Hoi.VisibleIndex = 3;
+            this.Hoi.Width = 94;
+            // 
+            // gridColumn3
+            // 
+            this.gridColumn3.Caption = "Trạng thái";
+            this.gridColumn3.FieldName = "STTGac";
+            this.gridColumn3.MinWidth = 25;
+            this.gridColumn3.Name = "gridColumn3";
+            this.gridColumn3.Width = 94;
+            // 
+            // gridColumn1
+            // 
+            this.gridColumn1.Caption = "Chi tiết";
+            this.gridColumn1.ColumnEdit = this.btnDetail;
+            this.gridColumn1.MaxWidth = 70;
+            this.gridColumn1.MinWidth = 25;
+            this.gridColumn1.Name = "gridColumn1";
+            this.gridColumn1.Visible = true;
+            this.gridColumn1.VisibleIndex = 4;
+            this.gridColumn1.Width = 70;
+            // 
+            // gridColumn2
+            // 
+            this.gridColumn2.Caption = "MaTK";
+            this.gridColumn2.FieldName = "MaGac";
+            this.gridColumn2.MinWidth = 25;
+            this.gridColumn2.Name = "gridColumn2";
+            this.gridColumn2.Width = 94;
+            // 
+            // gcDanhSachTK
+            // 
+            this.gcDanhSachTK.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.gcDanhSachTK.Location = new System.Drawing.Point(6, 80);
+            this.gcDanhSachTK.MainView = this.gvDanhSachTK;
+            this.gcDanhSachTK.Name = "gcDanhSachTK";
+            this.gcDanhSachTK.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.btnDetail});
+            this.gcDanhSachTK.Size = new System.Drawing.Size(1194, 652);
+            this.gcDanhSachTK.TabIndex = 21;
+            this.gcDanhSachTK.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gvDanhSachTK});
             // 
             // frmThemTK
             // 
@@ -514,9 +514,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
             this.panelControl1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gcDanhSachTK)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gvDanhSachTK)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnDetail)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl12)).EndInit();
             this.panelControl12.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl7)).EndInit();
@@ -535,6 +532,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl9)).EndInit();
             this.panelControl9.ResumeLayout(false);
             this.panelControl9.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnDetail)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvDanhSachTK)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gcDanhSachTK)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -547,16 +547,6 @@
         private DevExpress.XtraEditors.SimpleButton btnXoa;
         private DevExpress.XtraEditors.SimpleButton btnSua;
         private DevExpress.XtraEditors.LabelControl labelControl2;
-        private DevExpress.XtraGrid.GridControl gcDanhSachTK;
-        private DevExpress.XtraGrid.Views.Grid.GridView gvDanhSachTK;
-        private DevExpress.XtraGrid.Columns.GridColumn STT;
-        private DevExpress.XtraGrid.Columns.GridColumn NgayGac;
-        private DevExpress.XtraGrid.Columns.GridColumn DaiDoi;
-        private DevExpress.XtraGrid.Columns.GridColumn Hoi;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
-        private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit btnDetail;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
         private DevExpress.XtraEditors.PanelControl panelControl7;
         private DevExpress.XtraEditors.PanelControl pcThem;
         private DevExpress.XtraEditors.SimpleButton btnXacNhan;
@@ -580,5 +570,15 @@
         private DevExpress.XtraEditors.CheckEdit ceDaiDoi;
         private DevExpress.XtraEditors.CheckEdit ceTieuDoan;
         private System.Windows.Forms.ComboBox cbQuyen;
+        private DevExpress.XtraGrid.GridControl gcDanhSachTK;
+        private DevExpress.XtraGrid.Views.Grid.GridView gvDanhSachTK;
+        private DevExpress.XtraGrid.Columns.GridColumn STT;
+        private DevExpress.XtraGrid.Columns.GridColumn NgayGac;
+        private DevExpress.XtraGrid.Columns.GridColumn DaiDoi;
+        private DevExpress.XtraGrid.Columns.GridColumn Hoi;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
+        private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit btnDetail;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
     }
 }

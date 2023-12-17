@@ -5,6 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace BTL.DAO
 {
@@ -18,38 +19,47 @@ namespace BTL.DAO
         }
         private DataProvider() { }
 
-        private string connectionSTR = @"Data Source=NGUYENGIAHIEU\NGUYENGIAHIEU;Initial Catalog=QuanlyDaiDoi3;Integrated Security=True";
+        private string connectionSTR = @"Data Source=NGUYENGIAHIEU\NGUYENGIAHIEU;Initial Catalog=QuanlyDaiDoi;Integrated Security=True";
 
         public DataTable ExecuteQuery(string query, object[] parameter = null)
         {
             DataTable data = new DataTable();
-
-            using (SqlConnection connection = new SqlConnection(connectionSTR))
+            try
             {
-                connection.Open();
+                
 
-                SqlCommand command = new SqlCommand(query, connection);
-
-                if (parameter != null)
+                using (SqlConnection connection = new SqlConnection(connectionSTR))
                 {
-                    string[] listPara = query.Split(' ');
-                    int i = 0;
-                    foreach (string item in listPara)
+                    connection.Open();
+
+                    SqlCommand command = new SqlCommand(query, connection);
+
+                    if (parameter != null)
                     {
-                        if (item.Contains('@'))
+                        string[] listPara = query.Split(' ');
+                        int i = 0;
+                        foreach (string item in listPara)
                         {
-                            command.Parameters.AddWithValue(item, parameter[i]);
-                            i++;
+                            if (item.Contains('@'))
+                            {
+                                command.Parameters.AddWithValue(item, parameter[i]);
+                                i++;
+                            }
                         }
                     }
+
+                    SqlDataAdapter adapter = new SqlDataAdapter(command);
+
+                    adapter.Fill(data);
+
+                    connection.Close();
                 }
-
-                SqlDataAdapter adapter = new SqlDataAdapter(command);
-
-                adapter.Fill(data);
-
-                connection.Close();
             }
+            catch 
+            {
+                MessageBox.Show("lỗi");
+            }
+            
 
             return data;
         }
@@ -57,31 +67,38 @@ namespace BTL.DAO
         public int ExecuteNonQuery(string query, object[] parameter = null)
         {
             int data = 0;
-
-            using (SqlConnection connection = new SqlConnection(connectionSTR))
+            try
             {
-                connection.Open();
-
-                SqlCommand command = new SqlCommand(query, connection);
-
-                if (parameter != null)
+                using (SqlConnection connection = new SqlConnection(connectionSTR))
                 {
-                    string[] listPara = query.Split(' ');
-                    int i = 0;
-                    foreach (string item in listPara)
+                    connection.Open();
+
+                    SqlCommand command = new SqlCommand(query, connection);
+
+                    if (parameter != null)
                     {
-                        if (item.Contains('@'))
+                        string[] listPara = query.Split(' ');
+                        int i = 0;
+                        foreach (string item in listPara)
                         {
-                            command.Parameters.AddWithValue(item, parameter[i]);
-                            i++;
+                            if (item.Contains('@'))
+                            {
+                                command.Parameters.AddWithValue(item, parameter[i]);
+                                i++;
+                            }
                         }
                     }
+
+                    data = command.ExecuteNonQuery();
+
+                    connection.Close();
                 }
-
-                data = command.ExecuteNonQuery();
-
-                connection.Close();
             }
+            catch 
+            {
+                MessageBox.Show("lỗi");
+            }
+            
 
             return data;
         }
@@ -89,30 +106,39 @@ namespace BTL.DAO
         public object ExecuteScalar(string query, object[] parameter = null)
         {
             object data = 0;
-
-            using (SqlConnection connection = new SqlConnection(connectionSTR))
+            try
             {
-                connection.Open();
-
-                SqlCommand command = new SqlCommand(query, connection);
-
-                if (parameter != null)
+                using (SqlConnection connection = new SqlConnection(connectionSTR))
                 {
-                    string[] listPara = query.Split(' ');
-                    int i = 0;
-                    foreach (string item in listPara)
+                    connection.Open();
+
+                    SqlCommand command = new SqlCommand(query, connection);
+
+                    if (parameter != null)
                     {
-                        if (item.Contains('@'))
+                        string[] listPara = query.Split(' ');
+                        int i = 0;
+                        foreach (string item in listPara)
                         {
-                            command.Parameters.AddWithValue(item, parameter[i]);
-                            i++;
+                            if (item.Contains('@'))
+                            {
+                                command.Parameters.AddWithValue(item, parameter[i]);
+                                i++;
+                            }
                         }
                     }
-                }
-                data = command.ExecuteScalar();
+                    data = command.ExecuteScalar();
 
-                connection.Close();
+                    connection.Close();
+                }
             }
+            catch
+            {
+                MessageBox.Show("lỗi");
+
+            }
+
+            
             return data;
         }
     }

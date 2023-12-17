@@ -28,6 +28,7 @@ namespace BTL
         {
             InitializeComponent();
             btnDetail.Click += BtnDetail_Click;
+            loadDS();
             loadCbDV();
             disenableTatCa();
 
@@ -103,7 +104,6 @@ namespace BTL
                 //                                       Ngay,   NoidungCV,        TGThucHien,        maDV,                soLuong,  DiaDiem,        nhacNho
                 //MessageBox.Show(Ngay.Text + nbSoL.ToString() + txtGhiChu.Text + txtDiaDiem.Text + ThoiGian.Text + cbDV.SelectedValue.ToString(), "Thêm");
             }
-
         }
 
         private void btnSua_Click(object sender, EventArgs e)
@@ -124,6 +124,7 @@ namespace BTL
             cbSua.Checked=false;
             enableTatCa();
             XoaTatCa();
+
         }
     }
 }

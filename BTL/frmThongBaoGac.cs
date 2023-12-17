@@ -1,4 +1,6 @@
-﻿using DevExpress.XtraEditors;
+﻿using BTL.DAO;
+using BTL.DTO;
+using DevExpress.XtraEditors;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,14 +15,72 @@ namespace BTL
 {
     public partial class frmThongBaoGac : DevExpress.XtraEditors.XtraForm
     {
-        public frmThongBaoGac()
-        {
-            InitializeComponent();
-        }
+        private TTNguoiDung inForUser;
 
+        public TTNguoiDung InForUser
+        {
+            get { return inForUser; }
+            set { inForUser = value; }
+            
+        }
+        public frmThongBaoGac(TTNguoiDung inFor)
+        {
+            this.inForUser = inFor;
+            InitializeComponent();
+            LoadData();
+            btnDetail.Click += BtnDetail_Click;
+
+
+        }
+        void LoadData()
+        {            
+            gcLichGac.DataSource = ThongBaoGac.Instance.LayLichGac(InForUser.MaDV);
+        }
+        void LoadButton()
+        {
+            if (cSTTDS.EditValue.ToString() == "True")
+            {
+                panelControl2.Visible = true;
+            }
+            else
+            {
+                panelControl2.Visible=false;
+            }
+        }
+        void disenableTatCa()
+        {
+            cbNgayGac.Enabled = false; 
+            txtNhacNho.Enabled = false;
+            txtDap.Enabled = false;
+            txtHoi.Enabled = false;
+        }
+        private void BtnDetail_Click(object sender, EventArgs e)
+        {
+
+            txtNhacNho.Text = gvLichGac.GetFocusedRowCellValue("NhacNho").ToString();
+            txtDap.Text = gvLichGac.GetFocusedRowCellValue("Dap").ToString();
+            txtHoi.Text = gvLichGac.GetFocusedRowCellValue("Hoi").ToString();
+            cbNgayGac.Text = gvLichGac.GetFocusedRowCellValue("Ngay").ToString();
+            txtMaGac.Text = gvLichGac.GetFocusedRowCellValue("MaGac").ToString();
+            cSTTDS.EditValue = gvLichGac.GetFocusedRowCellValue("STTDS");
+            disenableTatCa();
+            LoadButton();
+        }
+        //btn Cắt gác
         private void simpleButton8_Click(object sender, EventArgs e)
         {
-            frmCatGac frmCatGac = new frmCatGac();
+            //MessageBox.Show(txtMaGac.Text+ cSTTDS.EditValue.ToString());
+            string a = txtMaGac.Text;
+            int b = int.Parse(a);
+            frmCatGac frmCatGac = new frmCatGac(b);
+            frmCatGac.ShowDialog();
+        }
+
+        private void simpleButton2_Click(object sender, EventArgs e)
+        {
+            string a = txtMaGac.Text;
+            int b = int.Parse(a);
+            frmCatGac frmCatGac = new frmCatGac(b);
             frmCatGac.ShowDialog();
         }
     }

@@ -1,5 +1,7 @@
 ﻿using BTL.DAO;
 using BTL.DTO;
+using DevExpress.Utils.About;
+using DevExpress.Utils.Extensions;
 using DevExpress.XtraEditors;
 using System;
 using System.Collections.Generic;
@@ -15,14 +17,28 @@ namespace BTL
 {
     public partial class frmThongBaoCV : DevExpress.XtraEditors.XtraForm
     {
-        public frmThongBaoCV()
+        private TTNguoiDung inForUser;
+
+        public TTNguoiDung InForUser
         {
+            get { return inForUser; }
+            set { inForUser = value; }
+
+        }
+        public frmThongBaoCV(TTNguoiDung inFor)
+        {
+            this.inForUser = inFor;
             InitializeComponent();
+            Load();
         }
         void Load()
         {
-            gcDanhSachCV.DataSource = QuanLyQnDAO.Instance.getDanhSachQN();
+           // gcDanhSachCV.DataSource = QuanLyQnDAO.Instance.getDanhSachQN();
             btnDetail.Click += btnDetail_Click;
+            
+            //string t = time.Text;
+            //string h= date.EditValue.ToString();
+            //MessageBox.Show();
         }
         private void btnDetail_Click(object sender, EventArgs e)
         {

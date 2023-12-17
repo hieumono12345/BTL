@@ -69,6 +69,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAO\CatGacDAO.cs" />
     <Compile Include="DAO\DataProvider.cs" />
     <Compile Include="DAO\LoadCombox.cs" />
     <Compile Include="DAO\Login.cs" />
@@ -79,6 +80,7 @@
     <Compile Include="DAO\QuanLyTaiKhoan.cs" />
     <Compile Include="DAO\QuanLyViPham.cs" />
     <Compile Include="DAO\SHA1_HASH.cs" />
+    <Compile Include="DAO\ThongBaoGac.cs" />
     <Compile Include="DTO\ChiTietDanhSachCongViec.cs" />
     <Compile Include="DTO\ChiTietDanhSachGac.cs" />
     <Compile Include="DTO\ChucVu.cs" />
@@ -94,7 +96,9 @@
     <Compile Include="DTO\Quyen.cs" />
     <Compile Include="DTO\TaiKhoan.cs" />
     <Compile Include="DTO\ThoiGianGac.cs" />
+    <Compile Include="DTO\TinhChatCongViec.cs" />
     <Compile Include="DTO\TK_Quyen.cs" />
+    <Compile Include="DTO\TrangThaiCongViec.cs" />
     <Compile Include="DTO\TTNguoiDung.cs" />
     <Compile Include="DTO\UuTien.cs" />
     <Compile Include="frmCatCuCV.cs">
@@ -102,6 +106,12 @@
     </Compile>
     <Compile Include="frmCatCuCV.Designer.cs">
       <DependentUpon>frmCatCuCV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCatCuCVThuCong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCatCuCVThuCong.Designer.cs">
+      <DependentUpon>frmCatCuCVThuCong.cs</DependentUpon>
     </Compile>
     <Compile Include="frmCatGac.cs">
       <SubType>Form</SubType>
@@ -197,6 +207,9 @@
     </Compile>
     <EmbeddedResource Include="frmCatCuCV.resx">
       <DependentUpon>frmCatCuCV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCatCuCVThuCong.resx">
+      <DependentUpon>frmCatCuCVThuCong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmCatGac.resx">
       <DependentUpon>frmCatGac.cs</DependentUpon>

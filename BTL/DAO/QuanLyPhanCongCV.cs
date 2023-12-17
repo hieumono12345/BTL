@@ -16,14 +16,11 @@ namespace BTL.DAO
         {
             get { if (instance == null) instance = new QuanLyPhanCongCV(); return instance; }
             private set { instance = value; }
-        }
-
-        
+        }      
 
         public DataTable LayToanBoCVChuaHoanThanh()
         {
-            DataTable data = DataProvider.Instance.ExecuteQuery("SELECT ROW_NUMBER() OVER (ORDER BY MaCongViec) AS 'STT',a.MaCongViec,b.TenDV,a.TGDuKien,a.Ngay,a.STTDS from NoiDungCongViec a, DonVi b where a.MaDV=b.MaDV");
-
+            DataTable data = DataProvider.Instance.ExecuteQuery("SELECT ROW_NUMBER() OVER (ORDER BY MaCongViec) AS 'STT',a.MaCongViec,b.TenDV,a.TGDuKien,a.Ngay,a.STTDS, a.NoiDung from NoiDungCongViec a, DonVi b where a.MaDV=b.MaDV");
             return data;
         }
         public bool themCongViec(string Ngay, string NoidungCV, string TGThucHien, int maDV,int soLuong,string DiaDiem, string nhacNho)
