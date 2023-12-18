@@ -29,6 +29,7 @@ namespace BTL
             InitializeComponent();
             LoadData();
             btnDetail.Click += BtnDetail_Click;
+            ce.Checked = false;
 
 
         }
@@ -36,23 +37,14 @@ namespace BTL
         {            
             gcLichGac.DataSource = ThongBaoGac.Instance.LayLichGac(InForUser.MaDV);
         }
-        void LoadButton()
-        {
-            if (cSTTDS.EditValue.ToString() == "True")
-            {
-                panelControl2.Visible = true;
-            }
-            else
-            {
-                panelControl2.Visible=false;
-            }
-        }
+        
         void disenableTatCa()
         {
             cbNgayGac.Enabled = false; 
             txtNhacNho.Enabled = false;
             txtDap.Enabled = false;
             txtHoi.Enabled = false;
+            
         }
         private void BtnDetail_Click(object sender, EventArgs e)
         {
@@ -63,25 +55,38 @@ namespace BTL
             cbNgayGac.Text = gvLichGac.GetFocusedRowCellValue("Ngay").ToString();
             txtMaGac.Text = gvLichGac.GetFocusedRowCellValue("MaGac").ToString();
             cSTTDS.EditValue = gvLichGac.GetFocusedRowCellValue("STTDS");
-            disenableTatCa();
-            LoadButton();
+            ce.Checked = true;
+            disenableTatCa();            
         }
         //btn Cắt gác
         private void simpleButton8_Click(object sender, EventArgs e)
         {
             //MessageBox.Show(txtMaGac.Text+ cSTTDS.EditValue.ToString());
+
             string a = txtMaGac.Text;
-            int b = int.Parse(a);
-            frmCatGac frmCatGac = new frmCatGac(b);
-            frmCatGac.ShowDialog();
+            if (ce.Checked == true)
+            {
+
+                int b = int.Parse(a);
+                frmCatGac frmCatGac = new frmCatGac(b);
+                frmCatGac.ShowDialog();
+            }
+
+
         }
 
         private void simpleButton2_Click(object sender, EventArgs e)
         {
+
             string a = txtMaGac.Text;
-            int b = int.Parse(a);
-            frmCatGac frmCatGac = new frmCatGac(b);
-            frmCatGac.ShowDialog();
+            if (ce.Checked == true)
+            {                
+                int b = int.Parse(a);
+                frmCatGac frmCatGac = new frmCatGac(b);
+                frmCatGac.ShowDialog();
+            }
+            
+        
         }
     }
 }

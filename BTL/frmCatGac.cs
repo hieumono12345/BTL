@@ -33,8 +33,8 @@ namespace BTL
         private void frmCatGac_Load(object sender, EventArgs e)
         {
             //cắt gác tự động vào đâyy
-            //DataTable dt = CatGacDAO.Instance.getDSGacByMaGac(maGac);
-            //gcDanhSachGac.DataSource = dt;
+            /*DataTable dt = CatGacDAO.Instance.getDSGacByMaGac(maGac);
+            gcDSGac.DataSource = dt;*/
         }
 
         private void simpleButton1_Click(object sender, EventArgs e)
@@ -47,6 +47,12 @@ namespace BTL
             frmCatGacThuCong f = new frmCatGacThuCong();
             f.ShowDialog();
             this.Hide();
+        }
+
+        private void simpleButton3_Click(object sender, EventArgs e)
+        {
+            DataTable dt = CatGacDAO.Instance.getDSGacByMaGac(maGac);
+            gcDSGac.DataSource = dt;
         }
     }
 }

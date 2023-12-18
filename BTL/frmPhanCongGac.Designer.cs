@@ -61,6 +61,8 @@
             this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
             this.txtNhacNho = new System.Windows.Forms.RichTextBox();
             this.panelControl10 = new DevExpress.XtraEditors.PanelControl();
+            this.cbSua = new DevExpress.XtraEditors.CheckEdit();
+            this.cbThem = new DevExpress.XtraEditors.CheckEdit();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.labelControl11 = new DevExpress.XtraEditors.LabelControl();
             this.panelControl9 = new DevExpress.XtraEditors.PanelControl();
@@ -71,8 +73,6 @@
             this.txtMaGac = new System.Windows.Forms.TextBox();
             this.labelControl15 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl13 = new DevExpress.XtraEditors.LabelControl();
-            this.cbSua = new DevExpress.XtraEditors.CheckEdit();
-            this.cbThem = new DevExpress.XtraEditors.CheckEdit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gcDanhSachGac)).BeginInit();
@@ -88,10 +88,10 @@
             this.panelControl8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl10)).BeginInit();
             this.panelControl10.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl9)).BeginInit();
-            this.panelControl9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cbSua.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbThem.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl9)).BeginInit();
+            this.panelControl9.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelControl1
@@ -388,6 +388,24 @@
             this.panelControl10.Size = new System.Drawing.Size(531, 115);
             this.panelControl10.TabIndex = 10;
             // 
+            // cbSua
+            // 
+            this.cbSua.Location = new System.Drawing.Point(211, 90);
+            this.cbSua.Name = "cbSua";
+            this.cbSua.Properties.Caption = "cbSua";
+            this.cbSua.Size = new System.Drawing.Size(87, 20);
+            this.cbSua.TabIndex = 33;
+            this.cbSua.Visible = false;
+            // 
+            // cbThem
+            // 
+            this.cbThem.Location = new System.Drawing.Point(304, 90);
+            this.cbThem.Name = "cbThem";
+            this.cbThem.Properties.Caption = "cbThem";
+            this.cbThem.Size = new System.Drawing.Size(87, 20);
+            this.cbThem.TabIndex = 32;
+            this.cbThem.Visible = false;
+            // 
             // dateTimePicker1
             // 
             this.dateTimePicker1.CustomFormat = "yyyy-MM-dd";
@@ -486,24 +504,6 @@
             this.labelControl13.TabIndex = 1;
             this.labelControl13.Text = "THÔNG TIN GÁC";
             // 
-            // cbSua
-            // 
-            this.cbSua.Location = new System.Drawing.Point(211, 90);
-            this.cbSua.Name = "cbSua";
-            this.cbSua.Properties.Caption = "cbSua";
-            this.cbSua.Size = new System.Drawing.Size(87, 20);
-            this.cbSua.TabIndex = 33;
-            this.cbSua.Visible = false;
-            // 
-            // cbThem
-            // 
-            this.cbThem.Location = new System.Drawing.Point(304, 90);
-            this.cbThem.Name = "cbThem";
-            this.cbThem.Properties.Caption = "cbThem";
-            this.cbThem.Size = new System.Drawing.Size(87, 20);
-            this.cbThem.TabIndex = 32;
-            this.cbThem.Visible = false;
-            // 
             // frmPhanCongGac
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -533,11 +533,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl10)).EndInit();
             this.panelControl10.ResumeLayout(false);
             this.panelControl10.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cbSua.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbThem.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl9)).EndInit();
             this.panelControl9.ResumeLayout(false);
             this.panelControl9.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cbSua.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbThem.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }

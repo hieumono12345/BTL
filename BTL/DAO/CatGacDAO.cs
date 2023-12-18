@@ -21,7 +21,7 @@ namespace BTL.DAO
 
         public DataTable getDSGacByMaGac(int MaGac)
         {
-            DataTable data = DataProvider.Instance.ExecuteQuery("" + MaGac);
+            DataTable data = DataProvider.Instance.ExecuteQuery("[usp_CatGacTuDong]    @MaGac=" + MaGac);
             return data;
         }
     }

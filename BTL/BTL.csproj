@@ -84,6 +84,7 @@
     <Compile Include="DTO\ChiTietDanhSachCongViec.cs" />
     <Compile Include="DTO\ChiTietDanhSachGac.cs" />
     <Compile Include="DTO\ChucVu.cs" />
+    <Compile Include="DTO\CV.cs" />
     <Compile Include="DTO\DanhSach.cs" />
     <Compile Include="DTO\DonVi.cs" />
     <Compile Include="DTO\Nganh.cs" />

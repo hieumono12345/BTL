@@ -26,7 +26,7 @@ namespace BTL.DTO
             this.Hoi = row["Hoi"].ToString();
             this.Dap= row["Dap"].ToString();
             this.NhacNho = row["NhacNho"].ToString();
-            this.MaDV = (int)row["MaDV"];
+            //this.MaDV = (int)row["MaDV"];
         }
 
         private int _MaGac;

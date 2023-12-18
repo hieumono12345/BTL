@@ -141,5 +141,21 @@ namespace BTL.DAO
 
             return list;
         }
+        public List<TinhChatCongViec> getListTCCV()
+        {
+            List<TinhChatCongViec> list = new List<TinhChatCongViec>();
+
+            string query = "SELECT * from TinhChatCongViec";
+
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+
+            foreach (DataRow item in data.Rows)
+            {
+                TinhChatCongViec a = new TinhChatCongViec(item);
+                list.Add(a);
+            }
+
+            return list;
+        }
     }
 }
