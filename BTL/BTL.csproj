@@ -69,6 +69,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAO\CatCongViec.cs" />
     <Compile Include="DAO\CatGacDAO.cs" />
     <Compile Include="DAO\DataProvider.cs" />
     <Compile Include="DAO\LoadCombox.cs" />
@@ -132,6 +133,12 @@
     <Compile Include="frmDanhSachHocVien.Designer.cs">
       <DependentUpon>frmDanhSachHocVien.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmDanhSachUuTien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDanhSachUuTien.Designer.cs">
+      <DependentUpon>frmDanhSachUuTien.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmHome.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -165,7 +172,7 @@
     <Compile Include="frmThongBaoCV.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmThongBaoCV.Designer.cs">
+    <Compile Include="frmThongBaoCV.designer.cs">
       <DependentUpon>frmThongBaoCV.cs</DependentUpon>
     </Compile>
     <Compile Include="frmThongBaoGac.cs">
@@ -220,6 +227,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmDanhSachHocVien.resx">
       <DependentUpon>frmDanhSachHocVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDanhSachUuTien.resx">
+      <DependentUpon>frmDanhSachUuTien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmHome.resx">
       <DependentUpon>FrmHome.cs</DependentUpon>

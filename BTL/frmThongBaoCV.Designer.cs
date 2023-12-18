@@ -37,35 +37,35 @@
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.panelControl5 = new DevExpress.XtraEditors.PanelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
+            this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.gcDanhSachCV = new DevExpress.XtraGrid.GridControl();
             this.gvDanhSachCV = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.stt = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.tencongviec = new DevExpress.XtraGrid.Columns.GridColumn();
             this.Ngay = new DevExpress.XtraGrid.Columns.GridColumn();
             this.TGBD = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.trangthai = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.danhsach = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.btnDetail = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.panelControl7 = new DevExpress.XtraEditors.PanelControl();
             this.panelControl4 = new DevExpress.XtraEditors.PanelControl();
             this.simpleButton8 = new DevExpress.XtraEditors.SimpleButton();
-            this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
-            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton6 = new DevExpress.XtraEditors.SimpleButton();
+            this.btn_tienhanhcongviec = new DevExpress.XtraEditors.SimpleButton();
             this.panelControl3 = new DevExpress.XtraEditors.PanelControl();
+            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
             this.panelControl8 = new DevExpress.XtraEditors.PanelControl();
             this.txtMaCV = new System.Windows.Forms.TextBox();
             this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.txt_GhiChu = new System.Windows.Forms.RichTextBox();
             this.panelControl10 = new DevExpress.XtraEditors.PanelControl();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txt_soluong = new System.Windows.Forms.TextBox();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox17 = new System.Windows.Forms.TextBox();
+            this.txt_Ngay = new System.Windows.Forms.TextBox();
+            this.txt_TGBD = new System.Windows.Forms.TextBox();
+            this.txt_DiaDiem = new System.Windows.Forms.TextBox();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl11 = new DevExpress.XtraEditors.LabelControl();
@@ -74,6 +74,8 @@
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl5)).BeginInit();
             this.panelControl5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
+            this.panelControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gcDanhSachCV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvDanhSachCV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnDetail)).BeginInit();
@@ -81,8 +83,6 @@
             this.panelControl7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl4)).BeginInit();
             this.panelControl4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
-            this.panelControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).BeginInit();
             this.panelControl3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl8)).BeginInit();
@@ -100,7 +100,7 @@
             this.panelControl1.Controls.Add(this.gcDanhSachCV);
             this.panelControl1.Location = new System.Drawing.Point(3, 12);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(1199, 804);
+            this.panelControl1.Size = new System.Drawing.Size(1199, 778);
             this.panelControl1.TabIndex = 7;
             // 
             // panelControl5
@@ -121,6 +121,15 @@
             this.labelControl2.Size = new System.Drawing.Size(504, 26);
             this.labelControl2.TabIndex = 5;
             this.labelControl2.Text = "DANH SÁCH CÔNG VIỆC CHƯA HOÀN THÀNH";
+            // 
+            // panelControl2
+            // 
+            this.panelControl2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.panelControl2.Controls.Add(this.simpleButton1);
+            this.panelControl2.Location = new System.Drawing.Point(652, 718);
+            this.panelControl2.Name = "panelControl2";
+            this.panelControl2.Size = new System.Drawing.Size(531, 50);
+            this.panelControl2.TabIndex = 23;
             // 
             // simpleButton1
             // 
@@ -148,11 +157,11 @@
             // 
             this.gvDanhSachCV.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.stt,
-            this.gridColumn1,
+            this.tencongviec,
             this.Ngay,
             this.TGBD,
-            this.gridColumn7,
-            this.gridColumn3,
+            this.trangthai,
+            this.danhsach,
             this.gridColumn2});
             this.gvDanhSachCV.GridControl = this.gcDanhSachCV;
             this.gvDanhSachCV.Name = "gvDanhSachCV";
@@ -161,22 +170,22 @@
             // stt
             // 
             this.stt.Caption = "STT";
-            this.stt.FieldName = "stt";
+            this.stt.FieldName = "STT";
             this.stt.MinWidth = 25;
             this.stt.Name = "stt";
             this.stt.Visible = true;
             this.stt.VisibleIndex = 0;
             // 
-            // gridColumn1
+            // tencongviec
             // 
-            this.gridColumn1.Caption = "Tên công việc";
-            this.gridColumn1.FieldName = "NoiDung";
-            this.gridColumn1.MinWidth = 25;
-            this.gridColumn1.Name = "gridColumn1";
-            this.gridColumn1.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.True;
-            this.gridColumn1.Visible = true;
-            this.gridColumn1.VisibleIndex = 1;
-            this.gridColumn1.Width = 94;
+            this.tencongviec.Caption = "Tên công việc";
+            this.tencongviec.FieldName = "NoiDung";
+            this.tencongviec.MinWidth = 25;
+            this.tencongviec.Name = "tencongviec";
+            this.tencongviec.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.True;
+            this.tencongviec.Visible = true;
+            this.tencongviec.VisibleIndex = 1;
+            this.tencongviec.Width = 94;
             // 
             // Ngay
             // 
@@ -200,25 +209,25 @@
             this.TGBD.VisibleIndex = 3;
             this.TGBD.Width = 94;
             // 
-            // gridColumn7
+            // trangthai
             // 
-            this.gridColumn7.Caption = "Trạng thái";
-            this.gridColumn7.FieldName = "SttCV";
-            this.gridColumn7.MinWidth = 25;
-            this.gridColumn7.Name = "gridColumn7";
-            this.gridColumn7.Visible = true;
-            this.gridColumn7.VisibleIndex = 4;
-            this.gridColumn7.Width = 94;
+            this.trangthai.Caption = "Trạng thái";
+            this.trangthai.FieldName = "TrangThai";
+            this.trangthai.MinWidth = 25;
+            this.trangthai.Name = "trangthai";
+            this.trangthai.Visible = true;
+            this.trangthai.VisibleIndex = 4;
+            this.trangthai.Width = 94;
             // 
-            // gridColumn3
+            // danhsach
             // 
-            this.gridColumn3.Caption = "Danh sách";
-            this.gridColumn3.FieldName = "SttDS";
-            this.gridColumn3.MinWidth = 25;
-            this.gridColumn3.Name = "gridColumn3";
-            this.gridColumn3.Visible = true;
-            this.gridColumn3.VisibleIndex = 5;
-            this.gridColumn3.Width = 94;
+            this.danhsach.Caption = "Danh sách";
+            this.danhsach.FieldName = "STTDS";
+            this.danhsach.MinWidth = 25;
+            this.danhsach.Name = "danhsach";
+            this.danhsach.Visible = true;
+            this.danhsach.VisibleIndex = 5;
+            this.danhsach.Width = 94;
             // 
             // gridColumn2
             // 
@@ -252,15 +261,15 @@
             this.panelControl7.Controls.Add(this.labelControl13);
             this.panelControl7.Location = new System.Drawing.Point(1208, 12);
             this.panelControl7.Name = "panelControl7";
-            this.panelControl7.Size = new System.Drawing.Size(643, 804);
+            this.panelControl7.Size = new System.Drawing.Size(953, 778);
             this.panelControl7.TabIndex = 12;
             // 
             // panelControl4
             // 
             this.panelControl4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.panelControl4.Controls.Add(this.simpleButton8);
-            this.panelControl4.Controls.Add(this.simpleButton6);
-            this.panelControl4.Location = new System.Drawing.Point(91, 680);
+            this.panelControl4.Controls.Add(this.btn_tienhanhcongviec);
+            this.panelControl4.Location = new System.Drawing.Point(91, 654);
             this.panelControl4.Name = "panelControl4";
             this.panelControl4.Size = new System.Drawing.Size(531, 52);
             this.panelControl4.TabIndex = 24;
@@ -274,15 +283,28 @@
             this.simpleButton8.Size = new System.Drawing.Size(186, 43);
             this.simpleButton8.TabIndex = 20;
             this.simpleButton8.Text = "Hoàn thành công việc";
+            this.simpleButton8.Click += new System.EventHandler(this.simpleButton8_Click);
             // 
-            // panelControl2
+            // btn_tienhanhcongviec
             // 
-            this.panelControl2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.panelControl2.Controls.Add(this.simpleButton1);
-            this.panelControl2.Location = new System.Drawing.Point(652, 744);
-            this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(531, 50);
-            this.panelControl2.TabIndex = 23;
+            this.btn_tienhanhcongviec.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btn_tienhanhcongviec.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_tienhanhcongviec.ImageOptions.Image")));
+            this.btn_tienhanhcongviec.Location = new System.Drawing.Point(34, 2);
+            this.btn_tienhanhcongviec.Name = "btn_tienhanhcongviec";
+            this.btn_tienhanhcongviec.Size = new System.Drawing.Size(186, 43);
+            this.btn_tienhanhcongviec.TabIndex = 20;
+            this.btn_tienhanhcongviec.Text = "Bắt đầu tiến hành";
+            this.btn_tienhanhcongviec.Click += new System.EventHandler(this.btn_tienhanhcongviec_Click);
+            // 
+            // panelControl3
+            // 
+            this.panelControl3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.panelControl3.Controls.Add(this.simpleButton2);
+            this.panelControl3.Controls.Add(this.simpleButton3);
+            this.panelControl3.Location = new System.Drawing.Point(91, 723);
+            this.panelControl3.Name = "panelControl3";
+            this.panelControl3.Size = new System.Drawing.Size(531, 50);
+            this.panelControl3.TabIndex = 22;
             // 
             // simpleButton2
             // 
@@ -293,26 +315,6 @@
             this.simpleButton2.Size = new System.Drawing.Size(186, 38);
             this.simpleButton2.TabIndex = 21;
             this.simpleButton2.Text = "Điều chỉnh lực lượng";
-            // 
-            // simpleButton6
-            // 
-            this.simpleButton6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.simpleButton6.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton6.ImageOptions.Image")));
-            this.simpleButton6.Location = new System.Drawing.Point(34, 2);
-            this.simpleButton6.Name = "simpleButton6";
-            this.simpleButton6.Size = new System.Drawing.Size(186, 43);
-            this.simpleButton6.TabIndex = 20;
-            this.simpleButton6.Text = "Bắt đầu tiến hành";
-            // 
-            // panelControl3
-            // 
-            this.panelControl3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.panelControl3.Controls.Add(this.simpleButton2);
-            this.panelControl3.Controls.Add(this.simpleButton3);
-            this.panelControl3.Location = new System.Drawing.Point(91, 749);
-            this.panelControl3.Name = "panelControl3";
-            this.panelControl3.Size = new System.Drawing.Size(531, 50);
-            this.panelControl3.TabIndex = 22;
             // 
             // simpleButton3
             // 
@@ -329,7 +331,7 @@
             // 
             this.panelControl8.Controls.Add(this.txtMaCV);
             this.panelControl8.Controls.Add(this.labelControl8);
-            this.panelControl8.Controls.Add(this.richTextBox1);
+            this.panelControl8.Controls.Add(this.txt_GhiChu);
             this.panelControl8.Location = new System.Drawing.Point(91, 417);
             this.panelControl8.Name = "panelControl8";
             this.panelControl8.Size = new System.Drawing.Size(531, 171);
@@ -353,21 +355,21 @@
             this.labelControl8.TabIndex = 17;
             this.labelControl8.Text = "Ghi chú: ";
             // 
-            // richTextBox1
+            // txt_GhiChu
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(239, 34);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(269, 96);
-            this.richTextBox1.TabIndex = 11;
-            this.richTextBox1.Text = "";
+            this.txt_GhiChu.Location = new System.Drawing.Point(239, 34);
+            this.txt_GhiChu.Name = "txt_GhiChu";
+            this.txt_GhiChu.Size = new System.Drawing.Size(269, 96);
+            this.txt_GhiChu.TabIndex = 11;
+            this.txt_GhiChu.Text = "";
             // 
             // panelControl10
             // 
-            this.panelControl10.Controls.Add(this.textBox4);
+            this.panelControl10.Controls.Add(this.txt_soluong);
             this.panelControl10.Controls.Add(this.labelControl5);
-            this.panelControl10.Controls.Add(this.textBox2);
-            this.panelControl10.Controls.Add(this.textBox1);
-            this.panelControl10.Controls.Add(this.textBox17);
+            this.panelControl10.Controls.Add(this.txt_Ngay);
+            this.panelControl10.Controls.Add(this.txt_TGBD);
+            this.panelControl10.Controls.Add(this.txt_DiaDiem);
             this.panelControl10.Controls.Add(this.labelControl1);
             this.panelControl10.Controls.Add(this.labelControl3);
             this.panelControl10.Controls.Add(this.labelControl11);
@@ -376,13 +378,13 @@
             this.panelControl10.Size = new System.Drawing.Size(531, 299);
             this.panelControl10.TabIndex = 10;
             // 
-            // textBox4
+            // txt_soluong
             // 
-            this.textBox4.Enabled = false;
-            this.textBox4.Location = new System.Drawing.Point(239, 250);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(269, 23);
-            this.textBox4.TabIndex = 28;
+            this.txt_soluong.Enabled = false;
+            this.txt_soluong.Location = new System.Drawing.Point(239, 250);
+            this.txt_soluong.Name = "txt_soluong";
+            this.txt_soluong.Size = new System.Drawing.Size(269, 23);
+            this.txt_soluong.TabIndex = 28;
             // 
             // labelControl5
             // 
@@ -394,29 +396,29 @@
             this.labelControl5.TabIndex = 27;
             this.labelControl5.Text = "Số lượng :";
             // 
-            // textBox2
+            // txt_Ngay
             // 
-            this.textBox2.Enabled = false;
-            this.textBox2.Location = new System.Drawing.Point(239, 47);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(269, 23);
-            this.textBox2.TabIndex = 26;
+            this.txt_Ngay.Enabled = false;
+            this.txt_Ngay.Location = new System.Drawing.Point(239, 47);
+            this.txt_Ngay.Name = "txt_Ngay";
+            this.txt_Ngay.Size = new System.Drawing.Size(269, 23);
+            this.txt_Ngay.TabIndex = 26;
             // 
-            // textBox1
+            // txt_TGBD
             // 
-            this.textBox1.Enabled = false;
-            this.textBox1.Location = new System.Drawing.Point(239, 113);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(269, 23);
-            this.textBox1.TabIndex = 25;
+            this.txt_TGBD.Enabled = false;
+            this.txt_TGBD.Location = new System.Drawing.Point(239, 113);
+            this.txt_TGBD.Name = "txt_TGBD";
+            this.txt_TGBD.Size = new System.Drawing.Size(269, 23);
+            this.txt_TGBD.TabIndex = 25;
             // 
-            // textBox17
+            // txt_DiaDiem
             // 
-            this.textBox17.Enabled = false;
-            this.textBox17.Location = new System.Drawing.Point(239, 184);
-            this.textBox17.Name = "textBox17";
-            this.textBox17.Size = new System.Drawing.Size(269, 23);
-            this.textBox17.TabIndex = 18;
+            this.txt_DiaDiem.Enabled = false;
+            this.txt_DiaDiem.Location = new System.Drawing.Point(239, 184);
+            this.txt_DiaDiem.Name = "txt_DiaDiem";
+            this.txt_DiaDiem.Size = new System.Drawing.Size(269, 23);
+            this.txt_DiaDiem.TabIndex = 18;
             // 
             // labelControl1
             // 
@@ -462,7 +464,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1863, 820);
+            this.ClientSize = new System.Drawing.Size(1813, 794);
             this.Controls.Add(this.panelControl7);
             this.Controls.Add(this.panelControl1);
             this.Name = "frmThongBaoCV";
@@ -472,6 +474,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl5)).EndInit();
             this.panelControl5.ResumeLayout(false);
             this.panelControl5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
+            this.panelControl2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gcDanhSachCV)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvDanhSachCV)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnDetail)).EndInit();
@@ -480,8 +484,6 @@
             this.panelControl7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl4)).EndInit();
             this.panelControl4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
-            this.panelControl2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).EndInit();
             this.panelControl3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl8)).EndInit();
@@ -501,7 +503,7 @@
         private DevExpress.XtraGrid.GridControl gcDanhSachCV;
         private DevExpress.XtraGrid.Views.Grid.GridView gvDanhSachCV;
         private DevExpress.XtraGrid.Columns.GridColumn stt;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
+        private DevExpress.XtraGrid.Columns.GridColumn tencongviec;
         private DevExpress.XtraGrid.Columns.GridColumn Ngay;
         private DevExpress.XtraGrid.Columns.GridColumn TGBD;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
@@ -511,24 +513,24 @@
         private DevExpress.XtraEditors.SimpleButton simpleButton3;
         private DevExpress.XtraEditors.PanelControl panelControl8;
         private DevExpress.XtraEditors.LabelControl labelControl8;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox txt_GhiChu;
         private DevExpress.XtraEditors.PanelControl panelControl10;
-        private System.Windows.Forms.TextBox textBox17;
+        private System.Windows.Forms.TextBox txt_DiaDiem;
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraEditors.LabelControl labelControl3;
         private DevExpress.XtraEditors.LabelControl labelControl11;
         private DevExpress.XtraEditors.LabelControl labelControl13;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
+        private System.Windows.Forms.TextBox txt_Ngay;
+        private System.Windows.Forms.TextBox txt_TGBD;
+        private DevExpress.XtraGrid.Columns.GridColumn danhsach;
         private DevExpress.XtraEditors.LabelControl labelControl5;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn7;
+        private DevExpress.XtraGrid.Columns.GridColumn trangthai;
         private DevExpress.XtraEditors.PanelControl panelControl4;
         private DevExpress.XtraEditors.SimpleButton simpleButton8;
         private DevExpress.XtraEditors.PanelControl panelControl2;
         private DevExpress.XtraEditors.SimpleButton simpleButton2;
-        private DevExpress.XtraEditors.SimpleButton simpleButton6;
-        private System.Windows.Forms.TextBox textBox4;
+        private DevExpress.XtraEditors.SimpleButton btn_tienhanhcongviec;
+        private System.Windows.Forms.TextBox txt_soluong;
         private DevExpress.XtraEditors.SimpleButton simpleButton1;
         private DevExpress.XtraEditors.PanelControl panelControl5;
         private System.Windows.Forms.TextBox txtMaCV;

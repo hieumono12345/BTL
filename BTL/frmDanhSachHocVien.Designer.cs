@@ -56,20 +56,14 @@
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.panelControl7 = new DevExpress.XtraEditors.PanelControl();
             this.panelControl10 = new DevExpress.XtraEditors.PanelControl();
-            this.cbGioiTinh = new System.Windows.Forms.ComboBox();
-            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.txtQuanHam = new System.Windows.Forms.ComboBox();
-            this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
-            this.txtChucVu = new System.Windows.Forms.TextBox();
-            this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
-            this.txtTenHV = new System.Windows.Forms.TextBox();
+            this.txtNoiDungUuTien = new DevExpress.XtraEditors.TextEdit();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
-            this.txtMaHV = new System.Windows.Forms.TextBox();
-            this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.cbQN = new System.Windows.Forms.ComboBox();
             this.pncBtnXuLy = new DevExpress.XtraEditors.PanelControl();
-            this.btnThoat = new DevExpress.XtraEditors.SimpleButton();
             this.btnXacNhan = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl13 = new DevExpress.XtraEditors.LabelControl();
+            this.cnNganh = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.gcDanhSachQN)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvDanhSachQN)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnDetail)).BeginInit();
@@ -82,6 +76,7 @@
             this.panelControl7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl10)).BeginInit();
             this.panelControl10.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNoiDungUuTien.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pncBtnXuLy)).BeginInit();
             this.pncBtnXuLy.SuspendLayout();
             this.SuspendLayout();
@@ -95,7 +90,7 @@
             this.gcDanhSachQN.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.btnXoa,
             this.btnDetail});
-            this.gcDanhSachQN.Size = new System.Drawing.Size(1185, 616);
+            this.gcDanhSachQN.Size = new System.Drawing.Size(1185, 628);
             this.gcDanhSachQN.TabIndex = 0;
             this.gcDanhSachQN.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvDanhSachQN});
@@ -114,7 +109,6 @@
             // 
             // MaQN
             // 
-            this.MaQN.Caption = "Mã Quân nhân";
             this.MaQN.FieldName = "MaQN";
             this.MaQN.MaxWidth = 150;
             this.MaQN.MinWidth = 100;
@@ -202,7 +196,7 @@
             this.panelControl1.Controls.Add(this.gcDanhSachQN);
             this.panelControl1.Location = new System.Drawing.Point(3, 12);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(1199, 796);
+            this.panelControl1.Size = new System.Drawing.Size(1199, 802);
             this.panelControl1.TabIndex = 7;
             // 
             // panelControl12
@@ -211,7 +205,7 @@
             this.panelControl12.Controls.Add(this.btnThem);
             this.panelControl12.Controls.Add(this.btnDelete);
             this.panelControl12.Controls.Add(this.btnSua);
-            this.panelControl12.Location = new System.Drawing.Point(9, 733);
+            this.panelControl12.Location = new System.Drawing.Point(9, 739);
             this.panelControl12.Name = "panelControl12";
             this.panelControl12.Size = new System.Drawing.Size(1185, 50);
             this.panelControl12.TabIndex = 21;
@@ -270,139 +264,70 @@
             this.panelControl7.Cursor = System.Windows.Forms.Cursors.Default;
             this.panelControl7.Location = new System.Drawing.Point(1208, 12);
             this.panelControl7.Name = "panelControl7";
-            this.panelControl7.Size = new System.Drawing.Size(643, 796);
+            this.panelControl7.Size = new System.Drawing.Size(643, 802);
             this.panelControl7.TabIndex = 12;
             // 
             // panelControl10
             // 
-            this.panelControl10.Controls.Add(this.cbGioiTinh);
-            this.panelControl10.Controls.Add(this.labelControl1);
-            this.panelControl10.Controls.Add(this.txtQuanHam);
-            this.panelControl10.Controls.Add(this.labelControl6);
-            this.panelControl10.Controls.Add(this.txtChucVu);
-            this.panelControl10.Controls.Add(this.labelControl5);
-            this.panelControl10.Controls.Add(this.txtTenHV);
+            this.panelControl10.Controls.Add(this.cnNganh);
+            this.panelControl10.Controls.Add(this.txtNoiDungUuTien);
             this.panelControl10.Controls.Add(this.labelControl3);
-            this.panelControl10.Controls.Add(this.txtMaHV);
-            this.panelControl10.Controls.Add(this.labelControl4);
+            this.panelControl10.Controls.Add(this.labelControl1);
+            this.panelControl10.Controls.Add(this.cbQN);
             this.panelControl10.Location = new System.Drawing.Point(91, 78);
             this.panelControl10.Name = "panelControl10";
-            this.panelControl10.Size = new System.Drawing.Size(531, 332);
+            this.panelControl10.Size = new System.Drawing.Size(531, 628);
             this.panelControl10.TabIndex = 22;
             // 
-            // cbGioiTinh
+            // txtNoiDungUuTien
             // 
-            this.cbGioiTinh.FormattingEnabled = true;
-            this.cbGioiTinh.Location = new System.Drawing.Point(238, 267);
-            this.cbGioiTinh.Name = "cbGioiTinh";
-            this.cbGioiTinh.Size = new System.Drawing.Size(269, 24);
-            this.cbGioiTinh.TabIndex = 27;
-            // 
-            // labelControl1
-            // 
-            this.labelControl1.Appearance.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl1.Appearance.Options.UseFont = true;
-            this.labelControl1.Location = new System.Drawing.Point(24, 267);
-            this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(91, 26);
-            this.labelControl1.TabIndex = 26;
-            this.labelControl1.Text = "Giới tính:";
-            // 
-            // txtQuanHam
-            // 
-            this.txtQuanHam.FormattingEnabled = true;
-            this.txtQuanHam.Location = new System.Drawing.Point(238, 214);
-            this.txtQuanHam.Name = "txtQuanHam";
-            this.txtQuanHam.Size = new System.Drawing.Size(269, 24);
-            this.txtQuanHam.TabIndex = 19;
-            // 
-            // labelControl6
-            // 
-            this.labelControl6.Appearance.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl6.Appearance.Options.UseFont = true;
-            this.labelControl6.Location = new System.Drawing.Point(24, 209);
-            this.labelControl6.Name = "labelControl6";
-            this.labelControl6.Size = new System.Drawing.Size(116, 26);
-            this.labelControl6.TabIndex = 25;
-            this.labelControl6.Text = "Quân hàm: ";
-            // 
-            // txtChucVu
-            // 
-            this.txtChucVu.Location = new System.Drawing.Point(238, 157);
-            this.txtChucVu.Name = "txtChucVu";
-            this.txtChucVu.Size = new System.Drawing.Size(269, 23);
-            this.txtChucVu.TabIndex = 24;
-            // 
-            // labelControl5
-            // 
-            this.labelControl5.Appearance.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl5.Appearance.Options.UseFont = true;
-            this.labelControl5.Location = new System.Drawing.Point(24, 152);
-            this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(91, 26);
-            this.labelControl5.TabIndex = 23;
-            this.labelControl5.Text = "Chức vụ:";
-            // 
-            // txtTenHV
-            // 
-            this.txtTenHV.Location = new System.Drawing.Point(238, 99);
-            this.txtTenHV.Name = "txtTenHV";
-            this.txtTenHV.Size = new System.Drawing.Size(269, 23);
-            this.txtTenHV.TabIndex = 22;
+            this.txtNoiDungUuTien.Location = new System.Drawing.Point(224, 223);
+            this.txtNoiDungUuTien.Name = "txtNoiDungUuTien";
+            this.txtNoiDungUuTien.Size = new System.Drawing.Size(269, 23);
+            this.txtNoiDungUuTien.TabIndex = 32;
             // 
             // labelControl3
             // 
             this.labelControl3.Appearance.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl3.Appearance.Options.UseFont = true;
-            this.labelControl3.Location = new System.Drawing.Point(24, 94);
+            this.labelControl3.Location = new System.Drawing.Point(24, 218);
             this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(129, 26);
-            this.labelControl3.TabIndex = 21;
-            this.labelControl3.Text = "Tên học viên";
+            this.labelControl3.Size = new System.Drawing.Size(170, 26);
+            this.labelControl3.TabIndex = 30;
+            this.labelControl3.Text = "Nội dung ưu tiên:";
             // 
-            // txtMaHV
+            // labelControl1
             // 
-            this.txtMaHV.Location = new System.Drawing.Point(237, 36);
-            this.txtMaHV.Name = "txtMaHV";
-            this.txtMaHV.Size = new System.Drawing.Size(269, 23);
-            this.txtMaHV.TabIndex = 20;
+            this.labelControl1.Appearance.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl1.Appearance.Options.UseFont = true;
+            this.labelControl1.Location = new System.Drawing.Point(24, 108);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(116, 26);
+            this.labelControl1.TabIndex = 28;
+            this.labelControl1.Text = "Quân nhân:";
             // 
-            // labelControl4
+            // cbQN
             // 
-            this.labelControl4.Appearance.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl4.Appearance.Options.UseFont = true;
-            this.labelControl4.Location = new System.Drawing.Point(25, 31);
-            this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(128, 26);
-            this.labelControl4.TabIndex = 19;
-            this.labelControl4.Text = "Mã học viên:";
+            this.cbQN.FormattingEnabled = true;
+            this.cbQN.Location = new System.Drawing.Point(224, 113);
+            this.cbQN.Name = "cbQN";
+            this.cbQN.Size = new System.Drawing.Size(269, 24);
+            this.cbQN.TabIndex = 29;
             // 
             // pncBtnXuLy
             // 
             this.pncBtnXuLy.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.pncBtnXuLy.Controls.Add(this.btnThoat);
             this.pncBtnXuLy.Controls.Add(this.btnXacNhan);
-            this.pncBtnXuLy.Location = new System.Drawing.Point(91, 733);
+            this.pncBtnXuLy.Location = new System.Drawing.Point(91, 739);
             this.pncBtnXuLy.Name = "pncBtnXuLy";
             this.pncBtnXuLy.Size = new System.Drawing.Size(531, 50);
             this.pncBtnXuLy.TabIndex = 23;
-            // 
-            // btnThoat
-            // 
-            this.btnThoat.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnThoat.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnThoat.ImageOptions.Image")));
-            this.btnThoat.Location = new System.Drawing.Point(59, 5);
-            this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(186, 38);
-            this.btnThoat.TabIndex = 21;
-            this.btnThoat.Text = "Thoát";
-            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
             // btnXacNhan
             // 
             this.btnXacNhan.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnXacNhan.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnXacNhan.ImageOptions.Image")));
-            this.btnXacNhan.Location = new System.Drawing.Point(300, 2);
+            this.btnXacNhan.Location = new System.Drawing.Point(163, 4);
             this.btnXacNhan.Name = "btnXacNhan";
             this.btnXacNhan.Size = new System.Drawing.Size(186, 43);
             this.btnXacNhan.TabIndex = 20;
@@ -418,6 +343,14 @@
             this.labelControl13.Size = new System.Drawing.Size(244, 26);
             this.labelControl13.TabIndex = 1;
             this.labelControl13.Text = "THÔNG TIN HỌC VIÊN";
+            // 
+            // cnNganh
+            // 
+            this.cnNganh.FormattingEnabled = true;
+            this.cnNganh.Location = new System.Drawing.Point(224, 44);
+            this.cnNganh.Name = "cnNganh";
+            this.cnNganh.Size = new System.Drawing.Size(269, 24);
+            this.cnNganh.TabIndex = 33;
             // 
             // frmDanhSachHocVien
             // 
@@ -443,6 +376,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl10)).EndInit();
             this.panelControl10.ResumeLayout(false);
             this.panelControl10.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNoiDungUuTien.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pncBtnXuLy)).EndInit();
             this.pncBtnXuLy.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -463,24 +397,19 @@
         private DevExpress.XtraEditors.PanelControl panelControl7;
         private DevExpress.XtraEditors.LabelControl labelControl13;
         private DevExpress.XtraEditors.PanelControl pncBtnXuLy;
-        private DevExpress.XtraEditors.SimpleButton btnThoat;
         private DevExpress.XtraEditors.SimpleButton btnXacNhan;
         private DevExpress.XtraEditors.PanelControl panelControl10;
-        private System.Windows.Forms.TextBox txtChucVu;
-        private DevExpress.XtraEditors.LabelControl labelControl5;
-        private System.Windows.Forms.TextBox txtTenHV;
-        private DevExpress.XtraEditors.LabelControl labelControl3;
-        private System.Windows.Forms.TextBox txtMaHV;
-        private DevExpress.XtraEditors.LabelControl labelControl4;
         private DevExpress.XtraEditors.PanelControl panelControl12;
         private DevExpress.XtraEditors.SimpleButton btnThem;
         private DevExpress.XtraEditors.SimpleButton btnDelete;
         private DevExpress.XtraEditors.SimpleButton btnSua;
-        private System.Windows.Forms.ComboBox txtQuanHam;
-        private DevExpress.XtraEditors.LabelControl labelControl6;
-        private DevExpress.XtraEditors.LabelControl labelControl1;
-        private System.Windows.Forms.ComboBox cbGioiTinh;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit btnDetail;
+        private DevExpress.XtraEditors.LabelControl labelControl1;
+        private System.Windows.Forms.ComboBox cbQN;
+        private DevExpress.XtraEditors.TextEdit txtNoiDungUuTien;
+        private DevExpress.XtraEditors.LabelControl labelControl3;
+        private DevExpress.XtraGrid.GridControl gridControl1;
+        private System.Windows.Forms.ComboBox cnNganh;
     }
 }

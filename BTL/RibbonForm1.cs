@@ -87,7 +87,7 @@ namespace BTL
             if (inForUser.MaQuyen == 2)
             {
                 QuanLyNguoiDung.Visible = false;
-                PhanCong.Visible = false;
+                PhanCong.Visible = true;
                 System.Visible= true;
                 Home.Visible = false;
                 ThongBao.Visible = true;
@@ -134,7 +134,7 @@ namespace BTL
 
         private void btnQLHocVien_ItemClick(object sender, ItemClickEventArgs e)
         {           
-            OpenForm(typeof(frmDanhSachHocVien));
+            OpenFormSpecical(typeof(frmDanhSachHocVien));
         }
 
         private void btnListLoi_ItemClick(object sender, ItemClickEventArgs e)

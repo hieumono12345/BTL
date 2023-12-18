@@ -78,15 +78,16 @@ namespace BTL
         private void simpleButton2_Click(object sender, EventArgs e)
         {
 
-            string a = txtMaGac.Text;
-            if (ce.Checked == true)
-            {                
-                int b = int.Parse(a);
-                frmCatGac frmCatGac = new frmCatGac(b);
-                frmCatGac.ShowDialog();
+            if (int.TryParse(txtMaGac.Text, out int b))
+            {
+                if (ce.Checked == true)
+                {
+                    frmCatGac frmCatGac = new frmCatGac(b);
+                    frmCatGac.ShowDialog();
+                }
             }
-            
-        
+
+
         }
     }
 }

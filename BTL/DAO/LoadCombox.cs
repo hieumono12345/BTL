@@ -73,6 +73,25 @@ namespace BTL.DAO
 
             return list;
         }
+        public List<QN> getDSQNByDV( int MaDV,int id)
+        {
+            
+            if (MaDV == null) MaDV = 0;
+            List<QN> list = new List<QN>();
+
+            string query = "SELECT MaQN,TenQN FROM dbo.QuanNhan WHERE MaDV="+MaDV+" AND MaChucVu= 3 AND MaNganh="+id;
+
+
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+
+            foreach (DataRow item in data.Rows)
+            {
+                QN a = new QN(item);
+                list.Add(a);
+            }
+
+            return list;
+        }
 
         public List<DonVi> getListDonVi()
         {
@@ -157,5 +176,6 @@ namespace BTL.DAO
 
             return list;
         }
+         
     }
 }

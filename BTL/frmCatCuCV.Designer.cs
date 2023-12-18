@@ -36,19 +36,20 @@
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject8 = new DevExpress.Utils.SerializableAppearanceObject();
             this.panelControl7 = new DevExpress.XtraEditors.PanelControl();
             this.panelControl3 = new DevExpress.XtraEditors.PanelControl();
-            this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
+            this.btn_cattudong = new DevExpress.XtraEditors.SimpleButton();
             this.panelControl8 = new DevExpress.XtraEditors.PanelControl();
             this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.panelControl10 = new DevExpress.XtraEditors.PanelControl();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.cbx_tinhchat = new System.Windows.Forms.ComboBox();
+            this.txt_ghichu = new System.Windows.Forms.RichTextBox();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
+            this.panelControl10 = new DevExpress.XtraEditors.PanelControl();
+            this.txt_noidung = new System.Windows.Forms.TextBox();
             this.labelControl11 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl13 = new DevExpress.XtraEditors.LabelControl();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.gcDanhSachCV = new DevExpress.XtraGrid.GridControl();
             this.gvDanhSachCV = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.stt = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.STT = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.ThoiGian = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -57,8 +58,6 @@
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl7)).BeginInit();
             this.panelControl7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).BeginInit();
@@ -87,33 +86,34 @@
             this.panelControl7.Controls.Add(this.labelControl13);
             this.panelControl7.Location = new System.Drawing.Point(1208, 12);
             this.panelControl7.Name = "panelControl7";
-            this.panelControl7.Size = new System.Drawing.Size(643, 805);
+            this.panelControl7.Size = new System.Drawing.Size(962, 805);
             this.panelControl7.TabIndex = 12;
             // 
             // panelControl3
             // 
             this.panelControl3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.panelControl3.Controls.Add(this.simpleButton3);
+            this.panelControl3.Controls.Add(this.btn_cattudong);
             this.panelControl3.Location = new System.Drawing.Point(91, 750);
             this.panelControl3.Name = "panelControl3";
             this.panelControl3.Size = new System.Drawing.Size(531, 50);
             this.panelControl3.TabIndex = 22;
             // 
-            // simpleButton3
+            // btn_cattudong
             // 
-            this.simpleButton3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.simpleButton3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton3.ImageOptions.Image")));
-            this.simpleButton3.Location = new System.Drawing.Point(181, 5);
-            this.simpleButton3.Name = "simpleButton3";
-            this.simpleButton3.Size = new System.Drawing.Size(186, 43);
-            this.simpleButton3.TabIndex = 20;
-            this.simpleButton3.Text = "Cắt tự động";
+            this.btn_cattudong.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btn_cattudong.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_cattudong.ImageOptions.Image")));
+            this.btn_cattudong.Location = new System.Drawing.Point(181, 5);
+            this.btn_cattudong.Name = "btn_cattudong";
+            this.btn_cattudong.Size = new System.Drawing.Size(186, 43);
+            this.btn_cattudong.TabIndex = 20;
+            this.btn_cattudong.Text = "Cắt tự động";
+            this.btn_cattudong.Click += new System.EventHandler(this.btn_cattudong_Click);
             // 
             // panelControl8
             // 
             this.panelControl8.Controls.Add(this.labelControl8);
-            this.panelControl8.Controls.Add(this.comboBox2);
-            this.panelControl8.Controls.Add(this.richTextBox1);
+            this.panelControl8.Controls.Add(this.cbx_tinhchat);
+            this.panelControl8.Controls.Add(this.txt_ghichu);
             this.panelControl8.Controls.Add(this.labelControl4);
             this.panelControl8.Location = new System.Drawing.Point(91, 231);
             this.panelControl8.Name = "panelControl8";
@@ -130,31 +130,21 @@
             this.labelControl8.TabIndex = 17;
             this.labelControl8.Text = "Ghi chú: ";
             // 
-            // richTextBox1
+            // cbx_tinhchat
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(248, 144);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(264, 96);
-            this.richTextBox1.TabIndex = 11;
-            this.richTextBox1.Text = "";
+            this.cbx_tinhchat.FormattingEnabled = true;
+            this.cbx_tinhchat.Location = new System.Drawing.Point(248, 31);
+            this.cbx_tinhchat.Name = "cbx_tinhchat";
+            this.cbx_tinhchat.Size = new System.Drawing.Size(269, 24);
+            this.cbx_tinhchat.TabIndex = 20;
             // 
-            // panelControl10
+            // txt_ghichu
             // 
-            this.panelControl10.Controls.Add(this.textBox2);
-            this.panelControl10.Controls.Add(this.textBox1);
-            this.panelControl10.Controls.Add(this.labelControl11);
-            this.panelControl10.Location = new System.Drawing.Point(91, 83);
-            this.panelControl10.Name = "panelControl10";
-            this.panelControl10.Size = new System.Drawing.Size(531, 121);
-            this.panelControl10.TabIndex = 10;
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(248, 31);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(269, 24);
-            this.comboBox2.TabIndex = 20;
+            this.txt_ghichu.Location = new System.Drawing.Point(248, 144);
+            this.txt_ghichu.Name = "txt_ghichu";
+            this.txt_ghichu.Size = new System.Drawing.Size(264, 96);
+            this.txt_ghichu.TabIndex = 11;
+            this.txt_ghichu.Text = "";
             // 
             // labelControl4
             // 
@@ -165,6 +155,22 @@
             this.labelControl4.Size = new System.Drawing.Size(204, 26);
             this.labelControl4.TabIndex = 19;
             this.labelControl4.Text = "Đăc điểm lực lượng:";
+            // 
+            // panelControl10
+            // 
+            this.panelControl10.Controls.Add(this.txt_noidung);
+            this.panelControl10.Controls.Add(this.labelControl11);
+            this.panelControl10.Location = new System.Drawing.Point(91, 83);
+            this.panelControl10.Name = "panelControl10";
+            this.panelControl10.Size = new System.Drawing.Size(531, 121);
+            this.panelControl10.TabIndex = 10;
+            // 
+            // txt_noidung
+            // 
+            this.txt_noidung.Location = new System.Drawing.Point(248, 50);
+            this.txt_noidung.Name = "txt_noidung";
+            this.txt_noidung.Size = new System.Drawing.Size(269, 23);
+            this.txt_noidung.TabIndex = 26;
             // 
             // labelControl11
             // 
@@ -213,7 +219,7 @@
             // gvDanhSachCV
             // 
             this.gvDanhSachCV.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.stt,
+            this.STT,
             this.gridColumn1,
             this.ThoiGian,
             this.gridColumn2});
@@ -221,14 +227,14 @@
             this.gvDanhSachCV.Name = "gvDanhSachCV";
             this.gvDanhSachCV.OptionsCustomization.AllowMergedGrouping = DevExpress.Utils.DefaultBoolean.True;
             // 
-            // stt
+            // STT
             // 
-            this.stt.Caption = "STT";
-            this.stt.FieldName = "stt";
-            this.stt.MinWidth = 25;
-            this.stt.Name = "stt";
-            this.stt.Visible = true;
-            this.stt.VisibleIndex = 0;
+            this.STT.Caption = "STT";
+            this.STT.FieldName = "STT";
+            this.STT.MinWidth = 25;
+            this.STT.Name = "STT";
+            this.STT.Visible = true;
+            this.STT.VisibleIndex = 0;
             // 
             // gridColumn1
             // 
@@ -244,7 +250,7 @@
             // ThoiGian
             // 
             this.ThoiGian.Caption = "Tên lớp";
-            this.ThoiGian.FieldName = "TenLop";
+            this.ThoiGian.FieldName = "TenNganh";
             this.ThoiGian.MinWidth = 25;
             this.ThoiGian.Name = "ThoiGian";
             this.ThoiGian.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.True;
@@ -291,6 +297,7 @@
             this.simpleButton1.Size = new System.Drawing.Size(186, 43);
             this.simpleButton1.TabIndex = 22;
             this.simpleButton1.Text = "Xác nhận";
+            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
             // simpleButton2
             // 
@@ -313,29 +320,16 @@
             this.labelControl2.TabIndex = 21;
             this.labelControl2.Text = "DANH SÁCH ";
             // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(248, 50);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(269, 23);
-            this.textBox1.TabIndex = 26;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(248, 21);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(269, 23);
-            this.textBox2.TabIndex = 27;
-            // 
             // frmCatCuCV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1863, 820);
+            this.ClientSize = new System.Drawing.Size(1822, 820);
             this.Controls.Add(this.panelControl1);
             this.Controls.Add(this.panelControl7);
             this.Name = "frmCatCuCV";
             this.Text = "frmCatCuCV";
+            this.Load += new System.EventHandler(this.frmCatCuCV_Load);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl7)).EndInit();
             this.panelControl7.ResumeLayout(false);
             this.panelControl7.PerformLayout();
@@ -363,12 +357,12 @@
 
         private DevExpress.XtraEditors.PanelControl panelControl7;
         private DevExpress.XtraEditors.PanelControl panelControl3;
-        private DevExpress.XtraEditors.SimpleButton simpleButton3;
+        private DevExpress.XtraEditors.SimpleButton btn_cattudong;
         private DevExpress.XtraEditors.PanelControl panelControl8;
         private DevExpress.XtraEditors.LabelControl labelControl8;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox txt_ghichu;
         private DevExpress.XtraEditors.PanelControl panelControl10;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox cbx_tinhchat;
         private DevExpress.XtraEditors.LabelControl labelControl4;
         private DevExpress.XtraEditors.LabelControl labelControl11;
         private DevExpress.XtraEditors.LabelControl labelControl13;
@@ -379,12 +373,11 @@
         private DevExpress.XtraEditors.SimpleButton simpleButton1;
         private DevExpress.XtraGrid.GridControl gcDanhSachCV;
         private DevExpress.XtraGrid.Views.Grid.GridView gvDanhSachCV;
-        private DevExpress.XtraGrid.Columns.GridColumn stt;
+        private DevExpress.XtraGrid.Columns.GridColumn STT;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
         private DevExpress.XtraGrid.Columns.GridColumn ThoiGian;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit btnDetail;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txt_noidung;
     }
 }

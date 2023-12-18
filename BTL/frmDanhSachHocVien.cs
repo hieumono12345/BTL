@@ -15,18 +15,26 @@ namespace BTL
 {
     public partial class frmDanhSachHocVien : DevExpress.XtraEditors.XtraForm
     {
-        public frmDanhSachHocVien()
+        private TTNguoiDung inForUser;
+
+        public TTNguoiDung InForUser
+        {
+            get { return inForUser; }
+            set { inForUser = value; }
+        }
+        public frmDanhSachHocVien(TTNguoiDung inFor)
         {
             InitializeComponent();
+            this.inForUser = inFor;
             Load();
         }
         void Load()
         {
-            pncBtnXuLy.Visible = false;
-            txtMaHV.Enabled = false;
-            txtTenHV.Enabled = false;
-            txtChucVu.Enabled = false;
-            txtQuanHam.Enabled = false;
+            //pncBtnXuLy.Visible = false;
+            //txtMaHV.Enabled = false;
+            //txtTenHV.Enabled = false;
+            //txtChucVu.Enabled = false;
+            //txtQuanHam.Enabled = false;
             gcDanhSachQN.DataSource = QuanLyQnDAO.Instance.getDanhSachQN();
             btnDetail.Click += btnDetail_Click;
             loadCBX();
@@ -39,15 +47,17 @@ namespace BTL
         }
         void loadCBX()//xem load giá trị combox ở đây
         {
-            Dictionary<string, int> dict = new Dictionary<string, int>()
-            {
-                {"Nam ",1 },
-                {"Nữ",0 }
-            };
 
-            cbGioiTinh.DataSource = new BindingSource(dict, null);
-            cbGioiTinh.DisplayMember = "Key";
-            cbGioiTinh.ValueMember = "Value";    
+            /*cbNganh.DataSource = LoadCombox.Instance.getListNganh();
+            cbNganh.DisplayMember = "TenNganh";
+            cbNganh.ValueMember = "MaNganh";*/
+        }
+        private void cbNganh_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            //cbQN.DataSource = LoadCombox.Instance.getDSQNByDV(inForUser.MaDV, (int)cbNganh.SelectedValue);
+
+            cbQN.DisplayMember = "TenQN";
+            cbQN.ValueMember = "MaQN";
         }
         private void btnDetail_Click(object sender, EventArgs e)
         {            
@@ -63,15 +73,15 @@ namespace BTL
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            pncBtnXuLy.Visible = true;
-            txtMaHV.Enabled = true;
-            txtTenHV.Enabled = true;
-            txtChucVu.Enabled = true;
-            txtQuanHam.Enabled = true;
-            txtQuanHam.Text = "";
-            txtMaHV.Text = "";
-            txtTenHV.Text = "";
-            txtChucVu.Text = "";
+            //pncBtnXuLy.Visible = true;
+            //txtMaHV.Enabled = true;
+            //txtTenHV.Enabled = true;
+            //txtChucVu.Enabled = true;
+            //txtQuanHam.Enabled = true;
+            //txtQuanHam.Text = "";
+            //txtMaHV.Text = "";
+            //txtTenHV.Text = "";
+            //txtChucVu.Text = "";
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
@@ -81,11 +91,7 @@ namespace BTL
 
         private void btnSua_Click(object sender, EventArgs e)
         {
-            pncBtnXuLy.Visible = true;
-            txtMaHV.Enabled = true;
-            txtTenHV.Enabled = true;
-            txtChucVu.Enabled = true;
-            txtQuanHam.Enabled = true;
+            
         }
 
         private void btnThoat_Click(object sender, EventArgs e)
@@ -95,7 +101,7 @@ namespace BTL
 
         private void btnXacNhan_Click(object sender, EventArgs e)//xem lấy giá trị combobox ở đây
         {
-            MessageBox.Show("quan ham" + txtQuanHam.Text+"-"+txtChucVu.Text + "-" + txtMaHV.Text + "-" + cbGioiTinh.SelectedValue, "sss");
+            
             Load();
         }
     }
