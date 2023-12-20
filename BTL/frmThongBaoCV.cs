@@ -29,6 +29,7 @@ namespace BTL
         {
             this.inForUser = inFor;
             InitializeComponent();
+            // bdsdbsbdjsd
             Load();
         }
         void Load()
