@@ -69,5 +69,38 @@ namespace BTL.DAO
 
             return list[0];
         }
+
+        public NoiDungCongViec GetNoiDungCV(int id)
+        {
+            List<NoiDungCongViec> list = new List<NoiDungCongViec>();
+
+            string query = "SELECT *  FROM NoiDungCongViec a where a.MaCongViec=" + id;
+
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+
+            foreach (DataRow item in data.Rows)
+            {
+                NoiDungCongViec a = new NoiDungCongViec(item);
+                list.Add(a);
+            }
+
+            return list[0];
+        }
+        public QN_UuTien GetQNUuTien(int id)
+        {
+            List<QN_UuTien> list = new List<QN_UuTien>();
+
+            string query = "select * from UuTien a where a.MaUuTien=" + id;
+
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+
+            foreach (DataRow item in data.Rows)
+            {
+                QN_UuTien a = new QN_UuTien(item);
+                list.Add(a);
+            }
+
+            return list[0];
+        }
     }
 }

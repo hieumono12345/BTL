@@ -18,12 +18,13 @@ namespace BTL
         static void Main()
         {
             TTNguoiDung a = new TTNguoiDung(91,2,2);
-            
-            
+            //TTNguoiDung x = new TTNguoiDung();
+
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new frmCatGac(2));
-            Application.Run(new Login());
+            //Application.Run(new frmDanhSachUuTien(a));
+            Application.Run(new frmPhanCongCV());
         }
     }
 }

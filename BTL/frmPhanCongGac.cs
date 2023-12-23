@@ -95,6 +95,14 @@ namespace BTL
             cbThem.Checked = false;
             cbSua.Checked = false;
         }
+        bool CheckInput()
+        {
+            if (txtHoi.Text == "" || txtDap.Text =="" || cbDV.Text=="")
+            {
+                return false;
+            }
+            else { return true; }
+        }
         
 
         //btnSua
@@ -103,7 +111,9 @@ namespace BTL
             cbThem.Checked = false;
             cbSua.Checked = true;
             enableTatCa();
-            
+            dateTimePicker1.Enabled = false;
+
+
         }
         //btnThem
         private void btnThem_Click(object sender, EventArgs e)
@@ -116,23 +126,56 @@ namespace BTL
         }
         
         private void btnThemLichGac_Click(object sender, EventArgs e)
-        {
-            //MessageBox.Show(  dateTimePicker1.Value.ToString("yyyy-MM-yy") +"--------"+dateTimePicker1.Text+ "----", "sss");
-             bool a = PhanCongGac.Instance.themLichGac(dateTimePicker1.Text.ToString(), txtHoi.Text, txtDap.Text, (int)cbDV.SelectedValue, txtNhacNho.Text);
-             if (a)
+        {           
+
+            if (cbThem.Checked == true)
             {
-                MessageBox.Show("Thêm thành công", "Thông báo");
-                loadDataLichGacTrongThang();
+                if (CheckInput() == false)
+                {
+                    MessageBox.Show("Đề nghị thêm đầy đủ vào các mục có đánh dấu *");
+                }
+                else
+                {
+                    bool a = PhanCongGac.Instance.themLichGac(dateTimePicker1.Text.ToString(), txtHoi.Text, txtDap.Text, (int)cbDV.SelectedValue, txtNhacNho.Text);
+                    if (a)
+                    {                        
+                        loadDataLichGacTrongThang();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Ngày gác được phân công!!", "Thông báo");
+                    }
+                }
+                
             }
-            else
+            if (cbSua.Checked == true)
             {
-                MessageBox.Show("Xem ngày gác đã được phân công!!", "Thông báo");
-            } 
+                //viết store sửa tại đây
+                MessageBox.Show("Sửa");
+            }
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("xóa mã gác = "+ txtMaGac.Text, "Thông báo");
+            DialogResult r = MessageBox.Show("Bạn có chắc chắn muốn xóa không?");
+            if (r == DialogResult.OK)
+            {
+                int id;
+                if (int.TryParse(txtMaGac.Text, out id))
+                {
+                    int a = DataProvider.Instance.ExecuteNonQuery("usp_xoalichgac @magac=" + id);
+                    if (a > 0)
+                    {
+                        Load();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Xóa thất bại");
+                    }
+                }
+                //viết store xóa ở đây
+                
+            }
         }
     }
 }

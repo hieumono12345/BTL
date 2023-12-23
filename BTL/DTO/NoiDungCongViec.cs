@@ -9,7 +9,7 @@ namespace BTL.DTO
 {
     public class NoiDungCongViec
     {
-        public NoiDungCongViec(int MaCongViec,string NoiDung, string Diadiem, string TGDuKien,int SoLuong, int STTDS, int STTCV, string GhiChu,string TGBD,string TGKT,string DacDiem,int MaDV)
+        public NoiDungCongViec(string Ngay,int MaCongViec,string NoiDung, string Diadiem, string TGDuKien,int SoLuong, int STTDS, int STTCV, string GhiChu,string TGBD,string TGKT,string DacDiem,int MaDV)
         {
             this.MaCongViec = MaCongViec;
             this.NoiDung = NoiDung;
@@ -23,21 +23,22 @@ namespace BTL.DTO
             this.TGKT = TGKT;
             this.DacDiem = DacDiem;
             this.MaDV = MaDV;
+            this.Ngay = Ngay;
         }
         public NoiDungCongViec(DataRow row)
         {
             this.MaCongViec = (int)row["MaCongViec"];
             this.NoiDung = row["NoiDung"].ToString();
             this.Diadiem = row["Diadiem"].ToString();
-            this.TGDuKien = row["TGDuKien"].ToString();
             this.SoLuong = (int)row["SoLuong"];
-            this.STTDS = (int)row["STTDS"];
-            this.STTCV = (int)row["STTCV"];
+            //this.STTDS = (int)row["STTDS"];
+            this.STTCV = (int)row["MaTT"];
             this.GhiChu = row["GhiChu"].ToString();
             this.TGBD = row["TGBD"].ToString();
             this.TGKT = row["TGKT"].ToString();
-            this.DacDiem = row["DacDiem"].ToString();
+            //this.DacDiem = row["DacTaTC"].ToString();
             this.MaDV = (int)row["MaDV"];
+            this.Ngay = row["Ngay"].ToString();
         }
 
         private int _MaCongViec;
@@ -45,6 +46,12 @@ namespace BTL.DTO
         {
             get { return _MaCongViec; }
             set { _MaCongViec = value; }
+        }
+        private string _Ngay;
+        public string Ngay
+        {
+            get { return _Ngay; }
+            set { _Ngay = value; }
         }
 
         private string _NoiDung;

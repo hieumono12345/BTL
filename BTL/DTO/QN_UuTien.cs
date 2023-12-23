@@ -9,15 +9,17 @@ namespace BTL.DTO
 {
     public class QN_UuTien
     {
-        public QN_UuTien(int MaQN, int MaUT)
+        public QN_UuTien(int MaQN, int MaUT,string NoiDungUuTien)
         {
             this.MaQN = MaQN;
             this.MaUT = MaUT;
+            this.NoiDungUuTien = NoiDungUuTien;
         }
         public QN_UuTien(DataRow row)
         {
             this.MaQN = (int)row["MaQN"];
-            this.MaUT = (int)row["MaUT"];
+            this.MaUT = (int)row["MaUuTien"];
+            this.NoiDungUuTien = row["NoiDungUuTien"].ToString();
         }
         private int _MaQN;
 
@@ -32,6 +34,12 @@ namespace BTL.DTO
         {
             get { return _MaUT; }
             set { _MaUT = value; }
+        }
+        private string _NoiDungUuTien;
+        public string NoiDungUuTien
+        {
+            get { return _NoiDungUuTien; }
+            set { _NoiDungUuTien = value; }
         }
     }
 }

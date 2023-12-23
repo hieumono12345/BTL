@@ -91,7 +91,7 @@ namespace BTL
                 System.Visible= true;
                 Home.Visible = false;
                 ThongBao.Visible = true;
-                QuanLyGac.Visible = true;
+                QuanLyGac.Visible = false;
                 QuanLyQN.Visible = true;
                 QuanLyCongViec.Visible = true;
             }
@@ -161,7 +161,7 @@ namespace BTL
 
         private void btnCatGac_ItemClick(object sender, ItemClickEventArgs e)
         {
-            OpenForm(typeof(frmCatGac));
+            OpenFormSpecical(typeof(frmCatGac));
         }
 
         private void btnPhanCongCV_ItemClick(object sender, ItemClickEventArgs e)

@@ -46,20 +46,23 @@ namespace BTL
         }
         private void BtnDetail_Click(object sender, EventArgs e)
         {
-            DTO.CV a = QuanLyPhanCongCV.Instance.GetCV((int)gvDanhSachCV.GetFocusedRowCellValue("MaCongViec"));
-            cbSua.Checked = false;
-            cbThem.Checked = false;
+            NoiDungCongViec NDCV = QuanLyPhanCongCV.Instance.GetNoiDungCV((int)gvDanhSachCV.GetFocusedRowCellValue("MaCongViec"));
+            //cbSua.Checked = false;
+            //cbThem.Checked = false;
             disenableTatCa();
-            Ngay.Text = gvDanhSachCV.GetFocusedRowCellValue("Ngay").ToString();
-            nbSoL.Text = gvDanhSachCV.GetFocusedRowCellValue("SoLuong").ToString();
-            txtGhiChu.Text = gvDanhSachCV.GetFocusedRowCellValue("GhiChu").ToString();
-            string str1 = a.TGBD.ToString();
+            
+            Ngay.Text = NDCV.Ngay;
+            nbSoL.Text = NDCV.SoLuong.ToString();
+            txtGhiChu.Text = NDCV.GhiChu.ToString();
+            string str1 = NDCV.TGBD.ToString();
             txtTGBD.Text = str1.Substring(0, 5);
-            string str = a.TGKT.ToString();
-            txtTGKT.Text = str.Substring(0, 5);
-            txtDiaDiem.Text = gvDanhSachCV.GetFocusedRowCellValue("DiaDiem").ToString();
-            txtNoiDung.Text= gvDanhSachCV.GetFocusedRowCellValue("NoiDung").ToString();
-            cbDV.Text = a.TenDonVi;
+            string str = NDCV.TGKT.ToString();
+            if (str != "")
+            {
+                txtTGKT.Text = str.Substring(0, 5);            
+            }
+            txtDiaDiem.Text = NDCV.Diadiem.ToString();
+            txtNoiDung.Text = NDCV.NoiDung.ToString();            
             txtMaCV.Text = gvDanhSachCV.GetFocusedRowCellValue("MaCongViec").ToString();
             ctAn.Visible = true;
         }
@@ -96,8 +99,20 @@ namespace BTL
             TGBD.Text = "";
             TGKT.Text = "";
             txtDiaDiem.Text = "";
-            cbDV.Text = "";
             txtMaCV.Text = "";
+            txtNoiDung.Text = "";
+        }
+
+        bool checkInPut()
+        {
+            if (nbSoL.Text != ""|| TGBD.Text != ""|| txtDiaDiem.Text != ""|| txtNoiDung.Text != "")
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
         }
         void loadCbDV()
         {
@@ -113,57 +128,57 @@ namespace BTL
             TimeSpan time1 = TGBD.Time.TimeOfDay;
             TimeSpan time2 = TGKT.Time.TimeOfDay;
 
-
-
-            // So sánh hai giá trị thời gian
-            if (time1 > time2)
+            if (checkInPut())
             {
-                MessageBox.Show("Thời gian bắt đầu phải lớn hơn thời gian kết thúc", "sửa");
-            }
-            else if (time1 < time2)
-            {
-                if (cbSua.Checked == true)
+                if (time1 > time2)
                 {
-                    bool a = QuanLyPhanCongCV.Instance.suaCongViec((int)gvDanhSachCV.GetFocusedRowCellValue("MaCongViec"), Ngay.Text, txtNoiDung.Text, TGBD.Text, TGKT.Text, (Int32)cbDV.SelectedValue, (int)nbSoL.Value, txtDiaDiem.Text, txtGhiChu.Text);
-                    if (a == true)
+                    MessageBox.Show("Thời gian bắt đầu phải lớn hơn thời gian kết thúc", "sửa");
+                }
+                else if (time1 < time2)
+                {
+                    if (cbSua.Checked == true)
                     {
-                        MessageBox.Show("Sửa thành công");
-                        loadDS();
+                        bool a = QuanLyPhanCongCV.Instance.suaCongViec((int)gvDanhSachCV.GetFocusedRowCellValue("MaCongViec"), Ngay.Text, txtNoiDung.Text, TGBD.Text, TGKT.Text, (Int32)cbDV.SelectedValue, (int)nbSoL.Value, txtDiaDiem.Text, txtGhiChu.Text);
+                        if (a == true)
+                        {
+                            loadDS();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Thất bại");
+                        }
                     }
-                    else
+                    if (cbThem.Checked == true)
                     {
-                        MessageBox.Show("Thất bại");
+                        bool a = QuanLyPhanCongCV.Instance.themCongViec(Ngay.Text, txtNoiDung.Text, TGBD.Text, TGKT.Text, (Int32)cbDV.SelectedValue, (int)nbSoL.Value, txtDiaDiem.Text, txtGhiChu.Text);
+                        if (a == true)
+                        {
+                            loadDS();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Thất bại");
+                        }
                     }
                 }
-                if (cbThem.Checked == true)
+                else
                 {
-                    bool a = QuanLyPhanCongCV.Instance.themCongViec(Ngay.Text, txtNoiDung.Text, TGBD.Text, TGKT.Text, (Int32)cbDV.SelectedValue, (int)nbSoL.Value, txtDiaDiem.Text, txtGhiChu.Text);
-                    if (a == true)
-                    {
-                        MessageBox.Show("Thêm thành công");
-                        loadDS();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Thất bại");
-                    }
-
-                    //(string Ngay, string noidung, string TGBD, string TGKT, int maDV,int soLuong,string DiaDiem, string nhacNho)
-                    //MessageBox.Show(Ngay.Text + nbSoL.ToString() + txtGhiChu.Text + txtDiaDiem.Text + ThoiGian.Text + cbDV.SelectedValue.ToString(), "Thêm");
+                    MessageBox.Show("Thời gian bắt đầu phải nhỏ hơn thời gian kết thúc", "sửa");
                 }
             }
             else
             {
-                MessageBox.Show("Thời gian bắt đầu phải lớn hơn thời gian kết thúc", "sửa");
+                MessageBox.Show("Đề nghị thêm vào tất cả các mục có đánh dấu *", "sửa");
             }
+
+            // So sánh hai giá trị thời gian
+            
             /*DTO.CV a = QuanLyPhanCongCV.Instance.GetCV((int)gvDanhSachCV.GetFocusedRowCellValue("MaCongViec"));
             string str1 = a.TGBD.ToString();
             TGBD.Text = str1.Substring(0, 5);
             MessageBox.Show(str1.Substring(0, 5), "Thất bại");*/
 
             //MessageBox.Show(TGBD.EditValue.ToString()  + TGKT.EditValue.ToString(), "sửa");
-
-
         }
 
         private void btnSua_Click(object sender, EventArgs e)
@@ -180,7 +195,7 @@ namespace BTL
             bool a = QuanLyPhanCongCV.Instance.xoaCongViec((int)gvDanhSachCV.GetFocusedRowCellValue("MaCongViec"));
             if (a == true)
             {
-                MessageBox.Show("Xóa thành công");
+                
                 loadDS();
             }
             else
@@ -197,6 +212,22 @@ namespace BTL
             enableTatCa();
             XoaTatCa();
 
+        }
+
+        
+
+        private void checkEdit1_CheckedChanged(object sender, EventArgs e)
+        {
+            if(ceTGKT.Checked == true) 
+            {
+                TGKT.Enabled = false;
+
+            }
+            else
+            {
+                TGKT.Enabled = true;
+               
+            }
         }
     }
 }

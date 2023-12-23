@@ -22,13 +22,12 @@ namespace BTL
             get { return inForUser; }
             set { inForUser = value; }
         }
+        
         public frmDanhSachUuTien(TTNguoiDung inFor)
         {
             this.inForUser = inFor;
             InitializeComponent();
             Load();
-            cbThem.Checked = false;
-            cbSua.Checked = false;
             disbleTatCa();
         }
         void enableTatCa()
@@ -53,23 +52,40 @@ namespace BTL
 
         void Load()
         {
-            gcDanhSachTK.DataSource = DataProvider.Instance.ExecuteQuery("usp_HienThiDanhSachUuTien");
+            cbSua.Checked = false;
+            cbThem.Checked = false;
+            gcDSUuTien.DataSource = DataProvider.Instance.ExecuteQuery("usp_HienThiDanhSachUuTien");
             btnDetail.Click += btnDetail_Click;
             loadCBX();
         }
         void loadCBX()//xem load giá trị combox ở đây
-        {
-            
+        {            
             cbNganh.DataSource= LoadCombox.Instance.getListNganh( );
             cbNganh.DisplayMember = "TenNganh";
             cbNganh.ValueMember = "MaNganh";
         }
         private void btnDetail_Click(object sender, EventArgs e)
         {
-            cbSua.Checked = false;
-            cbThem.Checked = false;
-           txtMaUT.Text= gvDanhSachTK.GetFocusedRowCellValue("MaUT").ToString();
+            
+            QN_UuTien a = QuanLyPhanCongCV.Instance.GetQNUuTien((int)gvDSUuTien.GetFocusedRowCellValue("MaUuTien"));
+            txtMaUT.Text = a.MaUT.ToString();
+            cbQN.Text = gvDSUuTien.GetFocusedRowCellValue("TenQN").ToString();
+            txtMaQN.Text = a.MaQN.ToString();
+            txtNoiDungUuTien.Text = a.NoiDungUuTien.ToString();            
+
             disbleTatCa();
+            cbNganh.Text = "";
+            cbThem.Checked = false;
+            cbSua.Checked = false;
+        }
+
+        bool CheckInput()
+        {
+            if (txtNoiDungUuTien.Text == "")
+            {
+                return false;
+            }
+            else { return true; }
         }
 
         private void cbNganh_SelectionChangeCommitted(object sender, EventArgs e)
@@ -82,14 +98,35 @@ namespace BTL
 
         private void btnSua_Click(object sender, EventArgs e)
         {
-            enableTatCa();
-            cbSua.Checked = true;
             cbThem.Checked = false;
+            cbSua.Checked = true;
+            enableTatCa();
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
+            DialogResult r = MessageBox.Show("Bạn có chắc chắn muốn xóa không?");
+            if (r == DialogResult.OK)
+            {
+                int id;
+                if (int.TryParse(txtMaUT.Text, out id))
+                {
+                    //viết store xóa ở đây
+                    MessageBox.Show("Xóa thất bại"+id.ToString());
 
+                    /*int a = DataProvider.Instance.ExecuteNonQuery("usp_xoalichgac @magac=" + id);
+                    if (a > 0)
+                    {
+                        Load();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Xóa thất bại");
+                    }*/
+                }
+
+
+            }
         }
 
         private void btnThem_Click(object sender, EventArgs e)
@@ -102,49 +139,53 @@ namespace BTL
 
         private void btnXacNhan_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("vào");
-            if (cbSua.Checked == true && cbThem.Checked == false)
-            {
-                cbSua.Checked = false;
-                cbThem.Checked = false;
-                MessageBox.Show("vào sửa");
-                //sửa
-                /*int a = DataProvider.Instance.ExecuteNonQuery("usp_Themuutien @MaQN="+ cbQN.SelectedValue + ",@noidunguutien= '"+txtNoiDungUuTien.Text+"'");
-                if (a >0)
-                {
-                    MessageBox.Show("Sửa thành công", "ssss");
-                Load();
-                
 
+            if (cbThem.Checked == true)
+            {
+                
+                if (CheckInput() == false)
+                {
+                    MessageBox.Show("Đề nghị thêm đầy đủ vào các mục có đánh dấu *");
                 }
                 else
                 {
-                    MessageBox.Show("Sửa thất bại", "ssss");
-                }*/
-            }
-            if (cbSua.Checked == false && cbThem.Checked == true)
-            {
-                cbSua.Checked = false;
-                cbThem.Checked = false;
-                //thêm
-                if (int.TryParse(txtMaUT.Text, out int mauutien))
-                {
-                    MessageBox.Show("vào theem");
-                    /*int a = DataProvider.Instance.ExecuteNonQuery("CREATE PROC usp_SuaUutien @MaUuTien=" + mauutien + ",@MaQN=" + cbQN.SelectedValue + ", @noidunguutien= '" + txtNoiDungUuTien.Text + "'");
+                    //viết store thêm ở đây
+                    int a = DataProvider.Instance.ExecuteNonQuery("usp_Themuutien @MaQN=" + cbQN.SelectedValue + ",@noidunguutien= '" + txtNoiDungUuTien.Text + "'");
                     if (a > 0)
                     {
-                        MessageBox.Show("Thêm thành công", "ssss");
                         Load();
-                    
                     }
                     else
                     {
                         MessageBox.Show("Thêm thất bại", "ssss");
-                    }*/
+                    }
                 }
 
-
             }
+            if (cbSua.Checked == true)
+            {
+                //viết store sửa tại đây
+                int id,id2;
+                if (int.TryParse(txtMaUT.Text, out id))
+                {
+                    if (int.TryParse(txtMaQN.Text, out id2))
+                    {
+                        int a = DataProvider.Instance.ExecuteNonQuery("usp_SuaUutien @MaUuTien=" + id + ",@MaQN=" + id2 + ", @noidunguutien= '" + txtNoiDungUuTien.Text + "'");
+                        if (a > 0)
+                        {
+                            Load();
+
+                        }
+                        else
+                        {
+                            MessageBox.Show("Sửa thất bại", "ssss");
+                        }
+                    }
+                    
+                }
+                
+            }
+            
         }
     }
 }
