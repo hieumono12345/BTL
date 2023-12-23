@@ -28,14 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions4 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions1 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPhanCongCV));
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject13 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject14 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject15 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject16 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
+            this.ctAn = new DevExpress.XtraEditors.PanelControl();
+            this.txtTGKT = new System.Windows.Forms.TextBox();
+            this.txtTGBD = new System.Windows.Forms.TextBox();
+            this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl10 = new DevExpress.XtraEditors.LabelControl();
             this.gcDanhSachCV = new DevExpress.XtraGrid.GridControl();
             this.gvDanhSachCV = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -56,6 +61,12 @@
             this.btnXoa = new DevExpress.XtraEditors.SimpleButton();
             this.btnSua = new DevExpress.XtraEditors.SimpleButton();
             this.panelControl7 = new DevExpress.XtraEditors.PanelControl();
+            this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
+            this.TGKT = new DevExpress.XtraEditors.TimeEdit();
+            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
+            this.TGBD = new DevExpress.XtraEditors.TimeEdit();
+            this.cbThem = new DevExpress.XtraEditors.CheckEdit();
             this.panelControl3 = new DevExpress.XtraEditors.PanelControl();
             this.btnXacNhan = new DevExpress.XtraEditors.SimpleButton();
             this.panelControl11 = new DevExpress.XtraEditors.PanelControl();
@@ -65,30 +76,22 @@
             this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
             this.txtGhiChu = new System.Windows.Forms.RichTextBox();
             this.panelControl10 = new DevExpress.XtraEditors.PanelControl();
-            this.TGKT = new DevExpress.XtraEditors.TimeEdit();
-            this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
+            this.Ngay = new System.Windows.Forms.DateTimePicker();
             this.txtNoiDung = new System.Windows.Forms.TextBox();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
             this.cbSua = new DevExpress.XtraEditors.CheckEdit();
-            this.Ngay = new DevExpress.XtraEditors.DateEdit();
-            this.cbThem = new DevExpress.XtraEditors.CheckEdit();
             this.nbSoL = new System.Windows.Forms.NumericUpDown();
             this.txtDiaDiem = new System.Windows.Forms.TextBox();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
-            this.TGBD = new DevExpress.XtraEditors.TimeEdit();
             this.txtMaCV = new System.Windows.Forms.TextBox();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl11 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl13 = new DevExpress.XtraEditors.LabelControl();
-            this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
-            this.ctAn = new DevExpress.XtraEditors.PanelControl();
-            this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl10 = new DevExpress.XtraEditors.LabelControl();
-            this.txtTGBD = new System.Windows.Forms.TextBox();
-            this.txtTGKT = new System.Windows.Forms.TextBox();
+            this.ceTGKT = new DevExpress.XtraEditors.CheckEdit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ctAn)).BeginInit();
+            this.ctAn.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gcDanhSachCV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvDanhSachCV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnDetail)).BeginInit();
@@ -96,6 +99,11 @@
             this.panelControl12.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl7)).BeginInit();
             this.panelControl7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
+            this.panelControl2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.TGKT.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TGBD.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbThem.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).BeginInit();
             this.panelControl3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl11)).BeginInit();
@@ -104,17 +112,9 @@
             this.panelControl8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl10)).BeginInit();
             this.panelControl10.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.TGKT.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbSua.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Ngay.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Ngay.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbThem.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nbSoL)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TGBD.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
-            this.panelControl2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ctAn)).BeginInit();
-            this.ctAn.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ceTGKT.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // labelControl2
@@ -138,6 +138,53 @@
             this.panelControl1.Name = "panelControl1";
             this.panelControl1.Size = new System.Drawing.Size(1199, 796);
             this.panelControl1.TabIndex = 6;
+            // 
+            // ctAn
+            // 
+            this.ctAn.Controls.Add(this.txtTGKT);
+            this.ctAn.Controls.Add(this.txtTGBD);
+            this.ctAn.Controls.Add(this.labelControl7);
+            this.ctAn.Controls.Add(this.labelControl10);
+            this.ctAn.Location = new System.Drawing.Point(91, 329);
+            this.ctAn.Name = "ctAn";
+            this.ctAn.Size = new System.Drawing.Size(531, 116);
+            this.ctAn.TabIndex = 36;
+            // 
+            // txtTGKT
+            // 
+            this.txtTGKT.Enabled = false;
+            this.txtTGKT.Location = new System.Drawing.Point(236, 67);
+            this.txtTGKT.Name = "txtTGKT";
+            this.txtTGKT.Size = new System.Drawing.Size(269, 23);
+            this.txtTGKT.TabIndex = 37;
+            // 
+            // txtTGBD
+            // 
+            this.txtTGBD.Enabled = false;
+            this.txtTGBD.Location = new System.Drawing.Point(236, 22);
+            this.txtTGBD.Name = "txtTGBD";
+            this.txtTGBD.Size = new System.Drawing.Size(269, 23);
+            this.txtTGBD.TabIndex = 36;
+            // 
+            // labelControl7
+            // 
+            this.labelControl7.Appearance.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl7.Appearance.Options.UseFont = true;
+            this.labelControl7.Location = new System.Drawing.Point(25, 17);
+            this.labelControl7.Name = "labelControl7";
+            this.labelControl7.Size = new System.Drawing.Size(187, 26);
+            this.labelControl7.TabIndex = 24;
+            this.labelControl7.Text = "Thời gian bắt đầu: ";
+            // 
+            // labelControl10
+            // 
+            this.labelControl10.Appearance.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl10.Appearance.Options.UseFont = true;
+            this.labelControl10.Location = new System.Drawing.Point(25, 62);
+            this.labelControl10.Name = "labelControl10";
+            this.labelControl10.Size = new System.Drawing.Size(191, 26);
+            this.labelControl10.TabIndex = 34;
+            this.labelControl10.Text = "Thời gian kết thúc: ";
             // 
             // gcDanhSachCV
             // 
@@ -256,9 +303,9 @@
             // btnDetail
             // 
             this.btnDetail.AutoHeight = false;
-            editorButtonImageOptions4.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions4.Image")));
+            editorButtonImageOptions1.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions1.Image")));
             this.btnDetail.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions4, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject13, serializableAppearanceObject14, serializableAppearanceObject15, serializableAppearanceObject16, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.btnDetail.Name = "btnDetail";
             this.btnDetail.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             // 
@@ -364,6 +411,77 @@
             this.panelControl7.Size = new System.Drawing.Size(643, 796);
             this.panelControl7.TabIndex = 11;
             // 
+            // panelControl2
+            // 
+            this.panelControl2.Controls.Add(this.ceTGKT);
+            this.panelControl2.Controls.Add(this.TGKT);
+            this.panelControl2.Controls.Add(this.labelControl3);
+            this.panelControl2.Controls.Add(this.labelControl6);
+            this.panelControl2.Controls.Add(this.TGBD);
+            this.panelControl2.Location = new System.Drawing.Point(91, 329);
+            this.panelControl2.Name = "panelControl2";
+            this.panelControl2.Size = new System.Drawing.Size(531, 116);
+            this.panelControl2.TabIndex = 19;
+            // 
+            // TGKT
+            // 
+            this.TGKT.EditValue = new System.DateTime(2023, 12, 13, 0, 0, 0, 0);
+            this.TGKT.Location = new System.Drawing.Point(239, 66);
+            this.TGKT.Name = "TGKT";
+            this.TGKT.Properties.Appearance.BackColor = System.Drawing.SystemColors.Window;
+            this.TGKT.Properties.Appearance.Options.UseBackColor = true;
+            this.TGKT.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.TGKT.Properties.DisplayFormat.FormatString = "HH:mm";
+            this.TGKT.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
+            this.TGKT.Properties.EditFormat.FormatString = "HH:mm";
+            this.TGKT.Size = new System.Drawing.Size(269, 24);
+            this.TGKT.TabIndex = 35;
+            // 
+            // labelControl3
+            // 
+            this.labelControl3.Appearance.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl3.Appearance.Options.UseFont = true;
+            this.labelControl3.Location = new System.Drawing.Point(25, 17);
+            this.labelControl3.Name = "labelControl3";
+            this.labelControl3.Size = new System.Drawing.Size(196, 26);
+            this.labelControl3.TabIndex = 24;
+            this.labelControl3.Text = "Thời gian bắt đầu*: ";
+            // 
+            // labelControl6
+            // 
+            this.labelControl6.Appearance.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl6.Appearance.Options.UseFont = true;
+            this.labelControl6.Location = new System.Drawing.Point(25, 62);
+            this.labelControl6.Name = "labelControl6";
+            this.labelControl6.Size = new System.Drawing.Size(191, 26);
+            this.labelControl6.TabIndex = 34;
+            this.labelControl6.Text = "Thời gian kết thúc: ";
+            // 
+            // TGBD
+            // 
+            this.TGBD.EditValue = new System.DateTime(2023, 12, 13, 0, 0, 0, 0);
+            this.TGBD.Location = new System.Drawing.Point(239, 21);
+            this.TGBD.Name = "TGBD";
+            this.TGBD.Properties.Appearance.BackColor = System.Drawing.SystemColors.Window;
+            this.TGBD.Properties.Appearance.Options.UseBackColor = true;
+            this.TGBD.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.TGBD.Properties.DisplayFormat.FormatString = "HH:mm";
+            this.TGBD.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
+            this.TGBD.Properties.EditFormat.FormatString = "HH:mm";
+            this.TGBD.Size = new System.Drawing.Size(269, 24);
+            this.TGBD.TabIndex = 25;
+            // 
+            // cbThem
+            // 
+            this.cbThem.Location = new System.Drawing.Point(96, 8);
+            this.cbThem.Name = "cbThem";
+            this.cbThem.Properties.Caption = "Chưa xác định thời gian kết  thúc";
+            this.cbThem.Size = new System.Drawing.Size(77, 20);
+            this.cbThem.TabIndex = 28;
+            this.cbThem.Visible = false;
+            // 
             // panelControl3
             // 
             this.panelControl3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -407,9 +525,9 @@
             this.labelControl9.Appearance.Options.UseFont = true;
             this.labelControl9.Location = new System.Drawing.Point(25, 25);
             this.labelControl9.Name = "labelControl9";
-            this.labelControl9.Size = new System.Drawing.Size(149, 26);
+            this.labelControl9.Size = new System.Drawing.Size(158, 26);
             this.labelControl9.TabIndex = 17;
-            this.labelControl9.Text = "Đơn thực hiện:";
+            this.labelControl9.Text = "Đơn thực hiện*:";
             // 
             // panelControl8
             // 
@@ -440,12 +558,12 @@
             // 
             // panelControl10
             // 
+            this.panelControl10.Controls.Add(this.Ngay);
             this.panelControl10.Controls.Add(this.txtNoiDung);
             this.panelControl10.Controls.Add(this.labelControl5);
             this.panelControl10.Controls.Add(this.cbSua);
-            this.panelControl10.Controls.Add(this.Ngay);
-            this.panelControl10.Controls.Add(this.cbThem);
             this.panelControl10.Controls.Add(this.nbSoL);
+            this.panelControl10.Controls.Add(this.cbThem);
             this.panelControl10.Controls.Add(this.txtDiaDiem);
             this.panelControl10.Controls.Add(this.labelControl4);
             this.panelControl10.Controls.Add(this.txtMaCV);
@@ -456,30 +574,15 @@
             this.panelControl10.Size = new System.Drawing.Size(531, 240);
             this.panelControl10.TabIndex = 10;
             // 
-            // TGKT
+            // Ngay
             // 
-            this.TGKT.EditValue = new System.DateTime(2023, 12, 13, 0, 0, 0, 0);
-            this.TGKT.Location = new System.Drawing.Point(239, 66);
-            this.TGKT.Name = "TGKT";
-            this.TGKT.Properties.Appearance.BackColor = System.Drawing.SystemColors.Window;
-            this.TGKT.Properties.Appearance.Options.UseBackColor = true;
-            this.TGKT.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.TGKT.Properties.DisplayFormat.FormatString = "HH:mm";
-            this.TGKT.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
-            this.TGKT.Properties.EditFormat.FormatString = "HH:mm";
-            this.TGKT.Size = new System.Drawing.Size(269, 24);
-            this.TGKT.TabIndex = 35;
-            // 
-            // labelControl6
-            // 
-            this.labelControl6.Appearance.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl6.Appearance.Options.UseFont = true;
-            this.labelControl6.Location = new System.Drawing.Point(25, 62);
-            this.labelControl6.Name = "labelControl6";
-            this.labelControl6.Size = new System.Drawing.Size(191, 26);
-            this.labelControl6.TabIndex = 34;
-            this.labelControl6.Text = "Thời gian kết thúc: ";
+            this.Ngay.CustomFormat = "yyyy-MM-dd";
+            this.Ngay.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.Ngay.Location = new System.Drawing.Point(239, 48);
+            this.Ngay.Name = "Ngay";
+            this.Ngay.Size = new System.Drawing.Size(269, 23);
+            this.Ngay.TabIndex = 34;
+            this.Ngay.Value = new System.DateTime(2023, 12, 12, 0, 0, 0, 0);
             // 
             // txtNoiDung
             // 
@@ -492,11 +595,11 @@
             // 
             this.labelControl5.Appearance.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl5.Appearance.Options.UseFont = true;
-            this.labelControl5.Location = new System.Drawing.Point(25, 93);
+            this.labelControl5.Location = new System.Drawing.Point(26, 93);
             this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(95, 26);
+            this.labelControl5.Size = new System.Drawing.Size(104, 26);
             this.labelControl5.TabIndex = 32;
-            this.labelControl5.Text = "Nôi dung:";
+            this.labelControl5.Text = "Nôi dung*:";
             // 
             // cbSua
             // 
@@ -506,29 +609,6 @@
             this.cbSua.Size = new System.Drawing.Size(87, 20);
             this.cbSua.TabIndex = 31;
             this.cbSua.Visible = false;
-            // 
-            // Ngay
-            // 
-            this.Ngay.EditValue = null;
-            this.Ngay.Location = new System.Drawing.Point(239, 50);
-            this.Ngay.Name = "Ngay";
-            this.Ngay.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.Ngay.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.Ngay.Properties.DisplayFormat.FormatString = "yyyy-MM-dd";
-            this.Ngay.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
-            this.Ngay.Size = new System.Drawing.Size(269, 23);
-            this.Ngay.TabIndex = 30;
-            // 
-            // cbThem
-            // 
-            this.cbThem.Location = new System.Drawing.Point(118, 8);
-            this.cbThem.Name = "cbThem";
-            this.cbThem.Properties.Caption = "cbThem";
-            this.cbThem.Size = new System.Drawing.Size(87, 20);
-            this.cbThem.TabIndex = 28;
-            this.cbThem.Visible = false;
             // 
             // nbSoL
             // 
@@ -550,24 +630,9 @@
             this.labelControl4.Appearance.Options.UseFont = true;
             this.labelControl4.Location = new System.Drawing.Point(25, 192);
             this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(104, 26);
+            this.labelControl4.Size = new System.Drawing.Size(113, 26);
             this.labelControl4.TabIndex = 19;
-            this.labelControl4.Text = "Số lượng :";
-            // 
-            // TGBD
-            // 
-            this.TGBD.EditValue = new System.DateTime(2023, 12, 13, 0, 0, 0, 0);
-            this.TGBD.Location = new System.Drawing.Point(239, 21);
-            this.TGBD.Name = "TGBD";
-            this.TGBD.Properties.Appearance.BackColor = System.Drawing.SystemColors.Window;
-            this.TGBD.Properties.Appearance.Options.UseBackColor = true;
-            this.TGBD.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.TGBD.Properties.DisplayFormat.FormatString = "HH:mm";
-            this.TGBD.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
-            this.TGBD.Properties.EditFormat.FormatString = "HH:mm";
-            this.TGBD.Size = new System.Drawing.Size(269, 24);
-            this.TGBD.TabIndex = 25;
+            this.labelControl4.Text = "Số lượng* :";
             // 
             // txtMaCV
             // 
@@ -583,19 +648,9 @@
             this.labelControl1.Appearance.Options.UseFont = true;
             this.labelControl1.Location = new System.Drawing.Point(25, 143);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(96, 26);
+            this.labelControl1.Size = new System.Drawing.Size(105, 26);
             this.labelControl1.TabIndex = 17;
-            this.labelControl1.Text = "Địa điểm:";
-            // 
-            // labelControl3
-            // 
-            this.labelControl3.Appearance.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl3.Appearance.Options.UseFont = true;
-            this.labelControl3.Location = new System.Drawing.Point(25, 17);
-            this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(187, 26);
-            this.labelControl3.TabIndex = 24;
-            this.labelControl3.Text = "Thời gian bắt đầu: ";
+            this.labelControl1.Text = "Địa điểm*:";
             // 
             // labelControl11
             // 
@@ -603,9 +658,9 @@
             this.labelControl11.Appearance.Options.UseFont = true;
             this.labelControl11.Location = new System.Drawing.Point(25, 45);
             this.labelControl11.Name = "labelControl11";
-            this.labelControl11.Size = new System.Drawing.Size(164, 26);
+            this.labelControl11.Size = new System.Drawing.Size(173, 26);
             this.labelControl11.TabIndex = 17;
-            this.labelControl11.Text = "Ngày thực hiện: ";
+            this.labelControl11.Text = "Ngày thực hiện*: ";
             // 
             // labelControl13
             // 
@@ -617,63 +672,14 @@
             this.labelControl13.TabIndex = 1;
             this.labelControl13.Text = "NHẬP THÔNG TIN CÔNG VIỆC";
             // 
-            // panelControl2
+            // ceTGKT
             // 
-            this.panelControl2.Controls.Add(this.TGKT);
-            this.panelControl2.Controls.Add(this.labelControl3);
-            this.panelControl2.Controls.Add(this.labelControl6);
-            this.panelControl2.Controls.Add(this.TGBD);
-            this.panelControl2.Location = new System.Drawing.Point(91, 329);
-            this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(531, 116);
-            this.panelControl2.TabIndex = 19;
-            // 
-            // ctAn
-            // 
-            this.ctAn.Controls.Add(this.txtTGKT);
-            this.ctAn.Controls.Add(this.txtTGBD);
-            this.ctAn.Controls.Add(this.labelControl7);
-            this.ctAn.Controls.Add(this.labelControl10);
-            this.ctAn.Location = new System.Drawing.Point(91, 329);
-            this.ctAn.Name = "ctAn";
-            this.ctAn.Size = new System.Drawing.Size(531, 116);
-            this.ctAn.TabIndex = 36;
-            // 
-            // labelControl7
-            // 
-            this.labelControl7.Appearance.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl7.Appearance.Options.UseFont = true;
-            this.labelControl7.Location = new System.Drawing.Point(25, 17);
-            this.labelControl7.Name = "labelControl7";
-            this.labelControl7.Size = new System.Drawing.Size(187, 26);
-            this.labelControl7.TabIndex = 24;
-            this.labelControl7.Text = "Thời gian bắt đầu: ";
-            // 
-            // labelControl10
-            // 
-            this.labelControl10.Appearance.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl10.Appearance.Options.UseFont = true;
-            this.labelControl10.Location = new System.Drawing.Point(25, 62);
-            this.labelControl10.Name = "labelControl10";
-            this.labelControl10.Size = new System.Drawing.Size(191, 26);
-            this.labelControl10.TabIndex = 34;
-            this.labelControl10.Text = "Thời gian kết thúc: ";
-            // 
-            // txtTGBD
-            // 
-            this.txtTGBD.Enabled = false;
-            this.txtTGBD.Location = new System.Drawing.Point(236, 22);
-            this.txtTGBD.Name = "txtTGBD";
-            this.txtTGBD.Size = new System.Drawing.Size(269, 23);
-            this.txtTGBD.TabIndex = 36;
-            // 
-            // txtTGKT
-            // 
-            this.txtTGKT.Enabled = false;
-            this.txtTGKT.Location = new System.Drawing.Point(236, 67);
-            this.txtTGKT.Name = "txtTGKT";
-            this.txtTGKT.Size = new System.Drawing.Size(269, 23);
-            this.txtTGKT.TabIndex = 37;
+            this.ceTGKT.Location = new System.Drawing.Point(239, 96);
+            this.ceTGKT.Name = "ceTGKT";
+            this.ceTGKT.Properties.Caption = "Chưa xác định thời gian kết  thúc";
+            this.ceTGKT.Size = new System.Drawing.Size(264, 20);
+            this.ceTGKT.TabIndex = 36;
+            this.ceTGKT.CheckedChanged += new System.EventHandler(this.checkEdit1_CheckedChanged);
             // 
             // frmPhanCongCV
             // 
@@ -687,6 +693,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
             this.panelControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ctAn)).EndInit();
+            this.ctAn.ResumeLayout(false);
+            this.ctAn.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gcDanhSachCV)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvDanhSachCV)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnDetail)).EndInit();
@@ -695,6 +704,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl7)).EndInit();
             this.panelControl7.ResumeLayout(false);
             this.panelControl7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
+            this.panelControl2.ResumeLayout(false);
+            this.panelControl2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.TGKT.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TGBD.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbThem.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).EndInit();
             this.panelControl3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl11)).EndInit();
@@ -706,19 +721,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl10)).EndInit();
             this.panelControl10.ResumeLayout(false);
             this.panelControl10.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.TGKT.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbSua.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Ngay.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Ngay.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbThem.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nbSoL)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TGBD.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
-            this.panelControl2.ResumeLayout(false);
-            this.panelControl2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ctAn)).EndInit();
-            this.ctAn.ResumeLayout(false);
-            this.ctAn.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ceTGKT.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -762,7 +767,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn MaCongViec;
         private DevExpress.XtraEditors.CheckEdit cbThem;
         private System.Windows.Forms.TextBox txtMaCV;
-        private DevExpress.XtraEditors.DateEdit Ngay;
         private DevExpress.XtraEditors.CheckEdit cbSua;
         private System.Windows.Forms.TextBox txtNoiDung;
         private DevExpress.XtraEditors.LabelControl labelControl5;
@@ -778,5 +782,7 @@
         private DevExpress.XtraEditors.LabelControl labelControl7;
         private DevExpress.XtraEditors.LabelControl labelControl10;
         private DevExpress.XtraEditors.PanelControl panelControl2;
+        private System.Windows.Forms.DateTimePicker Ngay;
+        private DevExpress.XtraEditors.CheckEdit ceTGKT;
     }
 }

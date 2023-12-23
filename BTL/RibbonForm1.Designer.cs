@@ -63,6 +63,7 @@
             this.barButtonItem6 = new DevExpress.XtraBars.BarButtonItem();
             this.skinPaletteRibbonGalleryBarItem1 = new DevExpress.XtraBars.SkinPaletteRibbonGalleryBarItem();
             this.barButtonItem7 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem8 = new DevExpress.XtraBars.BarButtonItem();
             this.QuanLyNguoiDung = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup18 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.Home = new DevExpress.XtraBars.Ribbon.RibbonPage();
@@ -93,7 +94,6 @@
             this.btnThongKe = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage3 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup11 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.barButtonItem8 = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.documentManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedView1)).BeginInit();
@@ -368,6 +368,12 @@
             this.barButtonItem7.Name = "barButtonItem7";
             this.barButtonItem7.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem7_ItemClick);
             // 
+            // barButtonItem8
+            // 
+            this.barButtonItem8.Caption = "Đổi mật khẩu";
+            this.barButtonItem8.Id = 34;
+            this.barButtonItem8.Name = "barButtonItem8";
+            // 
             // QuanLyNguoiDung
             // 
             this.QuanLyNguoiDung.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -463,6 +469,7 @@
             this.ribbonPageGroup5});
             this.QuanLyGac.Name = "QuanLyGac";
             this.QuanLyGac.Text = "Quản lý gác";
+            this.QuanLyGac.Visible = false;
             // 
             // ribbonPageGroup4
             // 
@@ -561,12 +568,6 @@
             // ribbonPageGroup11
             // 
             this.ribbonPageGroup11.Name = "ribbonPageGroup11";
-            // 
-            // barButtonItem8
-            // 
-            this.barButtonItem8.Caption = "Đổi mật khẩu";
-            this.barButtonItem8.Id = 34;
-            this.barButtonItem8.Name = "barButtonItem8";
             // 
             // frmMain
             // 
