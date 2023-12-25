@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmThongBaoCV));
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions1 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions3 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject9 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject10 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject11 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject12 = new DevExpress.Utils.SerializableAppearanceObject();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.panelControl5 = new DevExpress.XtraEditors.PanelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
@@ -46,21 +46,21 @@
             this.Ngay = new DevExpress.XtraGrid.Columns.GridColumn();
             this.TGBD = new DevExpress.XtraGrid.Columns.GridColumn();
             this.trangthai = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.danhsach = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.STTDS = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.btnDetail = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.panelControl7 = new DevExpress.XtraEditors.PanelControl();
-            this.panelControl4 = new DevExpress.XtraEditors.PanelControl();
+            this.controlBDTH = new DevExpress.XtraEditors.PanelControl();
             this.simpleButton8 = new DevExpress.XtraEditors.SimpleButton();
             this.btn_tienhanhcongviec = new DevExpress.XtraEditors.SimpleButton();
             this.panelControl3 = new DevExpress.XtraEditors.PanelControl();
-            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
             this.panelControl8 = new DevExpress.XtraEditors.PanelControl();
             this.txtMaCV = new System.Windows.Forms.TextBox();
             this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
             this.txt_GhiChu = new System.Windows.Forms.RichTextBox();
             this.panelControl10 = new DevExpress.XtraEditors.PanelControl();
+            this.cSTTDS = new DevExpress.XtraEditors.CheckEdit();
             this.txt_soluong = new System.Windows.Forms.TextBox();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
             this.txt_Ngay = new System.Windows.Forms.TextBox();
@@ -81,14 +81,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnDetail)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl7)).BeginInit();
             this.panelControl7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl4)).BeginInit();
-            this.panelControl4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.controlBDTH)).BeginInit();
+            this.controlBDTH.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).BeginInit();
             this.panelControl3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl8)).BeginInit();
             this.panelControl8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl10)).BeginInit();
             this.panelControl10.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cSTTDS.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // panelControl1
@@ -161,7 +162,7 @@
             this.Ngay,
             this.TGBD,
             this.trangthai,
-            this.danhsach,
+            this.STTDS,
             this.gridColumn2});
             this.gvDanhSachCV.GridControl = this.gcDanhSachCV;
             this.gvDanhSachCV.Name = "gvDanhSachCV";
@@ -219,15 +220,15 @@
             this.trangthai.VisibleIndex = 4;
             this.trangthai.Width = 94;
             // 
-            // danhsach
+            // STTDS
             // 
-            this.danhsach.Caption = "Danh sách";
-            this.danhsach.FieldName = "STTDS";
-            this.danhsach.MinWidth = 25;
-            this.danhsach.Name = "danhsach";
-            this.danhsach.Visible = true;
-            this.danhsach.VisibleIndex = 5;
-            this.danhsach.Width = 94;
+            this.STTDS.Caption = "Danh sách";
+            this.STTDS.FieldName = "STTDS";
+            this.STTDS.MinWidth = 25;
+            this.STTDS.Name = "STTDS";
+            this.STTDS.Visible = true;
+            this.STTDS.VisibleIndex = 5;
+            this.STTDS.Width = 94;
             // 
             // gridColumn2
             // 
@@ -243,9 +244,9 @@
             // btnDetail
             // 
             this.btnDetail.AutoHeight = false;
-            editorButtonImageOptions1.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions1.Image")));
+            editorButtonImageOptions3.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions3.Image")));
             this.btnDetail.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions3, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject9, serializableAppearanceObject10, serializableAppearanceObject11, serializableAppearanceObject12, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.btnDetail.Name = "btnDetail";
             this.btnDetail.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             // 
@@ -254,7 +255,7 @@
             this.panelControl7.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelControl7.Controls.Add(this.panelControl4);
+            this.panelControl7.Controls.Add(this.controlBDTH);
             this.panelControl7.Controls.Add(this.panelControl3);
             this.panelControl7.Controls.Add(this.panelControl8);
             this.panelControl7.Controls.Add(this.panelControl10);
@@ -264,15 +265,15 @@
             this.panelControl7.Size = new System.Drawing.Size(953, 778);
             this.panelControl7.TabIndex = 12;
             // 
-            // panelControl4
+            // controlBDTH
             // 
-            this.panelControl4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.panelControl4.Controls.Add(this.simpleButton8);
-            this.panelControl4.Controls.Add(this.btn_tienhanhcongviec);
-            this.panelControl4.Location = new System.Drawing.Point(91, 654);
-            this.panelControl4.Name = "panelControl4";
-            this.panelControl4.Size = new System.Drawing.Size(531, 52);
-            this.panelControl4.TabIndex = 24;
+            this.controlBDTH.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.controlBDTH.Controls.Add(this.simpleButton8);
+            this.controlBDTH.Controls.Add(this.btn_tienhanhcongviec);
+            this.controlBDTH.Location = new System.Drawing.Point(91, 665);
+            this.controlBDTH.Name = "controlBDTH";
+            this.controlBDTH.Size = new System.Drawing.Size(531, 52);
+            this.controlBDTH.TabIndex = 24;
             // 
             // simpleButton8
             // 
@@ -299,32 +300,21 @@
             // panelControl3
             // 
             this.panelControl3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.panelControl3.Controls.Add(this.simpleButton2);
             this.panelControl3.Controls.Add(this.simpleButton3);
             this.panelControl3.Location = new System.Drawing.Point(91, 723);
             this.panelControl3.Name = "panelControl3";
             this.panelControl3.Size = new System.Drawing.Size(531, 50);
             this.panelControl3.TabIndex = 22;
             // 
-            // simpleButton2
-            // 
-            this.simpleButton2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.simpleButton2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.ImageOptions.Image")));
-            this.simpleButton2.Location = new System.Drawing.Point(34, 7);
-            this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.Size = new System.Drawing.Size(186, 38);
-            this.simpleButton2.TabIndex = 21;
-            this.simpleButton2.Text = "Điều chỉnh lực lượng";
-            // 
             // simpleButton3
             // 
             this.simpleButton3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.simpleButton3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton3.ImageOptions.Image")));
-            this.simpleButton3.Location = new System.Drawing.Point(322, 5);
+            this.simpleButton3.Location = new System.Drawing.Point(186, 2);
             this.simpleButton3.Name = "simpleButton3";
             this.simpleButton3.Size = new System.Drawing.Size(186, 43);
             this.simpleButton3.TabIndex = 20;
-            this.simpleButton3.Text = "Cắt lực lượng";
+            this.simpleButton3.Text = "Điều chỉnh lực lượng";
             this.simpleButton3.Click += new System.EventHandler(this.simpleButton3_Click);
             // 
             // panelControl8
@@ -365,6 +355,7 @@
             // 
             // panelControl10
             // 
+            this.panelControl10.Controls.Add(this.cSTTDS);
             this.panelControl10.Controls.Add(this.txt_soluong);
             this.panelControl10.Controls.Add(this.labelControl5);
             this.panelControl10.Controls.Add(this.txt_Ngay);
@@ -377,6 +368,15 @@
             this.panelControl10.Name = "panelControl10";
             this.panelControl10.Size = new System.Drawing.Size(531, 299);
             this.panelControl10.TabIndex = 10;
+            // 
+            // cSTTDS
+            // 
+            this.cSTTDS.Location = new System.Drawing.Point(239, 158);
+            this.cSTTDS.Name = "cSTTDS";
+            this.cSTTDS.Properties.Caption = "STTDS";
+            this.cSTTDS.Size = new System.Drawing.Size(94, 20);
+            this.cSTTDS.TabIndex = 29;
+            this.cSTTDS.Visible = false;
             // 
             // txt_soluong
             // 
@@ -482,8 +482,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl7)).EndInit();
             this.panelControl7.ResumeLayout(false);
             this.panelControl7.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl4)).EndInit();
-            this.panelControl4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.controlBDTH)).EndInit();
+            this.controlBDTH.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).EndInit();
             this.panelControl3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl8)).EndInit();
@@ -492,6 +492,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl10)).EndInit();
             this.panelControl10.ResumeLayout(false);
             this.panelControl10.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cSTTDS.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -522,17 +523,17 @@
         private DevExpress.XtraEditors.LabelControl labelControl13;
         private System.Windows.Forms.TextBox txt_Ngay;
         private System.Windows.Forms.TextBox txt_TGBD;
-        private DevExpress.XtraGrid.Columns.GridColumn danhsach;
+        private DevExpress.XtraGrid.Columns.GridColumn STTDS;
         private DevExpress.XtraEditors.LabelControl labelControl5;
         private DevExpress.XtraGrid.Columns.GridColumn trangthai;
-        private DevExpress.XtraEditors.PanelControl panelControl4;
+        private DevExpress.XtraEditors.PanelControl controlBDTH;
         private DevExpress.XtraEditors.SimpleButton simpleButton8;
         private DevExpress.XtraEditors.PanelControl panelControl2;
-        private DevExpress.XtraEditors.SimpleButton simpleButton2;
         private DevExpress.XtraEditors.SimpleButton btn_tienhanhcongviec;
         private System.Windows.Forms.TextBox txt_soluong;
         private DevExpress.XtraEditors.SimpleButton simpleButton1;
         private DevExpress.XtraEditors.PanelControl panelControl5;
         private System.Windows.Forms.TextBox txtMaCV;
+        private DevExpress.XtraEditors.CheckEdit cSTTDS;
     }
 }

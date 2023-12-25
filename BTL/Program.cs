@@ -23,8 +23,9 @@ namespace BTL
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new frmDanhSachUuTien(a));
-            Application.Run(new frmPhanCongCV());
+            //Application.Run(new frmThongBaoCV(a));
+           Application.Run(new Login());
+            //Application.Run(new frmCatGac(7,true));
         }
     }
 }

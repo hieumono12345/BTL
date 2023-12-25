@@ -66,9 +66,8 @@ namespace BTL
             string a = txtMaGac.Text;
             if (ce.Checked == true)
             {
-
                 int b = int.Parse(a);
-                frmCatGac frmCatGac = new frmCatGac(b);
+                frmCatGac frmCatGac = new frmCatGac(b, cSTTDS.Checked);
                 frmCatGac.ShowDialog();
             }
 
@@ -81,9 +80,14 @@ namespace BTL
             if (int.TryParse(txtMaGac.Text, out int b))
             {
                 if (ce.Checked == true)
-                {
-                    frmCatGac frmCatGac = new frmCatGac(b);
+                { 
+                    frmCatGac frmCatGac = new frmCatGac(b, cSTTDS.Checked);
+                    this.Hide();
+                    
                     frmCatGac.ShowDialog();
+                    LoadData();
+                    this.Show();
+
                 }
             }
 

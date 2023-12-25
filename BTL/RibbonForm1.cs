@@ -193,5 +193,10 @@ namespace BTL
         {
             OpenForm(typeof(frmThemTK));
         }
+
+        private void btnDieuChinhDanhSachUuTien_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            OpenFormSpecical(typeof(frmDanhSachUuTien));
+        }
     }
 }

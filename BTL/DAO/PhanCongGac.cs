@@ -45,6 +45,25 @@ namespace BTL.DAO
 
             return list[0];
         }
+        public soLuongConLai getSoLuong(int maDV,string Ngay,string TGBD)
+        {
+
+            List<soLuongConLai> list = new List<soLuongConLai>();
+            
+
+            string query = "usp_soluongconlai @madv="+ maDV + " , @ngay='"+Ngay+"' , @TGBD=  '" + TGBD+"'";
+            
+
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+
+            foreach (DataRow item in data.Rows)
+            {
+                soLuongConLai a = new soLuongConLai(item);
+                list.Add(a);
+            }
+
+            return list[0];
+        }
         public bool themLichGac(string Ngay,string hoi, string dap,int maDV, string nhacNho)
             
         {

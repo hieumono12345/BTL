@@ -98,6 +98,7 @@
     <Compile Include="DTO\QN_ViPham.cs" />
     <Compile Include="DTO\QuanNhan.cs" />
     <Compile Include="DTO\Quyen.cs" />
+    <Compile Include="DTO\soLuongConLai.cs" />
     <Compile Include="DTO\TaiKhoan.cs" />
     <Compile Include="DTO\ThoiGianGac.cs" />
     <Compile Include="DTO\TinhChatCongViec.cs" />

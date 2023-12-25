@@ -236,6 +236,7 @@
             this.btnDieuChinhDanhSachUuTien.Caption = "Điều chỉnh danh sách ưu tiên";
             this.btnDieuChinhDanhSachUuTien.Id = 13;
             this.btnDieuChinhDanhSachUuTien.Name = "btnDieuChinhDanhSachUuTien";
+            this.btnDieuChinhDanhSachUuTien.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnDieuChinhDanhSachUuTien_ItemClick);
             // 
             // btnPhanCongLichGac
             // 

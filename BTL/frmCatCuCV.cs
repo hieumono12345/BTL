@@ -15,6 +15,14 @@ namespace BTL
 {
     public partial class frmCatCuCV : DevExpress.XtraEditors.XtraForm
     {
+        private bool sTTDS;
+
+        public bool STTDS
+        {
+            get { return sTTDS; }
+            set { sTTDS = value; }
+        }
+
         private TTNguoiDung inForUser;
 
         public TTNguoiDung InForUser
@@ -23,22 +31,21 @@ namespace BTL
             set { inForUser = value; }
 
         }
+
         void LoandDS()
         {
-            gcDanhSachCV.DataSource = DataProvider.Instance.ExecuteQuery("EXEC dbo.usp_HienThiDanhSachLamViec @MaCongViec="+CatCongViec.macv+"");
+            MessageBox.Show(CatCongViec.macv.ToString());
+            gcDanhSachCV.DataSource = DataProvider.Instance.ExecuteQuery("EXEC dbo.usp_HienThiDanhSachLamViec @MaCongViec= " + CatCongViec.macv+"");
         }
-        public frmCatCuCV(TTNguoiDung inFor)
+        public frmCatCuCV(TTNguoiDung inFor,bool a)
         {
             this.inForUser = inFor;
+            this.sTTDS = a;
+           
             InitializeComponent();
             LoandDS();
         }
-        public frmCatCuCV()
-        {
-            InitializeComponent();
-            WindowState = FormWindowState.Maximized;
-            //panelControl4.Visible = false;
-        }
+        
 
         void LoadComBoBox()
         {
@@ -63,11 +70,23 @@ namespace BTL
             LoadComBoBox();
             txt_noidung.Text = CatCongViec.noidung.ToString();
             txt_ghichu.Text = CatCongViec.ghichu.ToString();
+            ctrlThayThe.Visible = sTTDS;
         }
 
         private void btn_cattudong_Click(object sender, EventArgs e)
         {
-            DataTable dt = DataProvider.Instance.ExecuteQuery("EXEC dbo.usp_CatCongViecTuDong @MaCV = " + CatCongViec.macv + ",@Noidung = N'" + CatCongViec.noidung + "',@DiaDiem = N'" + CatCongViec.diadiem + "',@Ngay = '" + CatCongViec.ngay + "',@soluong = " + CatCongViec.soluong + ",@ThoiGianBatDauCongViec2 = '" + CatCongViec.thoigianbatdau + "',@MaTC = " + cbx_tinhchat.SelectedValue + ",@MaDV = " + inForUser.MaDV + "");
+            string gchu;
+            if (txt_ghichu.Text == "")
+            {
+                 gchu = "null";
+            }
+            else
+            {
+                gchu=txt_ghichu.Text;
+            }
+            string Sql = "[usp_CatCongViecTuDong] @MaCV = "+ CatCongViec.macv+",@Ghichu = "+gchu +", @MaTC= "+ cbx_tinhchat.SelectedValue+ ", @madv = "+ inForUser.MaDV;
+            MessageBox.Show(Sql);
+            DataTable dt = DataProvider.Instance.ExecuteQuery(Sql);
             gcDanhSachCV.DataSource = dt;
         }
 

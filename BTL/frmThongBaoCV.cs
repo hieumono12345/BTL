@@ -1,5 +1,6 @@
 ﻿using BTL.DAO;
 using BTL.DTO;
+using BTL.Report;
 using DevExpress.Utils.About;
 using DevExpress.Utils.Extensions;
 using DevExpress.XtraEditors;
@@ -29,13 +30,13 @@ namespace BTL
         {
             this.inForUser = inFor;
             InitializeComponent();
+            btnDetail.Click += btnDetail_Click;
             // bdsdbsbdjsd
             Load();
         }
         void Load()
         {
-           // gcDanhSachCV.DataSource = QuanLyQnDAO.Instance.getDanhSachQN();
-            btnDetail.Click += btnDetail_Click;
+           // gcDanhSachCV.DataSource = QuanLyQnDAO.Instance.getDanhSachQN();            
             DataTable dt = DataProvider.Instance.ExecuteQuery("EXEC dbo.usp_hienthidanhsachcongviecdaidoi @madv="+inForUser.MaDV+"");
             gcDanhSachCV.DataSource = dt;
             //string t = time.Text;
@@ -44,6 +45,7 @@ namespace BTL
         }
         private void btnDetail_Click(object sender, EventArgs e)
         {
+            
             //QuanNhan dt = QuanLyQnDAO.Instance.getChiTietQN((int)gvDanhSachCV.GetFocusedRowCellValue("MaQN"));
             DateTime cellValue = (DateTime)gvDanhSachCV.GetFocusedRowCellValue("Ngay");
             txt_Ngay.Text = cellValue.Date.ToString("yyyy/MM/dd");
@@ -52,6 +54,9 @@ namespace BTL
             txt_soluong.Text = gvDanhSachCV.GetFocusedRowCellValue("SoLuong").ToString();
             txt_GhiChu.Text= gvDanhSachCV.GetFocusedRowCellValue("GhiChu").ToString();
             txtMaCV.Text= gvDanhSachCV.GetFocusedRowCellValue("MaCongViec").ToString();
+            cSTTDS.EditValue = gvDanhSachCV.GetFocusedRowCellValue("STTDS");
+            controlBDTH.Visible = cSTTDS.Checked;
+            MessageBox.Show("detail" + cSTTDS.Checked);
         }
 
         private void simpleButton3_Click(object sender, EventArgs e)
@@ -72,14 +77,19 @@ namespace BTL
             {
                 CatCongViec.soluong = soLuong;
             }
-            frmCatCuCV frmCatCuCV = new frmCatCuCV(InForUser);
+
+
+            frmCatCuCV frmCatCuCV = new frmCatCuCV(InForUser,cSTTDS.Checked);
+            this.Hide();
             frmCatCuCV.ShowDialog();
+            Load();
             this.Show();
         }
 
         private void btn_tienhanhcongviec_Click(object sender, EventArgs e)
         {
-            int result = DataProvider.Instance.ExecuteNonQuery("EXEC dbo.usp_tienhanhcongviec @macv = "+CatCongViec.macv+"");
+            MessageBox.Show("tien hành"+txtMaCV.Text);
+            int result = DataProvider.Instance.ExecuteNonQuery("EXEC dbo.usp_tienhanhcongviec @macv = "+txtMaCV.Text+ "");
             if (result >= 0)
             {
                 MessageBox.Show("Bắt Đầu Thực Hiện Công Viêc!");
@@ -89,7 +99,7 @@ namespace BTL
 
         private void simpleButton8_Click(object sender, EventArgs e)
         {
-            int result = DataProvider.Instance.ExecuteNonQuery("EXEC dbo.usp_hoanthanhcongviec @macv = " + CatCongViec.macv + "");
+            int result = DataProvider.Instance.ExecuteNonQuery("EXEC dbo.usp_hoanthanhcongviec @macv = " +txtMaCV.Text+ "");
             if (result >= 0)
             {
                 MessageBox.Show("Đã Hoàn Thành Công Việc!!!");
