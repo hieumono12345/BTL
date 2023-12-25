@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions2 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions1 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmThongBaoGac));
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject5 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject7 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject8 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.gcLichGac = new DevExpress.XtraGrid.GridControl();
             this.gvLichGac = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -47,6 +47,7 @@
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.panelControl7 = new DevExpress.XtraEditors.PanelControl();
+            this.ce = new DevExpress.XtraEditors.CheckEdit();
             this.panelControl4 = new DevExpress.XtraEditors.PanelControl();
             this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
             this.panelControl8 = new DevExpress.XtraEditors.PanelControl();
@@ -64,7 +65,6 @@
             this.txtDap = new System.Windows.Forms.TextBox();
             this.labelControl15 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl13 = new DevExpress.XtraEditors.LabelControl();
-            this.ce = new DevExpress.XtraEditors.CheckEdit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gcLichGac)).BeginInit();
@@ -72,6 +72,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnDetail)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl7)).BeginInit();
             this.panelControl7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ce.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl4)).BeginInit();
             this.panelControl4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl8)).BeginInit();
@@ -81,7 +82,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl9)).BeginInit();
             this.panelControl9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cSTTDS.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ce.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // panelControl1
@@ -153,6 +153,8 @@
             this.DanhSach.Name = "DanhSach";
             this.DanhSach.OptionsColumn.AllowEdit = false;
             this.DanhSach.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.True;
+            this.DanhSach.Visible = true;
+            this.DanhSach.VisibleIndex = 2;
             this.DanhSach.Width = 94;
             // 
             // Hoi
@@ -183,15 +185,15 @@
             this.gridColumn1.MinWidth = 25;
             this.gridColumn1.Name = "gridColumn1";
             this.gridColumn1.Visible = true;
-            this.gridColumn1.VisibleIndex = 2;
+            this.gridColumn1.VisibleIndex = 3;
             this.gridColumn1.Width = 70;
             // 
             // btnDetail
             // 
             this.btnDetail.AutoHeight = false;
-            editorButtonImageOptions2.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions2.Image")));
+            editorButtonImageOptions1.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions1.Image")));
             this.btnDetail.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions2, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, serializableAppearanceObject6, serializableAppearanceObject7, serializableAppearanceObject8, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.btnDetail.Name = "btnDetail";
             this.btnDetail.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             // 
@@ -228,6 +230,15 @@
             this.panelControl7.Name = "panelControl7";
             this.panelControl7.Size = new System.Drawing.Size(643, 804);
             this.panelControl7.TabIndex = 12;
+            // 
+            // ce
+            // 
+            this.ce.Location = new System.Drawing.Point(302, 662);
+            this.ce.Name = "ce";
+            this.ce.Properties.Caption = "checkEdit1";
+            this.ce.Size = new System.Drawing.Size(94, 20);
+            this.ce.TabIndex = 27;
+            this.ce.Visible = false;
             // 
             // panelControl4
             // 
@@ -321,7 +332,7 @@
             // 
             this.cSTTDS.Location = new System.Drawing.Point(211, 47);
             this.cSTTDS.Name = "cSTTDS";
-            this.cSTTDS.Properties.Caption = "checkEdit1";
+            this.cSTTDS.Properties.Caption = "STTDS";
             this.cSTTDS.Size = new System.Drawing.Size(94, 20);
             this.cSTTDS.TabIndex = 18;
             this.cSTTDS.Visible = false;
@@ -388,15 +399,6 @@
             this.labelControl13.TabIndex = 1;
             this.labelControl13.Text = "THÔNG TIN GÁC";
             // 
-            // ce
-            // 
-            this.ce.Location = new System.Drawing.Point(302, 662);
-            this.ce.Name = "ce";
-            this.ce.Properties.Caption = "checkEdit1";
-            this.ce.Size = new System.Drawing.Size(94, 20);
-            this.ce.TabIndex = 27;
-            this.ce.Visible = false;
-            // 
             // frmThongBaoGac
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -415,6 +417,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl7)).EndInit();
             this.panelControl7.ResumeLayout(false);
             this.panelControl7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ce.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl4)).EndInit();
             this.panelControl4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl8)).EndInit();
@@ -427,7 +430,6 @@
             this.panelControl9.ResumeLayout(false);
             this.panelControl9.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cSTTDS.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ce.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }

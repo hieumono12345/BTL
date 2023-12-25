@@ -21,7 +21,7 @@ namespace BTL.DAO
 
         public DataTable LayLichGac(int MaDV)
         {
-            DataTable data = DataProvider.Instance.ExecuteQuery("SELECT ROW_NUMBER() OVER (ORDER BY MaGac) AS 'STT', MaGac , Ngay , Hoi , Dap , NhacNho  , MaDV from NoiDungGac  where NoiDungGac.MaDV=" + MaDV);
+            DataTable data = DataProvider.Instance.ExecuteQuery("usp_hienthingaygac @madv=" + MaDV);
             return data;
         }
     }

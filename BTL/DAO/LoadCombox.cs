@@ -93,6 +93,23 @@ namespace BTL.DAO
             return list;
         }
 
+        public List<QN> getQNThayThe(int MaGac, int MaTG)
+        {
+
+            string query = "usp_hienthiquannhan @magac="+MaGac+" , @matg= "+MaTG;
+            List<QN> list = new List<QN>();
+
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+
+            foreach (DataRow item in data.Rows)
+            {
+                QN a = new QN(item);
+                list.Add(a);
+            }
+
+            return list;
+        }
+
         public List<DonVi> getListDonVi()
         {
             List<DonVi> list = new List<DonVi>();

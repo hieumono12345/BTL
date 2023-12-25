@@ -54,7 +54,7 @@ namespace BTL
         {
             cbSua.Checked = false;
             cbThem.Checked = false;
-            gcDSUuTien.DataSource = DataProvider.Instance.ExecuteQuery("usp_HienThiDanhSachUuTien");
+            gcDSUuTien.DataSource = DataProvider.Instance.ExecuteQuery("usp_HienThiDanhSachUuTien @madv = "+(int)inForUser.MaDV);
             btnDetail.Click += btnDetail_Click;
             loadCBX();
         }
@@ -112,9 +112,9 @@ namespace BTL
                 if (int.TryParse(txtMaUT.Text, out id))
                 {
                     //viết store xóa ở đây
-                    MessageBox.Show("Xóa thất bại"+id.ToString());
+                    //MessageBox.Show("Xóa thất bại"+id.ToString());
 
-                    /*int a = DataProvider.Instance.ExecuteNonQuery("usp_xoalichgac @magac=" + id);
+                    int a = DataProvider.Instance.ExecuteNonQuery("usp_XoaUuTien @maut=" + id);
                     if (a > 0)
                     {
                         Load();
@@ -122,7 +122,7 @@ namespace BTL
                     else
                     {
                         MessageBox.Show("Xóa thất bại");
-                    }*/
+                    }
                 }
 
 

@@ -105,7 +105,8 @@ namespace BTL
 
         bool checkInPut()
         {
-            if (nbSoL.Text != ""|| TGBD.Text != ""|| txtDiaDiem.Text != ""|| txtNoiDung.Text != "")
+            //MessageBox.Show(nbSoL.Text+TGBD.Text);
+            if (nbSoL.Text == ""|| TGBD.Text == ""|| txtDiaDiem.Text == "" || txtNoiDung.Text == "")
             {
                 return false;
             }
@@ -125,45 +126,94 @@ namespace BTL
 
         private void btnXacNhan_Click(object sender, EventArgs e)
         {
+           
             TimeSpan time1 = TGBD.Time.TimeOfDay;
             TimeSpan time2 = TGKT.Time.TimeOfDay;
 
-            if (checkInPut())
+            if (checkInPut()==true)
             {
-                if (time1 > time2)
+                MessageBox.Show(ceTGKT.Checked.ToString());
+                if (ceTGKT.Checked.ToString() == "False")
                 {
-                    MessageBox.Show("Thời gian bắt đầu phải lớn hơn thời gian kết thúc", "sửa");
+                    if (time1 >= time2)
+                    {
+                        MessageBox.Show("Thời gian bắt đầu phải lớn hơn thời gian kết thúc", "sửa");
+                    }
+                    else//if (time1 < time2)
+                    {
+                        if (cbSua.Checked == true)
+                        {
+                            bool a = QuanLyPhanCongCV.Instance.suaCongViec((int)gvDanhSachCV.GetFocusedRowCellValue("MaCongViec"), Ngay.Text, txtNoiDung.Text, TGBD.Text, TGKT.Text, (Int32)cbDV.SelectedValue, (int)nbSoL.Value, txtDiaDiem.Text, txtGhiChu.Text);
+                            if (a == true)
+                            {
+                                loadDS();
+                            }
+                            else
+                            {
+                                MessageBox.Show("Thất bại");
+                            }
+                        }
+                        if (cbThem.Checked == true)
+                        {
+                            bool a = QuanLyPhanCongCV.Instance.themCongViec(Ngay.Text, txtNoiDung.Text, TGBD.Text, TGKT.Text, (Int32)cbDV.SelectedValue, (int)nbSoL.Value, txtDiaDiem.Text, txtGhiChu.Text);
+                            if (a == true)
+                            {
+                                loadDS();
+                            }
+                            else
+                            {
+                                soLuongConLai ba = PhanCongGac.Instance.getSoLuong((Int32)cbDV.SelectedValue, Ngay.Text, TGBD.Text);
+                                MessageBox.Show("Quân số của đơn vị không đủ để thực hiện nhiệm vụ. Số lượng quân số có thể của đơn vị tại thời điểm" + TGBD.Text + "  là:" + ba.soLuong);
+                            }
+                        }
+                    }
+                   
                 }
-                else if (time1 < time2)
+                else if(ceTGKT.Checked.ToString()=="True")
                 {
+                    MessageBox.Show("true"+ceTGKT.Checked.ToString());
                     if (cbSua.Checked == true)
                     {
-                        bool a = QuanLyPhanCongCV.Instance.suaCongViec((int)gvDanhSachCV.GetFocusedRowCellValue("MaCongViec"), Ngay.Text, txtNoiDung.Text, TGBD.Text, TGKT.Text, (Int32)cbDV.SelectedValue, (int)nbSoL.Value, txtDiaDiem.Text, txtGhiChu.Text);
+                        bool a = QuanLyPhanCongCV.Instance.suaCongViec((int)gvDanhSachCV.GetFocusedRowCellValue("MaCongViec"), Ngay.Text, txtNoiDung.Text, "", TGKT.Text, (Int32)cbDV.SelectedValue, (int)nbSoL.Value, txtDiaDiem.Text, txtGhiChu.Text);
+                        string sql = "[usp_ThemDanhSachCongViec1] @noidung NVARCHAR(300),@diadiem NVARCHAR(50),@ngay DATE,@soluong INT,@GhiChu NVARCHAR(300),@TGBD TIME,@MaDV INT";
                         if (a == true)
                         {
                             loadDS();
                         }
                         else
                         {
-                            MessageBox.Show("Thất bại");
+                            soLuongConLai ba = PhanCongGac.Instance.getSoLuong((Int32)cbDV.SelectedValue, Ngay.Text, TGBD.Text);
+                            MessageBox.Show("Quân số của đơn vị không đủ để thực hiện nhiệm vụ. Số lượng quân số có thể của đơn vị tại thời điểm" + TGBD.Text + "  là:" + ba.soLuong);
                         }
                     }
                     if (cbThem.Checked == true)
                     {
-                        bool a = QuanLyPhanCongCV.Instance.themCongViec(Ngay.Text, txtNoiDung.Text, TGBD.Text, TGKT.Text, (Int32)cbDV.SelectedValue, (int)nbSoL.Value, txtDiaDiem.Text, txtGhiChu.Text);
-                        if (a == true)
+                        MessageBox.Show("vào đây");
+                        string gChu;
+                        if (txtGhiChu.Text == "")
+                        {
+                            gChu = "null";
+                        }
+                        else
+                        {
+                            gChu= txtGhiChu.Text;
+                        }
+                      
+                        //bool a = QuanLyPhanCongCV.Instance.themCongViec(Ngay.Text, txtNoiDung.Text, TGBD.Text, "Null", (Int32)cbDV.SelectedValue, (int)nbSoL.Value, txtDiaDiem.Text, txtGhiChu.Text);
+                        string sql = "[usp_ThemDanhSachCongViec1] @noidung= "+ txtNoiDung.Text + ",@diadiem= "+ txtDiaDiem.Text + ",@ngay= '"+ Ngay.Text + "',@soluong ="+ (int)nbSoL.Value + ",@GhiChu= " +gChu+",@TGBD='"+ TGBD.Text+"',@MaDV ="+ (Int32)cbDV.SelectedValue;
+                        MessageBox.Show(sql);   
+                        int b = DataProvider.Instance.ExecuteNonQuery(sql);
+
+                        if (b>0)
                         {
                             loadDS();
                         }
                         else
                         {
-                            MessageBox.Show("Thất bại");
+                            soLuongConLai a = PhanCongGac.Instance.getSoLuong((Int32)cbDV.SelectedValue, Ngay.Text, TGBD.Text);
+                            MessageBox.Show("Quân số của đơn vị không đủ để thực hiện nhiệm vụ. Số lượng quân số có thể của đơn vị tại thời điểm" + TGBD.Text + "  là:"+a.soLuong);
                         }
                     }
-                }
-                else
-                {
-                    MessageBox.Show("Thời gian bắt đầu phải nhỏ hơn thời gian kết thúc", "sửa");
                 }
             }
             else
