@@ -51,6 +51,7 @@
             this.btnDetail = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.panelControl7 = new DevExpress.XtraEditors.PanelControl();
             this.panelControl10 = new DevExpress.XtraEditors.PanelControl();
+            this.txtMaQN = new DevExpress.XtraEditors.TextEdit();
             this.cbSua = new DevExpress.XtraEditors.CheckEdit();
             this.cbThem = new DevExpress.XtraEditors.CheckEdit();
             this.txtMaUT = new DevExpress.XtraEditors.TextEdit();
@@ -63,7 +64,6 @@
             this.pncBtnXuLy = new DevExpress.XtraEditors.PanelControl();
             this.btnXacNhan = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl13 = new DevExpress.XtraEditors.LabelControl();
-            this.txtMaQN = new DevExpress.XtraEditors.TextEdit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
@@ -75,13 +75,13 @@
             this.panelControl7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl10)).BeginInit();
             this.panelControl10.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMaQN.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbSua.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbThem.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMaUT.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNoiDungUuTien.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pncBtnXuLy)).BeginInit();
             this.pncBtnXuLy.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtMaQN.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // btnThem
@@ -270,8 +270,16 @@
             this.panelControl10.Controls.Add(this.cbQN);
             this.panelControl10.Location = new System.Drawing.Point(91, 78);
             this.panelControl10.Name = "panelControl10";
-            this.panelControl10.Size = new System.Drawing.Size(531, 628);
+            this.panelControl10.Size = new System.Drawing.Size(531, 524);
             this.panelControl10.TabIndex = 22;
+            // 
+            // txtMaQN
+            // 
+            this.txtMaQN.Location = new System.Drawing.Point(224, 340);
+            this.txtMaQN.Name = "txtMaQN";
+            this.txtMaQN.Size = new System.Drawing.Size(269, 23);
+            this.txtMaQN.TabIndex = 40;
+            this.txtMaQN.Visible = false;
             // 
             // cbSua
             // 
@@ -383,14 +391,6 @@
             this.labelControl13.TabIndex = 1;
             this.labelControl13.Text = "THÔNG TIN HỌC VIÊN";
             // 
-            // txtMaQN
-            // 
-            this.txtMaQN.Location = new System.Drawing.Point(224, 340);
-            this.txtMaQN.Name = "txtMaQN";
-            this.txtMaQN.Size = new System.Drawing.Size(269, 23);
-            this.txtMaQN.TabIndex = 40;
-            this.txtMaQN.Visible = false;
-            // 
             // frmDanhSachUuTien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -414,13 +414,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl10)).EndInit();
             this.panelControl10.ResumeLayout(false);
             this.panelControl10.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMaQN.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbSua.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbThem.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMaUT.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNoiDungUuTien.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pncBtnXuLy)).EndInit();
             this.pncBtnXuLy.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.txtMaQN.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -56,8 +56,7 @@ namespace BTL.DAO
             }
         }
             catch 
-            {
-                MessageBox.Show("lỗi");
+            { 
             }
 
 
@@ -67,7 +66,9 @@ namespace BTL.DAO
         public int ExecuteNonQuery(string query, object[] parameter = null)
         {
             int data = 0;
-            
+            try
+            {
+
                 using (SqlConnection connection = new SqlConnection(connectionSTR))
             {
                 connection.Open();
@@ -92,7 +93,10 @@ namespace BTL.DAO
 
                 connection.Close();
             }
-        
+        }
+            catch 
+            { 
+            }
             
 
             return data;

@@ -1,4 +1,5 @@
 ﻿using BTL.DAO;
+using BTL.DTO;
 using DevExpress.XtraEditors;
 using System;
 using System.Collections.Generic;
@@ -9,16 +10,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using BTL.DAO;
-using BTL.DTO;
-using DevExpress.Printing.DataAwareExport.Export.Utils;
 
 namespace BTL
 {
-    public partial class frmPhanCongGac : DevExpress.XtraEditors.XtraForm
+    public partial class frmLichSuGac3 : DevExpress.XtraEditors.XtraForm
     {
-        public frmPhanCongGac()
+        private int maDonVi;
+
+        public int MaDonVi
         {
+            get { return maDonVi; }
+            set { maDonVi = value; }
+        }
+        public frmLichSuGac3(int maDonVi)
+        {
+            this.maDonVi = maDonVi;
             InitializeComponent();
             btnDetail.Click += BtnDetail_Click;
             Load();
@@ -28,20 +34,27 @@ namespace BTL
         {
             cbSua.Checked = false;
             cbThem.Checked = false;
-            loadDataLichGacTrongThang();    
+            loadDataLichGacTrongThang();
             loadCbDV();
             disenableTatCa();
         }
         void loadDataLichGacTrongThang()
         {
-            gcDanhSachGac.DataSource = PhanCongGac.Instance.getDSDaPhanCongTrongThang();
+            if (maDonVi == 0)
+            {
+                gcDanhSachGac.DataSource = PhanCongGac.Instance.getDSDaPhanCongTrongThang();
+            }
+            else
+            {
+                gcDanhSachGac.DataSource = ThongBaoGac.Instance.LayLichGac(maDonVi);
+            }
         }
         private void frmDanhSachQN_Load(object sender, EventArgs e)
         {
             //gcDanhSachQN.DataSource = QuanLyQnDAO.Instance.getDanhSachQN();
             btnDetail.Click += BtnDetail_Click;
         }
-        
+
         void enableTatCa()
         {
             dateTimePicker1.Enabled = true;
@@ -59,7 +72,7 @@ namespace BTL
             txtDap.Enabled = false;
             txtMaGac.Enabled = false;
             cbDV.Enabled = false;
-            
+
         }
         void XoaTatCa()
         {
@@ -73,7 +86,7 @@ namespace BTL
 
         //Gán giá trị vào CB ở đâyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy
         void loadCbDV()
-        {            
+        {
             cbDV.DataSource = DAO.QuanLyDonVi.Instance.getListDonVi();
             cbDV.DisplayMember = "TenDV";
             cbDV.ValueMember = "MaDV";
@@ -84,26 +97,26 @@ namespace BTL
         {
             //MessageBox.Show(gvDanhSachGac.GetFocusedRowCellValue("MaGac").ToString(), "sss");
             NoiDungGac ndg = PhanCongGac.Instance.getNoiDungGac((int)gvDanhSachGac.GetFocusedRowCellValue("MaGac"));
-            
+
             txtHoi.Text = ndg.Hoi;
             txtDap.Text = ndg.Dap;
-            txtMaGac.Text= ndg.MaGac.ToString();
+            txtMaGac.Text = ndg.MaGac.ToString();
             txtNhacNho.Text = ndg.NhacNho;
             dateTimePicker1.Text = ndg.Ngay.ToString();
             //cbDV.Text = ndg.TenDV.ToString();
-            disenableTatCa();  
+            disenableTatCa();
             cbThem.Checked = false;
             cbSua.Checked = false;
         }
         bool CheckInput()
         {
-            if (txtHoi.Text == "" || txtDap.Text =="" || cbDV.Text=="")
+            if (txtHoi.Text == "" || txtDap.Text == "" || cbDV.Text == "")
             {
                 return false;
             }
             else { return true; }
         }
-        
+
 
         //btnSua
         private void simpleButton2_Click(object sender, EventArgs e)
@@ -122,11 +135,11 @@ namespace BTL
             cbSua.Checked = false;
             enableTatCa();
             XoaTatCa();
-            
+
         }
-        
+
         private void btnThemLichGac_Click(object sender, EventArgs e)
-        {           
+        {
 
             if (cbThem.Checked == true)
             {
@@ -138,22 +151,20 @@ namespace BTL
                 {
                     bool a = PhanCongGac.Instance.themLichGac(dateTimePicker1.Text.ToString(), txtHoi.Text, txtDap.Text, (int)cbDV.SelectedValue, txtNhacNho.Text);
                     if (a)
-                    {                        
+                    {
                         loadDataLichGacTrongThang();
-                        enableTatCa();
-                        XoaTatCa();
                     }
                     else
                     {
                         MessageBox.Show("Ngày gác được phân công!!", "Thông báo");
                     }
                 }
-                
+
             }
             if (cbSua.Checked == true)
             {
                 //viết store sửa tại đây
-                //MessageBox.Show("Sửa");
+                MessageBox.Show("Sửa");
             }
         }
 
@@ -169,8 +180,6 @@ namespace BTL
                     if (a > 0)
                     {
                         Load();
-                        enableTatCa();
-                        XoaTatCa();
                     }
                     else
                     {
@@ -178,7 +187,21 @@ namespace BTL
                     }
                 }
                 //viết store xóa ở đây
-                
+
+            }
+        }
+
+        private void btnThemLichGac_Click_1(object sender, EventArgs e)
+        {
+            MessageBox.Show(txtMaGac.Text);
+            int id;
+            if (int.TryParse(txtMaGac.Text, out id))
+            {
+                frmChiTiet2 a = new frmChiTiet2(id,true);
+                a.ShowDialog();
+                this.Hide();
+
+                this.Show();
             }
         }
     }
