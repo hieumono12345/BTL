@@ -1,6 +1,6 @@
 ﻿namespace BTL
 {
-    partial class frmCatGac
+    partial class frmChiTiet2
     {
         /// <summary>
         /// Required designer variable.
@@ -28,12 +28,30 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCatGac));
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions3 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject9 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject10 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject11 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject12 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions8 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmChiTiet2));
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject29 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject30 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject31 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject32 = new DevExpress.Utils.SerializableAppearanceObject();
+            this.gcDSGac = new DevExpress.XtraGrid.GridControl();
+            this.gvDSGac = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.MaTG = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.ThoiGian = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.HV1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.HV2 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.HV3 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.HV4 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.DocGac = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn8 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn9 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.btnDetail = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
+            this.Ma1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.Ma2 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.Ma3 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.Ma4 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.Ma5 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.txtMaTG = new System.Windows.Forms.TextBox();
             this.controlDocGac = new DevExpress.XtraEditors.PanelControl();
@@ -73,29 +91,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.MaHV1 = new System.Windows.Forms.TextBox();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.panelControl7 = new DevExpress.XtraEditors.PanelControl();
-            this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
-            this.labelControl13 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
-            this.btnChinhSua = new DevExpress.XtraEditors.SimpleButton();
-            this.gcDSGac = new DevExpress.XtraGrid.GridControl();
-            this.gvDSGac = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.MaTG = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.ThoiGian = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.HV1 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.HV2 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.HV3 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.HV4 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.DocGac = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn8 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn9 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.btnDetail = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
-            this.Ma1 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.Ma2 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.Ma3 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.Ma4 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.Ma5 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.btnXacNhan = new DevExpress.XtraEditors.SimpleButton();
+            ((System.ComponentModel.ISupportInitialize)(this.gcDSGac)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvDSGac)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnDetail)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.controlDocGac)).BeginInit();
@@ -108,492 +106,19 @@
             this.panelControl3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl7)).BeginInit();
-            this.panelControl7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gcDSGac)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gvDSGac)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnDetail)).BeginInit();
             this.SuspendLayout();
-            // 
-            // panelControl1
-            // 
-            this.panelControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelControl1.Controls.Add(this.txtMaTG);
-            this.panelControl1.Controls.Add(this.controlDocGac);
-            this.panelControl1.Controls.Add(this.panelControl5);
-            this.panelControl1.Controls.Add(this.panelControl4);
-            this.panelControl1.Controls.Add(this.panelControl3);
-            this.panelControl1.Controls.Add(this.btnLuu);
-            this.panelControl1.Controls.Add(this.panelControl2);
-            this.panelControl1.Controls.Add(this.labelControl1);
-            this.panelControl1.Location = new System.Drawing.Point(1208, 12);
-            this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(643, 1048);
-            this.panelControl1.TabIndex = 1;
-            // 
-            // txtMaTG
-            // 
-            this.txtMaTG.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtMaTG.Enabled = false;
-            this.txtMaTG.Location = new System.Drawing.Point(43, 282);
-            this.txtMaTG.Name = "txtMaTG";
-            this.txtMaTG.Size = new System.Drawing.Size(14, 23);
-            this.txtMaTG.TabIndex = 12;
-            this.txtMaTG.Visible = false;
-            // 
-            // controlDocGac
-            // 
-            this.controlDocGac.Controls.Add(this.maMoi5);
-            this.controlDocGac.Controls.Add(this.cbHV5);
-            this.controlDocGac.Controls.Add(this.labelControl7);
-            this.controlDocGac.Controls.Add(this.label9);
-            this.controlDocGac.Controls.Add(this.label10);
-            this.controlDocGac.Controls.Add(this.MaHV5);
-            this.controlDocGac.Location = new System.Drawing.Point(91, 686);
-            this.controlDocGac.Name = "controlDocGac";
-            this.controlDocGac.Size = new System.Drawing.Size(531, 130);
-            this.controlDocGac.TabIndex = 13;
-            // 
-            // maMoi5
-            // 
-            this.maMoi5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.maMoi5.Enabled = false;
-            this.maMoi5.Location = new System.Drawing.Point(518, 81);
-            this.maMoi5.Name = "maMoi5";
-            this.maMoi5.Size = new System.Drawing.Size(14, 23);
-            this.maMoi5.TabIndex = 17;
-            this.maMoi5.Visible = false;
-            // 
-            // cbHV5
-            // 
-            this.cbHV5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.cbHV5.FormattingEnabled = true;
-            this.cbHV5.Location = new System.Drawing.Point(243, 80);
-            this.cbHV5.Name = "cbHV5";
-            this.cbHV5.Size = new System.Drawing.Size(269, 24);
-            this.cbHV5.TabIndex = 10;
-            this.cbHV5.SelectedIndexChanged += new System.EventHandler(this.cbHV5_SelectedIndexChanged);
-            // 
-            // labelControl7
-            // 
-            this.labelControl7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelControl7.Appearance.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl7.Appearance.Options.UseFont = true;
-            this.labelControl7.Location = new System.Drawing.Point(14, 5);
-            this.labelControl7.Name = "labelControl7";
-            this.labelControl7.Size = new System.Drawing.Size(70, 19);
-            this.labelControl7.TabIndex = 3;
-            this.labelControl7.Text = "Đốc gác:";
-            // 
-            // label9
-            // 
-            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(135, 83);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(89, 16);
-            this.label9.TabIndex = 11;
-            this.label9.Text = "Tên học viên: ";
-            // 
-            // label10
-            // 
-            this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(135, 32);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(84, 16);
-            this.label10.TabIndex = 8;
-            this.label10.Text = "Mã học viên: ";
-            // 
-            // MaHV5
-            // 
-            this.MaHV5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.MaHV5.Enabled = false;
-            this.MaHV5.Location = new System.Drawing.Point(243, 29);
-            this.MaHV5.Name = "MaHV5";
-            this.MaHV5.Size = new System.Drawing.Size(269, 23);
-            this.MaHV5.TabIndex = 9;
-            // 
-            // panelControl5
-            // 
-            this.panelControl5.Controls.Add(this.maMoi4);
-            this.panelControl5.Controls.Add(this.cbHV4);
-            this.panelControl5.Controls.Add(this.labelControl6);
-            this.panelControl5.Controls.Add(this.label7);
-            this.panelControl5.Controls.Add(this.label8);
-            this.panelControl5.Controls.Add(this.MaHV4);
-            this.panelControl5.Location = new System.Drawing.Point(91, 534);
-            this.panelControl5.Name = "panelControl5";
-            this.panelControl5.Size = new System.Drawing.Size(531, 130);
-            this.panelControl5.TabIndex = 12;
-            // 
-            // maMoi4
-            // 
-            this.maMoi4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.maMoi4.Enabled = false;
-            this.maMoi4.Location = new System.Drawing.Point(518, 81);
-            this.maMoi4.Name = "maMoi4";
-            this.maMoi4.Size = new System.Drawing.Size(14, 23);
-            this.maMoi4.TabIndex = 16;
-            this.maMoi4.Visible = false;
-            // 
-            // cbHV4
-            // 
-            this.cbHV4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.cbHV4.FormattingEnabled = true;
-            this.cbHV4.Location = new System.Drawing.Point(243, 80);
-            this.cbHV4.Name = "cbHV4";
-            this.cbHV4.Size = new System.Drawing.Size(269, 24);
-            this.cbHV4.TabIndex = 10;
-            this.cbHV4.SelectedIndexChanged += new System.EventHandler(this.cbHV4_SelectedIndexChanged);
-            // 
-            // labelControl6
-            // 
-            this.labelControl6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelControl6.Appearance.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl6.Appearance.Options.UseFont = true;
-            this.labelControl6.Location = new System.Drawing.Point(14, 5);
-            this.labelControl6.Name = "labelControl6";
-            this.labelControl6.Size = new System.Drawing.Size(88, 19);
-            this.labelControl6.TabIndex = 3;
-            this.labelControl6.Text = "Học viên 4:";
-            // 
-            // label7
-            // 
-            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(135, 83);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(89, 16);
-            this.label7.TabIndex = 11;
-            this.label7.Text = "Tên học viên: ";
-            // 
-            // label8
-            // 
-            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(135, 32);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(84, 16);
-            this.label8.TabIndex = 8;
-            this.label8.Text = "Mã học viên: ";
-            // 
-            // MaHV4
-            // 
-            this.MaHV4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.MaHV4.Enabled = false;
-            this.MaHV4.Location = new System.Drawing.Point(243, 29);
-            this.MaHV4.Name = "MaHV4";
-            this.MaHV4.Size = new System.Drawing.Size(269, 23);
-            this.MaHV4.TabIndex = 9;
-            // 
-            // panelControl4
-            // 
-            this.panelControl4.Controls.Add(this.maMoi3);
-            this.panelControl4.Controls.Add(this.cbHV3);
-            this.panelControl4.Controls.Add(this.labelControl5);
-            this.panelControl4.Controls.Add(this.label5);
-            this.panelControl4.Controls.Add(this.label6);
-            this.panelControl4.Controls.Add(this.MaHV3);
-            this.panelControl4.Location = new System.Drawing.Point(91, 385);
-            this.panelControl4.Name = "panelControl4";
-            this.panelControl4.Size = new System.Drawing.Size(531, 130);
-            this.panelControl4.TabIndex = 12;
-            // 
-            // maMoi3
-            // 
-            this.maMoi3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.maMoi3.Enabled = false;
-            this.maMoi3.Location = new System.Drawing.Point(517, 81);
-            this.maMoi3.Name = "maMoi3";
-            this.maMoi3.Size = new System.Drawing.Size(14, 23);
-            this.maMoi3.TabIndex = 15;
-            this.maMoi3.Visible = false;
-            // 
-            // cbHV3
-            // 
-            this.cbHV3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.cbHV3.FormattingEnabled = true;
-            this.cbHV3.Location = new System.Drawing.Point(243, 80);
-            this.cbHV3.Name = "cbHV3";
-            this.cbHV3.Size = new System.Drawing.Size(269, 24);
-            this.cbHV3.TabIndex = 10;
-            this.cbHV3.SelectedIndexChanged += new System.EventHandler(this.cbHV3_SelectedIndexChanged);
-            // 
-            // labelControl5
-            // 
-            this.labelControl5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelControl5.Appearance.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl5.Appearance.Options.UseFont = true;
-            this.labelControl5.Location = new System.Drawing.Point(14, 5);
-            this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(88, 19);
-            this.labelControl5.TabIndex = 3;
-            this.labelControl5.Text = "Học viên 3:";
-            // 
-            // label5
-            // 
-            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(135, 83);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(89, 16);
-            this.label5.TabIndex = 11;
-            this.label5.Text = "Tên học viên: ";
-            // 
-            // label6
-            // 
-            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(135, 32);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(84, 16);
-            this.label6.TabIndex = 8;
-            this.label6.Text = "Mã học viên: ";
-            // 
-            // MaHV3
-            // 
-            this.MaHV3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.MaHV3.Enabled = false;
-            this.MaHV3.Location = new System.Drawing.Point(243, 29);
-            this.MaHV3.Name = "MaHV3";
-            this.MaHV3.Size = new System.Drawing.Size(269, 23);
-            this.MaHV3.TabIndex = 9;
-            // 
-            // panelControl3
-            // 
-            this.panelControl3.Controls.Add(this.maMoi2);
-            this.panelControl3.Controls.Add(this.cbHV2);
-            this.panelControl3.Controls.Add(this.labelControl3);
-            this.panelControl3.Controls.Add(this.label3);
-            this.panelControl3.Controls.Add(this.label4);
-            this.panelControl3.Controls.Add(this.MaHV2);
-            this.panelControl3.Location = new System.Drawing.Point(91, 237);
-            this.panelControl3.Name = "panelControl3";
-            this.panelControl3.Size = new System.Drawing.Size(531, 130);
-            this.panelControl3.TabIndex = 12;
-            // 
-            // maMoi2
-            // 
-            this.maMoi2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.maMoi2.Enabled = false;
-            this.maMoi2.Location = new System.Drawing.Point(518, 81);
-            this.maMoi2.Name = "maMoi2";
-            this.maMoi2.Size = new System.Drawing.Size(14, 23);
-            this.maMoi2.TabIndex = 14;
-            this.maMoi2.Visible = false;
-            // 
-            // cbHV2
-            // 
-            this.cbHV2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.cbHV2.FormattingEnabled = true;
-            this.cbHV2.Location = new System.Drawing.Point(243, 80);
-            this.cbHV2.Name = "cbHV2";
-            this.cbHV2.Size = new System.Drawing.Size(269, 24);
-            this.cbHV2.TabIndex = 10;
-            this.cbHV2.SelectedIndexChanged += new System.EventHandler(this.cbHV2_SelectedIndexChanged);
-            // 
-            // labelControl3
-            // 
-            this.labelControl3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelControl3.Appearance.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl3.Appearance.Options.UseFont = true;
-            this.labelControl3.Location = new System.Drawing.Point(14, 5);
-            this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(88, 19);
-            this.labelControl3.TabIndex = 3;
-            this.labelControl3.Text = "Học viên 2:";
-            // 
-            // label3
-            // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(135, 83);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(89, 16);
-            this.label3.TabIndex = 11;
-            this.label3.Text = "Tên học viên: ";
-            // 
-            // label4
-            // 
-            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(135, 32);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(84, 16);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "Mã học viên: ";
-            // 
-            // MaHV2
-            // 
-            this.MaHV2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.MaHV2.Enabled = false;
-            this.MaHV2.Location = new System.Drawing.Point(243, 29);
-            this.MaHV2.Name = "MaHV2";
-            this.MaHV2.Size = new System.Drawing.Size(269, 23);
-            this.MaHV2.TabIndex = 9;
-            // 
-            // btnLuu
-            // 
-            this.btnLuu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnLuu.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnLuu.ImageOptions.Image")));
-            this.btnLuu.Location = new System.Drawing.Point(245, 1002);
-            this.btnLuu.Name = "btnLuu";
-            this.btnLuu.Size = new System.Drawing.Size(186, 38);
-            this.btnLuu.TabIndex = 12;
-            this.btnLuu.Text = "Lưu";
-            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
-            // 
-            // panelControl2
-            // 
-            this.panelControl2.Controls.Add(this.maMoi1);
-            this.panelControl2.Controls.Add(this.cbHV1);
-            this.panelControl2.Controls.Add(this.labelControl4);
-            this.panelControl2.Controls.Add(this.label1);
-            this.panelControl2.Controls.Add(this.label2);
-            this.panelControl2.Controls.Add(this.MaHV1);
-            this.panelControl2.Location = new System.Drawing.Point(91, 88);
-            this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(531, 130);
-            this.panelControl2.TabIndex = 4;
-            // 
-            // maMoi1
-            // 
-            this.maMoi1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.maMoi1.Enabled = false;
-            this.maMoi1.Location = new System.Drawing.Point(517, 80);
-            this.maMoi1.Name = "maMoi1";
-            this.maMoi1.Size = new System.Drawing.Size(14, 23);
-            this.maMoi1.TabIndex = 13;
-            this.maMoi1.Visible = false;
-            // 
-            // cbHV1
-            // 
-            this.cbHV1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.cbHV1.FormattingEnabled = true;
-            this.cbHV1.Location = new System.Drawing.Point(243, 80);
-            this.cbHV1.Name = "cbHV1";
-            this.cbHV1.Size = new System.Drawing.Size(269, 24);
-            this.cbHV1.TabIndex = 10;
-            this.cbHV1.SelectionChangeCommitted += new System.EventHandler(this.cbHV1_SelectionChangeCommitted);
-            // 
-            // labelControl4
-            // 
-            this.labelControl4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelControl4.Appearance.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl4.Appearance.Options.UseFont = true;
-            this.labelControl4.Location = new System.Drawing.Point(14, 5);
-            this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(88, 19);
-            this.labelControl4.TabIndex = 3;
-            this.labelControl4.Text = "Học viên 1:";
-            // 
-            // label1
-            // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(135, 83);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(89, 16);
-            this.label1.TabIndex = 11;
-            this.label1.Text = "Tên học viên: ";
-            // 
-            // label2
-            // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(135, 32);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(84, 16);
-            this.label2.TabIndex = 8;
-            this.label2.Text = "Mã học viên: ";
-            // 
-            // MaHV1
-            // 
-            this.MaHV1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.MaHV1.Enabled = false;
-            this.MaHV1.Location = new System.Drawing.Point(243, 29);
-            this.MaHV1.Name = "MaHV1";
-            this.MaHV1.Size = new System.Drawing.Size(269, 23);
-            this.MaHV1.TabIndex = 9;
-            // 
-            // labelControl1
-            // 
-            this.labelControl1.Appearance.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl1.Appearance.Options.UseFont = true;
-            this.labelControl1.Location = new System.Drawing.Point(245, 12);
-            this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(221, 26);
-            this.labelControl1.TabIndex = 1;
-            this.labelControl1.Text = "THÔNG TIN CA GÁC";
-            // 
-            // panelControl7
-            // 
-            this.panelControl7.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelControl7.Controls.Add(this.simpleButton3);
-            this.panelControl7.Controls.Add(this.labelControl13);
-            this.panelControl7.Location = new System.Drawing.Point(0, 0);
-            this.panelControl7.Name = "panelControl7";
-            this.panelControl7.Size = new System.Drawing.Size(643, 1048);
-            this.panelControl7.TabIndex = 10;
-            // 
-            // simpleButton3
-            // 
-            this.simpleButton3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.simpleButton3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton3.ImageOptions.Image")));
-            this.simpleButton3.Location = new System.Drawing.Point(245, 1010);
-            this.simpleButton3.Name = "simpleButton3";
-            this.simpleButton3.Size = new System.Drawing.Size(186, 38);
-            this.simpleButton3.TabIndex = 20;
-            this.simpleButton3.Text = "Cắt gác tự đông";
-            this.simpleButton3.Click += new System.EventHandler(this.simpleButton3_Click);
-            // 
-            // labelControl13
-            // 
-            this.labelControl13.Appearance.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl13.Appearance.Options.UseFont = true;
-            this.labelControl13.Location = new System.Drawing.Point(245, 24);
-            this.labelControl13.Name = "labelControl13";
-            this.labelControl13.Size = new System.Drawing.Size(183, 26);
-            this.labelControl13.TabIndex = 1;
-            this.labelControl13.Text = "THÔNG TIN GÁC";
-            // 
-            // labelControl2
-            // 
-            this.labelControl2.Appearance.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl2.Appearance.Options.UseFont = true;
-            this.labelControl2.Location = new System.Drawing.Point(432, 36);
-            this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(244, 26);
-            this.labelControl2.TabIndex = 3;
-            this.labelControl2.Text = "DANH SÁCH CĂT GÁC";
-            // 
-            // btnChinhSua
-            // 
-            this.btnChinhSua.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnChinhSua.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnChinhSua.ImageOptions.Image")));
-            this.btnChinhSua.Location = new System.Drawing.Point(1016, 1013);
-            this.btnChinhSua.Name = "btnChinhSua";
-            this.btnChinhSua.Size = new System.Drawing.Size(186, 38);
-            this.btnChinhSua.TabIndex = 11;
-            this.btnChinhSua.Text = "Chỉnh sửa";
-            this.btnChinhSua.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
             // gcDSGac
             // 
             this.gcDSGac.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.gcDSGac.Location = new System.Drawing.Point(12, 95);
+            this.gcDSGac.Location = new System.Drawing.Point(12, 76);
             this.gcDSGac.MainView = this.gvDSGac;
             this.gcDSGac.Name = "gcDSGac";
             this.gcDSGac.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.btnDetail});
             this.gcDSGac.Size = new System.Drawing.Size(1190, 912);
-            this.gcDSGac.TabIndex = 20;
+            this.gcDSGac.TabIndex = 22;
             this.gcDSGac.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvDSGac});
             // 
@@ -722,9 +247,9 @@
             // btnDetail
             // 
             this.btnDetail.AutoHeight = false;
-            editorButtonImageOptions3.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions3.Image")));
+            editorButtonImageOptions8.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions8.Image")));
             this.btnDetail.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions3, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject9, serializableAppearanceObject10, serializableAppearanceObject11, serializableAppearanceObject12, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions8, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject29, serializableAppearanceObject30, serializableAppearanceObject31, serializableAppearanceObject32, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.btnDetail.Name = "btnDetail";
             this.btnDetail.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             // 
@@ -768,30 +293,443 @@
             this.Ma5.Name = "Ma5";
             this.Ma5.Width = 94;
             // 
-            // btnXacNhan
+            // labelControl2
             // 
-            this.btnXacNhan.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnXacNhan.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnXacNhan.ImageOptions.Image")));
-            this.btnXacNhan.Location = new System.Drawing.Point(811, 1014);
-            this.btnXacNhan.Name = "btnXacNhan";
-            this.btnXacNhan.Size = new System.Drawing.Size(186, 38);
-            this.btnXacNhan.TabIndex = 21;
-            this.btnXacNhan.Text = "Xác nhận";
-            this.btnXacNhan.Click += new System.EventHandler(this.btnXacNhan_Click);
+            this.labelControl2.Appearance.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl2.Appearance.Options.UseFont = true;
+            this.labelControl2.Location = new System.Drawing.Point(432, 17);
+            this.labelControl2.Name = "labelControl2";
+            this.labelControl2.Size = new System.Drawing.Size(244, 26);
+            this.labelControl2.TabIndex = 21;
+            this.labelControl2.Text = "DANH SÁCH CĂT GÁC";
             // 
-            // frmCatGac
+            // panelControl1
+            // 
+            this.panelControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelControl1.Controls.Add(this.txtMaTG);
+            this.panelControl1.Controls.Add(this.controlDocGac);
+            this.panelControl1.Controls.Add(this.panelControl5);
+            this.panelControl1.Controls.Add(this.panelControl4);
+            this.panelControl1.Controls.Add(this.panelControl3);
+            this.panelControl1.Controls.Add(this.btnLuu);
+            this.panelControl1.Controls.Add(this.panelControl2);
+            this.panelControl1.Controls.Add(this.labelControl1);
+            this.panelControl1.Location = new System.Drawing.Point(1208, 12);
+            this.panelControl1.Name = "panelControl1";
+            this.panelControl1.Size = new System.Drawing.Size(643, 839);
+            this.panelControl1.TabIndex = 23;
+            // 
+            // txtMaTG
+            // 
+            this.txtMaTG.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtMaTG.Enabled = false;
+            this.txtMaTG.Location = new System.Drawing.Point(43, 282);
+            this.txtMaTG.Name = "txtMaTG";
+            this.txtMaTG.Size = new System.Drawing.Size(14, 23);
+            this.txtMaTG.TabIndex = 12;
+            this.txtMaTG.Visible = false;
+            // 
+            // controlDocGac
+            // 
+            this.controlDocGac.Controls.Add(this.maMoi5);
+            this.controlDocGac.Controls.Add(this.cbHV5);
+            this.controlDocGac.Controls.Add(this.labelControl7);
+            this.controlDocGac.Controls.Add(this.label9);
+            this.controlDocGac.Controls.Add(this.label10);
+            this.controlDocGac.Controls.Add(this.MaHV5);
+            this.controlDocGac.Location = new System.Drawing.Point(91, 686);
+            this.controlDocGac.Name = "controlDocGac";
+            this.controlDocGac.Size = new System.Drawing.Size(531, 130);
+            this.controlDocGac.TabIndex = 13;
+            // 
+            // maMoi5
+            // 
+            this.maMoi5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.maMoi5.Enabled = false;
+            this.maMoi5.Location = new System.Drawing.Point(518, 81);
+            this.maMoi5.Name = "maMoi5";
+            this.maMoi5.Size = new System.Drawing.Size(14, 23);
+            this.maMoi5.TabIndex = 17;
+            this.maMoi5.Visible = false;
+            // 
+            // cbHV5
+            // 
+            this.cbHV5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbHV5.Enabled = false;
+            this.cbHV5.FormattingEnabled = true;
+            this.cbHV5.Location = new System.Drawing.Point(243, 80);
+            this.cbHV5.Name = "cbHV5";
+            this.cbHV5.Size = new System.Drawing.Size(269, 24);
+            this.cbHV5.TabIndex = 10;
+            // 
+            // labelControl7
+            // 
+            this.labelControl7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelControl7.Appearance.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl7.Appearance.Options.UseFont = true;
+            this.labelControl7.Location = new System.Drawing.Point(14, 5);
+            this.labelControl7.Name = "labelControl7";
+            this.labelControl7.Size = new System.Drawing.Size(70, 19);
+            this.labelControl7.TabIndex = 3;
+            this.labelControl7.Text = "Đốc gác:";
+            // 
+            // label9
+            // 
+            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(135, 83);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(89, 16);
+            this.label9.TabIndex = 11;
+            this.label9.Text = "Tên học viên: ";
+            // 
+            // label10
+            // 
+            this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(135, 32);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(84, 16);
+            this.label10.TabIndex = 8;
+            this.label10.Text = "Mã học viên: ";
+            // 
+            // MaHV5
+            // 
+            this.MaHV5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.MaHV5.Enabled = false;
+            this.MaHV5.Location = new System.Drawing.Point(243, 29);
+            this.MaHV5.Name = "MaHV5";
+            this.MaHV5.Size = new System.Drawing.Size(269, 23);
+            this.MaHV5.TabIndex = 9;
+            // 
+            // panelControl5
+            // 
+            this.panelControl5.Controls.Add(this.maMoi4);
+            this.panelControl5.Controls.Add(this.cbHV4);
+            this.panelControl5.Controls.Add(this.labelControl6);
+            this.panelControl5.Controls.Add(this.label7);
+            this.panelControl5.Controls.Add(this.label8);
+            this.panelControl5.Controls.Add(this.MaHV4);
+            this.panelControl5.Location = new System.Drawing.Point(91, 534);
+            this.panelControl5.Name = "panelControl5";
+            this.panelControl5.Size = new System.Drawing.Size(531, 130);
+            this.panelControl5.TabIndex = 12;
+            // 
+            // maMoi4
+            // 
+            this.maMoi4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.maMoi4.Enabled = false;
+            this.maMoi4.Location = new System.Drawing.Point(518, 81);
+            this.maMoi4.Name = "maMoi4";
+            this.maMoi4.Size = new System.Drawing.Size(14, 23);
+            this.maMoi4.TabIndex = 16;
+            this.maMoi4.Visible = false;
+            // 
+            // cbHV4
+            // 
+            this.cbHV4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbHV4.Enabled = false;
+            this.cbHV4.FormattingEnabled = true;
+            this.cbHV4.Location = new System.Drawing.Point(243, 80);
+            this.cbHV4.Name = "cbHV4";
+            this.cbHV4.Size = new System.Drawing.Size(269, 24);
+            this.cbHV4.TabIndex = 10;
+            // 
+            // labelControl6
+            // 
+            this.labelControl6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelControl6.Appearance.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl6.Appearance.Options.UseFont = true;
+            this.labelControl6.Location = new System.Drawing.Point(14, 5);
+            this.labelControl6.Name = "labelControl6";
+            this.labelControl6.Size = new System.Drawing.Size(88, 19);
+            this.labelControl6.TabIndex = 3;
+            this.labelControl6.Text = "Học viên 4:";
+            // 
+            // label7
+            // 
+            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(135, 83);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(89, 16);
+            this.label7.TabIndex = 11;
+            this.label7.Text = "Tên học viên: ";
+            // 
+            // label8
+            // 
+            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(135, 32);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(84, 16);
+            this.label8.TabIndex = 8;
+            this.label8.Text = "Mã học viên: ";
+            // 
+            // MaHV4
+            // 
+            this.MaHV4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.MaHV4.Enabled = false;
+            this.MaHV4.Location = new System.Drawing.Point(243, 29);
+            this.MaHV4.Name = "MaHV4";
+            this.MaHV4.Size = new System.Drawing.Size(269, 23);
+            this.MaHV4.TabIndex = 9;
+            // 
+            // panelControl4
+            // 
+            this.panelControl4.Controls.Add(this.maMoi3);
+            this.panelControl4.Controls.Add(this.cbHV3);
+            this.panelControl4.Controls.Add(this.labelControl5);
+            this.panelControl4.Controls.Add(this.label5);
+            this.panelControl4.Controls.Add(this.label6);
+            this.panelControl4.Controls.Add(this.MaHV3);
+            this.panelControl4.Location = new System.Drawing.Point(91, 385);
+            this.panelControl4.Name = "panelControl4";
+            this.panelControl4.Size = new System.Drawing.Size(531, 130);
+            this.panelControl4.TabIndex = 12;
+            // 
+            // maMoi3
+            // 
+            this.maMoi3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.maMoi3.Enabled = false;
+            this.maMoi3.Location = new System.Drawing.Point(517, 81);
+            this.maMoi3.Name = "maMoi3";
+            this.maMoi3.Size = new System.Drawing.Size(14, 23);
+            this.maMoi3.TabIndex = 15;
+            this.maMoi3.Visible = false;
+            // 
+            // cbHV3
+            // 
+            this.cbHV3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbHV3.Enabled = false;
+            this.cbHV3.FormattingEnabled = true;
+            this.cbHV3.Location = new System.Drawing.Point(243, 80);
+            this.cbHV3.Name = "cbHV3";
+            this.cbHV3.Size = new System.Drawing.Size(269, 24);
+            this.cbHV3.TabIndex = 10;
+            // 
+            // labelControl5
+            // 
+            this.labelControl5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelControl5.Appearance.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl5.Appearance.Options.UseFont = true;
+            this.labelControl5.Location = new System.Drawing.Point(14, 5);
+            this.labelControl5.Name = "labelControl5";
+            this.labelControl5.Size = new System.Drawing.Size(88, 19);
+            this.labelControl5.TabIndex = 3;
+            this.labelControl5.Text = "Học viên 3:";
+            // 
+            // label5
+            // 
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(135, 83);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(89, 16);
+            this.label5.TabIndex = 11;
+            this.label5.Text = "Tên học viên: ";
+            // 
+            // label6
+            // 
+            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(135, 32);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(84, 16);
+            this.label6.TabIndex = 8;
+            this.label6.Text = "Mã học viên: ";
+            // 
+            // MaHV3
+            // 
+            this.MaHV3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.MaHV3.Enabled = false;
+            this.MaHV3.Location = new System.Drawing.Point(243, 29);
+            this.MaHV3.Name = "MaHV3";
+            this.MaHV3.Size = new System.Drawing.Size(269, 23);
+            this.MaHV3.TabIndex = 9;
+            // 
+            // panelControl3
+            // 
+            this.panelControl3.Controls.Add(this.maMoi2);
+            this.panelControl3.Controls.Add(this.cbHV2);
+            this.panelControl3.Controls.Add(this.labelControl3);
+            this.panelControl3.Controls.Add(this.label3);
+            this.panelControl3.Controls.Add(this.label4);
+            this.panelControl3.Controls.Add(this.MaHV2);
+            this.panelControl3.Location = new System.Drawing.Point(91, 237);
+            this.panelControl3.Name = "panelControl3";
+            this.panelControl3.Size = new System.Drawing.Size(531, 130);
+            this.panelControl3.TabIndex = 12;
+            // 
+            // maMoi2
+            // 
+            this.maMoi2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.maMoi2.Enabled = false;
+            this.maMoi2.Location = new System.Drawing.Point(518, 81);
+            this.maMoi2.Name = "maMoi2";
+            this.maMoi2.Size = new System.Drawing.Size(14, 23);
+            this.maMoi2.TabIndex = 14;
+            this.maMoi2.Visible = false;
+            // 
+            // cbHV2
+            // 
+            this.cbHV2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbHV2.Enabled = false;
+            this.cbHV2.FormattingEnabled = true;
+            this.cbHV2.Location = new System.Drawing.Point(243, 80);
+            this.cbHV2.Name = "cbHV2";
+            this.cbHV2.Size = new System.Drawing.Size(269, 24);
+            this.cbHV2.TabIndex = 10;
+            // 
+            // labelControl3
+            // 
+            this.labelControl3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelControl3.Appearance.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl3.Appearance.Options.UseFont = true;
+            this.labelControl3.Location = new System.Drawing.Point(14, 5);
+            this.labelControl3.Name = "labelControl3";
+            this.labelControl3.Size = new System.Drawing.Size(88, 19);
+            this.labelControl3.TabIndex = 3;
+            this.labelControl3.Text = "Học viên 2:";
+            // 
+            // label3
+            // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(135, 83);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(89, 16);
+            this.label3.TabIndex = 11;
+            this.label3.Text = "Tên học viên: ";
+            // 
+            // label4
+            // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(135, 32);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(84, 16);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "Mã học viên: ";
+            // 
+            // MaHV2
+            // 
+            this.MaHV2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.MaHV2.Enabled = false;
+            this.MaHV2.Location = new System.Drawing.Point(243, 29);
+            this.MaHV2.Name = "MaHV2";
+            this.MaHV2.Size = new System.Drawing.Size(269, 23);
+            this.MaHV2.TabIndex = 9;
+            // 
+            // btnLuu
+            // 
+            this.btnLuu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnLuu.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnLuu.ImageOptions.Image")));
+            this.btnLuu.Location = new System.Drawing.Point(245, 793);
+            this.btnLuu.Name = "btnLuu";
+            this.btnLuu.Size = new System.Drawing.Size(186, 38);
+            this.btnLuu.TabIndex = 12;
+            this.btnLuu.Text = "Thoát";
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click_1);
+            // 
+            // panelControl2
+            // 
+            this.panelControl2.Controls.Add(this.maMoi1);
+            this.panelControl2.Controls.Add(this.cbHV1);
+            this.panelControl2.Controls.Add(this.labelControl4);
+            this.panelControl2.Controls.Add(this.label1);
+            this.panelControl2.Controls.Add(this.label2);
+            this.panelControl2.Controls.Add(this.MaHV1);
+            this.panelControl2.Location = new System.Drawing.Point(91, 88);
+            this.panelControl2.Name = "panelControl2";
+            this.panelControl2.Size = new System.Drawing.Size(531, 130);
+            this.panelControl2.TabIndex = 4;
+            // 
+            // maMoi1
+            // 
+            this.maMoi1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.maMoi1.Enabled = false;
+            this.maMoi1.Location = new System.Drawing.Point(517, 80);
+            this.maMoi1.Name = "maMoi1";
+            this.maMoi1.Size = new System.Drawing.Size(14, 23);
+            this.maMoi1.TabIndex = 13;
+            this.maMoi1.Visible = false;
+            // 
+            // cbHV1
+            // 
+            this.cbHV1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbHV1.Enabled = false;
+            this.cbHV1.FormattingEnabled = true;
+            this.cbHV1.Location = new System.Drawing.Point(243, 80);
+            this.cbHV1.Name = "cbHV1";
+            this.cbHV1.Size = new System.Drawing.Size(269, 24);
+            this.cbHV1.TabIndex = 10;
+            // 
+            // labelControl4
+            // 
+            this.labelControl4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelControl4.Appearance.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl4.Appearance.Options.UseFont = true;
+            this.labelControl4.Location = new System.Drawing.Point(14, 5);
+            this.labelControl4.Name = "labelControl4";
+            this.labelControl4.Size = new System.Drawing.Size(88, 19);
+            this.labelControl4.TabIndex = 3;
+            this.labelControl4.Text = "Học viên 1:";
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(135, 83);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(89, 16);
+            this.label1.TabIndex = 11;
+            this.label1.Text = "Tên học viên: ";
+            // 
+            // label2
+            // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(135, 32);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(84, 16);
+            this.label2.TabIndex = 8;
+            this.label2.Text = "Mã học viên: ";
+            // 
+            // MaHV1
+            // 
+            this.MaHV1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.MaHV1.Enabled = false;
+            this.MaHV1.Location = new System.Drawing.Point(243, 29);
+            this.MaHV1.Name = "MaHV1";
+            this.MaHV1.Size = new System.Drawing.Size(269, 23);
+            this.MaHV1.TabIndex = 9;
+            // 
+            // labelControl1
+            // 
+            this.labelControl1.Appearance.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl1.Appearance.Options.UseFont = true;
+            this.labelControl1.Location = new System.Drawing.Point(245, 12);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(221, 26);
+            this.labelControl1.TabIndex = 1;
+            this.labelControl1.Text = "THÔNG TIN CA GÁC";
+            // 
+            // frmChiTiet2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1863, 1063);
-            this.Controls.Add(this.btnXacNhan);
-            this.Controls.Add(this.gcDSGac);
-            this.Controls.Add(this.panelControl7);
-            this.Controls.Add(this.btnChinhSua);
-            this.Controls.Add(this.labelControl2);
+            this.ClientSize = new System.Drawing.Size(1863, 820);
             this.Controls.Add(this.panelControl1);
-            this.Name = "frmCatGac";
-            this.Text = "Cắt bán tự động";
+            this.Controls.Add(this.gcDSGac);
+            this.Controls.Add(this.labelControl2);
+            this.Name = "frmChiTiet2";
+            this.Text = "frmChiTiet2";
+            ((System.ComponentModel.ISupportInitialize)(this.gcDSGac)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvDSGac)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnDetail)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
             this.panelControl1.PerformLayout();
@@ -810,27 +748,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
             this.panelControl2.ResumeLayout(false);
             this.panelControl2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl7)).EndInit();
-            this.panelControl7.ResumeLayout(false);
-            this.panelControl7.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gcDSGac)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gvDSGac)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnDetail)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private DevExpress.XtraEditors.PanelControl panelControl1;
-        private DevExpress.XtraEditors.LabelControl labelControl1;
-        private DevExpress.XtraEditors.LabelControl labelControl2;
-        private DevExpress.XtraEditors.LabelControl labelControl4;
-        private DevExpress.XtraEditors.PanelControl panelControl2;
-        private DevExpress.XtraEditors.SimpleButton btnChinhSua;
-        private DevExpress.XtraEditors.PanelControl panelControl7;
-        private DevExpress.XtraEditors.LabelControl labelControl13;
-        private DevExpress.XtraEditors.SimpleButton simpleButton3;
+
         private DevExpress.XtraGrid.GridControl gcDSGac;
         private DevExpress.XtraGrid.Views.Grid.GridView gvDSGac;
         private DevExpress.XtraGrid.Columns.GridColumn MaTG;
@@ -843,46 +767,50 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn8;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn9;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit btnDetail;
-        private DevExpress.XtraEditors.SimpleButton btnXacNhan;
-        private DevExpress.XtraEditors.SimpleButton btnLuu;
+        private DevExpress.XtraGrid.Columns.GridColumn Ma1;
+        private DevExpress.XtraGrid.Columns.GridColumn Ma2;
+        private DevExpress.XtraGrid.Columns.GridColumn Ma3;
+        private DevExpress.XtraGrid.Columns.GridColumn Ma4;
+        private DevExpress.XtraGrid.Columns.GridColumn Ma5;
+        private DevExpress.XtraEditors.LabelControl labelControl2;
+        private DevExpress.XtraEditors.PanelControl panelControl1;
+        private System.Windows.Forms.TextBox txtMaTG;
         private DevExpress.XtraEditors.PanelControl controlDocGac;
+        private System.Windows.Forms.TextBox maMoi5;
         private System.Windows.Forms.ComboBox cbHV5;
         private DevExpress.XtraEditors.LabelControl labelControl7;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox MaHV5;
         private DevExpress.XtraEditors.PanelControl panelControl5;
+        private System.Windows.Forms.TextBox maMoi4;
         private System.Windows.Forms.ComboBox cbHV4;
         private DevExpress.XtraEditors.LabelControl labelControl6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox MaHV4;
         private DevExpress.XtraEditors.PanelControl panelControl4;
+        private System.Windows.Forms.TextBox maMoi3;
         private System.Windows.Forms.ComboBox cbHV3;
         private DevExpress.XtraEditors.LabelControl labelControl5;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox MaHV3;
         private DevExpress.XtraEditors.PanelControl panelControl3;
+        private System.Windows.Forms.TextBox maMoi2;
         private System.Windows.Forms.ComboBox cbHV2;
         private DevExpress.XtraEditors.LabelControl labelControl3;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox MaHV2;
+        private DevExpress.XtraEditors.SimpleButton btnLuu;
+        private DevExpress.XtraEditors.PanelControl panelControl2;
+        private System.Windows.Forms.TextBox maMoi1;
         private System.Windows.Forms.ComboBox cbHV1;
+        private DevExpress.XtraEditors.LabelControl labelControl4;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox MaHV1;
-        private DevExpress.XtraGrid.Columns.GridColumn Ma1;
-        private DevExpress.XtraGrid.Columns.GridColumn Ma2;
-        private DevExpress.XtraGrid.Columns.GridColumn Ma3;
-        private DevExpress.XtraGrid.Columns.GridColumn Ma4;
-        private DevExpress.XtraGrid.Columns.GridColumn Ma5;
-        private System.Windows.Forms.TextBox txtMaTG;
-        private System.Windows.Forms.TextBox maMoi5;
-        private System.Windows.Forms.TextBox maMoi4;
-        private System.Windows.Forms.TextBox maMoi3;
-        private System.Windows.Forms.TextBox maMoi2;
-        private System.Windows.Forms.TextBox maMoi1;
+        private DevExpress.XtraEditors.LabelControl labelControl1;
     }
 }

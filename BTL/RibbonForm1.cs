@@ -62,6 +62,34 @@ namespace BTL
             f.MdiParent = this;
             f.Show();
         }
+        void OpenFormSpecical1(Type typeForm)
+        {
+            foreach (Form frm in MdiChildren)
+            {
+                if (frm.GetType() == typeForm)
+                {
+                    frm.Activate();
+                    return;
+                }
+            }
+            Form f = (Form)Activator.CreateInstance(typeForm, 0);
+            f.MdiParent = this;
+            f.Show();
+        }
+        void OpenFormSpecical2(Type typeForm)
+        {
+            foreach (Form frm in MdiChildren)
+            {
+                if (frm.GetType() == typeForm)
+                {
+                    frm.Activate();
+                    return;
+                }
+            }
+            Form f = (Form)Activator.CreateInstance(typeForm, inForUser.MaDV);
+            f.MdiParent = this;
+            f.Show();
+        }
 
         /*void OpenFormSpecical(int i)
             
@@ -84,37 +112,37 @@ namespace BTL
         }*/
         void PhanQuyen()
         {
+            //dai doi
             if (inForUser.MaQuyen == 2)
             {
-                QuanLyNguoiDung.Visible = false;
-                PhanCong.Visible = true;
-                System.Visible= true;
-                Home.Visible = false;
+                QuanLyNguoiDung.Visible = true;
+                PhanCong.Visible = false; 
                 ThongBao.Visible = true;
                 QuanLyGac.Visible = false;
                 QuanLyQN.Visible = true;
                 QuanLyCongViec.Visible = true;
+                LichSuDonVi.Visible = true;
             }
+            //admin
             if (inForUser.MaQuyen == 1)
             {
                 QuanLyNguoiDung.Visible = true;
-                PhanCong.Visible = false;
-                System.Visible = true;
-                Home.Visible = false;
-                ThongBao.Visible = false;
+                PhanCong.Visible = true; 
+                ThongBao.Visible = true;
                 QuanLyGac.Visible = false;
                 QuanLyQN.Visible = false;
                 QuanLyCongViec.Visible = false;
+                LichSuDonVi.Visible= false;
             }
+            //tieu doan
             if (inForUser.MaQuyen == 3)
             {
-                PhanCong.Visible = true;
-                System.Visible = true;
-                Home.Visible = false;
+                PhanCong.Visible = true; 
                 ThongBao.Visible = false;
                 QuanLyGac.Visible = false;
                 QuanLyQN.Visible = false;
                 QuanLyCongViec.Visible = false;
+                LichSuDonVi.Visible= false;
             }
 
         }
@@ -197,6 +225,16 @@ namespace BTL
         private void btnDieuChinhDanhSachUuTien_ItemClick(object sender, ItemClickEventArgs e)
         {
             OpenFormSpecical(typeof(frmDanhSachUuTien));
+        }
+
+        private void barButtonItem9_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            OpenFormSpecical1(typeof(frmLichSuGac3));
+        }
+
+        private void btnLichSuCV_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            OpenFormSpecical2(typeof(frmLichSuGac3));
         }
     }
 }

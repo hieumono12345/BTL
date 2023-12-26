@@ -39,9 +39,6 @@ namespace BTL
            // gcDanhSachCV.DataSource = QuanLyQnDAO.Instance.getDanhSachQN();            
             DataTable dt = DataProvider.Instance.ExecuteQuery("EXEC dbo.usp_hienthidanhsachcongviecdaidoi @madv="+inForUser.MaDV+"");
             gcDanhSachCV.DataSource = dt;
-            //string t = time.Text;
-            //string h= date.EditValue.ToString();
-            //MessageBox.Show();
         }
         private void btnDetail_Click(object sender, EventArgs e)
         {
@@ -56,7 +53,7 @@ namespace BTL
             txtMaCV.Text= gvDanhSachCV.GetFocusedRowCellValue("MaCongViec").ToString();
             cSTTDS.EditValue = gvDanhSachCV.GetFocusedRowCellValue("STTDS");
             controlBDTH.Visible = cSTTDS.Checked;
-            MessageBox.Show("detail" + cSTTDS.Checked);
+            //MessageBox.Show("detail" + cSTTDS.Checked);
         }
 
         private void simpleButton3_Click(object sender, EventArgs e)
@@ -88,11 +85,11 @@ namespace BTL
 
         private void btn_tienhanhcongviec_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("tien hành"+txtMaCV.Text);
+            //MessageBox.Show("tien hành"+txtMaCV.Text);
             int result = DataProvider.Instance.ExecuteNonQuery("EXEC dbo.usp_tienhanhcongviec @macv = "+txtMaCV.Text+ "");
             if (result >= 0)
             {
-                MessageBox.Show("Bắt Đầu Thực Hiện Công Viêc!");
+               // MessageBox.Show("Bắt Đầu Thực Hiện Công Viêc!");
                 Load();
             }
         }
@@ -102,7 +99,7 @@ namespace BTL
             int result = DataProvider.Instance.ExecuteNonQuery("EXEC dbo.usp_hoanthanhcongviec @macv = " +txtMaCV.Text+ "");
             if (result >= 0)
             {
-                MessageBox.Show("Đã Hoàn Thành Công Việc!!!");
+                //MessageBox.Show("Đã Hoàn Thành Công Việc!!!");
                 Load();
             }
         }

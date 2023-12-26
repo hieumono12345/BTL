@@ -1,6 +1,6 @@
 ﻿namespace BTL
 {
-    partial class frmPhanCongGac
+    partial class frmLichSuGac3
     {
         /// <summary>
         /// Required designer variable.
@@ -28,17 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPhanCongGac));
             DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions1 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLichSuGac3));
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
-            this.btnSua = new DevExpress.XtraEditors.SimpleButton();
-            this.btnThem = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
-            this.btnXoa = new DevExpress.XtraEditors.SimpleButton();
             this.gcDanhSachGac = new DevExpress.XtraGrid.GridControl();
             this.gvDanhSachGac = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.STT = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -97,37 +94,12 @@
             // 
             this.panelControl1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.panelControl1.Controls.Add(this.btnSua);
-            this.panelControl1.Controls.Add(this.btnThem);
             this.panelControl1.Controls.Add(this.labelControl2);
-            this.panelControl1.Controls.Add(this.btnXoa);
             this.panelControl1.Controls.Add(this.gcDanhSachGac);
-            this.panelControl1.Location = new System.Drawing.Point(3, 12);
+            this.panelControl1.Location = new System.Drawing.Point(12, 5);
             this.panelControl1.Name = "panelControl1";
             this.panelControl1.Size = new System.Drawing.Size(1199, 803);
-            this.panelControl1.TabIndex = 7;
-            // 
-            // btnSua
-            // 
-            this.btnSua.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnSua.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSua.ImageOptions.Image")));
-            this.btnSua.Location = new System.Drawing.Point(816, 746);
-            this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(186, 38);
-            this.btnSua.TabIndex = 23;
-            this.btnSua.Text = "Sửa";
-            this.btnSua.Click += new System.EventHandler(this.simpleButton2_Click);
-            // 
-            // btnThem
-            // 
-            this.btnThem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnThem.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnThem.ImageOptions.Image")));
-            this.btnThem.Location = new System.Drawing.Point(1008, 746);
-            this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(186, 38);
-            this.btnThem.TabIndex = 22;
-            this.btnThem.Text = "Thêm";
-            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
+            this.panelControl1.TabIndex = 8;
             // 
             // labelControl2
             // 
@@ -139,17 +111,6 @@
             this.labelControl2.TabIndex = 5;
             this.labelControl2.Text = "DANH SÁCH GÁC TRONG THÁNG";
             // 
-            // btnXoa
-            // 
-            this.btnXoa.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnXoa.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnXoa.ImageOptions.Image")));
-            this.btnXoa.Location = new System.Drawing.Point(624, 746);
-            this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(186, 38);
-            this.btnXoa.TabIndex = 21;
-            this.btnXoa.Text = "Xóa";
-            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
-            // 
             // gcDanhSachGac
             // 
             this.gcDanhSachGac.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -159,7 +120,7 @@
             this.gcDanhSachGac.Name = "gcDanhSachGac";
             this.gcDanhSachGac.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.btnDetail});
-            this.gcDanhSachGac.Size = new System.Drawing.Size(1194, 652);
+            this.gcDanhSachGac.Size = new System.Drawing.Size(1194, 701);
             this.gcDanhSachGac.TabIndex = 4;
             this.gcDanhSachGac.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvDanhSachGac});
@@ -284,10 +245,10 @@
             this.panelControl7.Controls.Add(this.panelControl10);
             this.panelControl7.Controls.Add(this.panelControl9);
             this.panelControl7.Controls.Add(this.labelControl13);
-            this.panelControl7.Location = new System.Drawing.Point(1208, 12);
+            this.panelControl7.Location = new System.Drawing.Point(1217, 5);
             this.panelControl7.Name = "panelControl7";
             this.panelControl7.Size = new System.Drawing.Size(651, 803);
-            this.panelControl7.TabIndex = 11;
+            this.panelControl7.TabIndex = 12;
             // 
             // pcThem
             // 
@@ -306,8 +267,8 @@
             this.btnThemLichGac.Name = "btnThemLichGac";
             this.btnThemLichGac.Size = new System.Drawing.Size(186, 43);
             this.btnThemLichGac.TabIndex = 20;
-            this.btnThemLichGac.Text = "Xác nhận";
-            this.btnThemLichGac.Click += new System.EventHandler(this.btnThemLichGac_Click);
+            this.btnThemLichGac.Text = "Xem Danh sách";
+            this.btnThemLichGac.Click += new System.EventHandler(this.btnThemLichGac_Click_1);
             // 
             // panelControl11
             // 
@@ -492,15 +453,15 @@
             this.labelControl13.TabIndex = 1;
             this.labelControl13.Text = "THÔNG TIN GÁC";
             // 
-            // frmPhanCongGac
+            // frmLichSuGac3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1863, 820);
             this.Controls.Add(this.panelControl7);
             this.Controls.Add(this.panelControl1);
-            this.Name = "frmPhanCongGac";
-            this.Text = "Phân công gác";
+            this.Name = "frmLichSuGac3";
+            this.Text = "frmLichSuGac3";
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
             this.panelControl1.PerformLayout();
@@ -541,34 +502,31 @@
         private DevExpress.XtraGrid.Columns.GridColumn NgayGac;
         private DevExpress.XtraGrid.Columns.GridColumn Hoi;
         private DevExpress.XtraGrid.Columns.GridColumn Dap;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
+        private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit btnDetail;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
         private DevExpress.XtraEditors.PanelControl panelControl7;
+        private DevExpress.XtraEditors.PanelControl pcThem;
+        private DevExpress.XtraEditors.SimpleButton btnThemLichGac;
         private DevExpress.XtraEditors.PanelControl panelControl11;
+        private System.Windows.Forms.ComboBox cbDV;
         private DevExpress.XtraEditors.LabelControl labelControl9;
         private DevExpress.XtraEditors.PanelControl panelControl8;
         private DevExpress.XtraEditors.LabelControl labelControl8;
         private System.Windows.Forms.RichTextBox txtNhacNho;
         private DevExpress.XtraEditors.PanelControl panelControl10;
+        private DevExpress.XtraEditors.CheckEdit cbSua;
+        private DevExpress.XtraEditors.CheckEdit cbThem;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private DevExpress.XtraEditors.LabelControl labelControl11;
         private DevExpress.XtraEditors.PanelControl panelControl9;
+        private System.Windows.Forms.TextBox txtDap;
         private System.Windows.Forms.TextBox txtHoi;
         private DevExpress.XtraEditors.LabelControl labelControl12;
         private DevExpress.XtraEditors.LabelControl labelControl14;
         private System.Windows.Forms.TextBox txtMaGac;
         private DevExpress.XtraEditors.LabelControl labelControl15;
         private DevExpress.XtraEditors.LabelControl labelControl13;
-        private DevExpress.XtraEditors.SimpleButton btnXoa;
-        private System.Windows.Forms.ComboBox cbDV;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
-        private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit btnDetail;
-        private DevExpress.XtraEditors.SimpleButton btnThem;
-        private DevExpress.XtraEditors.SimpleButton btnSua;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private DevExpress.XtraEditors.PanelControl pcThem;
-        private DevExpress.XtraEditors.SimpleButton btnThemLichGac;
-        private System.Windows.Forms.TextBox txtDap;
-        private DevExpress.XtraEditors.CheckEdit cbSua;
-        private DevExpress.XtraEditors.CheckEdit cbThem;
     }
 }
