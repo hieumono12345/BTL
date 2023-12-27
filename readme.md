@@ -7,3 +7,4 @@ admin - admin
 Bài thi 2 lần 
 lần 1 môn hệ thống thông tin trong quân đội đc gặp thầy Trần Văn An được 7đ
 Lần 2 môn phân tích thiết kế hệ thống gặp thầy Nguyễn Văn Giang được 8.5đ
+KẾT THÚC TỐT ĐẸP XIN CHÂN THÀNH CẢM ƠN!!
